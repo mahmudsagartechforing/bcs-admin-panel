@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechForig BCS admin</title>
+    <!-- bootstrap CDN link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <!-- data table css -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.1/css/jquery.dataTables.min.css" />
+    <!-- date range picker css -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.1/css/dataTables.bootstrap5.min.css" />
+    <!-- Icofont CDN link -->
+    <link rel="stylesheet" href="./stylesheets/icofont/icofont.min.css" />
+    <!-- bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="./stylesheets/nav.css" />
+    <link rel="stylesheet" href="./stylesheets/support.css" />
+    <!-- charts js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+
+<body>
+    <header>
+        <!-- top bar section starts here -->
+        <nav class="navbar fixed-top">
+            <div class="container">
+                <!-- Brand/logo-->
+                <a class="navbar-brand" href="#">
+                    <img src="./images/TechForingLogo.png" alt="Tech Foring" />
+                </a>
+                <!-- page title -->
+                <span class="navbar-text rounded-0 px-2  fw-bold text-primary">
+                    <a href="" class="">Business Cybersecurity</a>
+                </span>
+                <span class="navbar-text rounded-0 px-2 fw-bold text-primary">
+                    <a href="" class="">Personal Cybersecurity</a>
+                </span>
+                <span class="dropdown">
+                    <a class="nav-link btn-primary dropdown text-white" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Admin
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="./myProfile.html">My profile</a></li>
+                        <li><a class="dropdown-item" href="#">Sgn out</a></li>
+                    </ul>
+                </span>
+            </div>
+        </nav>
+        <!-- top bar section ends here -->
+        <!-- sidebar section starts here -->
+        <aside>
+            <div class="aside-container">
+                <!-- Nav links starts here -->
+                <ul>
+                    <li class="nav-item">
+                        <a href="./index.html" class="nav-link active">
+                            <i class="icofont-listine-dots"></i>
+                            dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./order.html" class="nav-link">
+                            <i class="icofont-cube"></i>
+                            order
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./notification.html" class="nav-link">
+                            <i class="icofont-alarm"></i>
+                            notification</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./eventWebinar.html" class="nav-link">
+                            <svg class="icon" id="Layer_1" enable-background="new 0 0 512 512" height="25"
+                                viewBox="0 0 512 512" width="25" xmlns="http://www.w3.org/2000/svg">
+                                <g>
+                                    <path fill="#5BBC2E"
+                                        d="m499.5 422h-10v-304.92c0-20.678-16.822-37.5-37.5-37.5h-117.191c.113-11.477-2.186-22.566-6.849-32.967-1.695-3.78-6.131-5.472-9.912-3.776-3.78 1.693-5.471 6.131-3.777 9.911 3.682 8.216 5.549 16.987 5.549 26.072 0 16.374-6.204 31.323-16.377 42.633-3.364-12.738-12.055-23.325-23.534-29.244 6.171-6.144 9.997-14.641 9.997-24.016 0-18.696-15.21-33.906-33.906-33.906s-33.906 15.21-33.906 33.906c0 9.375 3.826 17.872 9.997 24.016-11.479 5.919-20.17 16.506-23.534 29.244-10.173-11.31-16.377-26.259-16.377-42.633-.001-35.19 28.629-63.82 63.82-63.82 14.175 0 27.594 4.547 38.807 13.149 3.287 2.522 7.994 1.901 10.516-1.385 2.521-3.287 1.901-7.995-1.385-10.516-13.856-10.629-30.433-16.248-47.938-16.248-43.759 0-79.242 35.833-78.809 79.58h-117.191c-20.678 0-37.5 16.822-37.5 37.5v304.92h-10c-6.893 0-12.5 5.607-12.5 12.5v34.549c0 23.683 19.268 42.951 42.951 42.951h426.098c23.683 0 42.951-19.268 42.951-42.951v-34.549c0-6.893-5.607-12.5-12.5-12.5zm-243.5-372.713c10.425 0 18.906 8.481 18.906 18.906s-8.481 18.907-18.906 18.907-18.906-8.481-18.906-18.906 8.481-18.907 18.906-18.907zm-2.85 52.813h5.7c17.025 0 30.893 13.743 31.11 30.717-9.843 6.213-21.485 9.825-33.96 9.825s-24.117-3.612-33.96-9.825c.217-16.975 14.085-30.717 31.11-30.717zm94.679 204.358h5.7c17.025 0 30.893 13.743 31.11 30.717-9.843 6.213-21.485 9.825-33.96 9.825s-24.117-3.612-33.96-9.825c.217-16.974 14.085-30.717 31.11-30.717zm-16.056-33.906c0-10.425 8.481-18.906 18.906-18.906s18.906 8.481 18.906 18.906-8.481 18.906-18.906 18.906-18.906-8.481-18.906-18.906zm42.816 24.016c6.171-6.144 9.997-14.641 9.997-24.016 0-18.696-15.21-33.906-33.906-33.906s-33.906 15.21-33.906 33.906c0 9.375 3.826 17.872 9.997 24.016-11.479 5.919-20.17 16.506-23.534 29.244-10.173-11.31-16.377-26.259-16.377-42.632 0-35.191 28.63-63.821 63.821-63.821s63.821 28.63 63.821 63.821c0 16.374-6.203 31.322-16.377 42.632-3.366-12.738-12.057-23.325-23.536-29.244zm-102.703-11.568h-31.772c.697-30.946-16.639-58.262-42.456-71.731l38.765-58.11c6.262 1.611 12.818 2.483 19.577 2.483s13.315-.871 19.577-2.483l38.765 58.11c-25.792 13.477-43.193 40.726-42.456 71.731zm-113.415 21.458h5.7c17.025 0 30.893 13.743 31.11 30.717-9.843 6.213-21.485 9.825-33.96 9.825s-24.117-3.612-33.96-9.825c.217-16.974 14.085-30.717 31.11-30.717zm-16.056-33.906c0-10.425 8.481-18.906 18.906-18.906s18.906 8.481 18.906 18.906-8.481 18.906-18.906 18.906-18.906-8.481-18.906-18.906zm42.815 24.016c6.171-6.144 9.997-14.641 9.997-24.016 0-18.696-15.21-33.906-33.906-33.906s-33.906 15.21-33.906 33.906c0 9.375 3.826 17.872 9.997 24.016-11.479 5.919-20.17 16.506-23.534 29.244-10.175-11.31-16.378-26.259-16.378-42.632 0-35.191 28.63-63.821 63.821-63.821s63.821 28.63 63.821 63.821c0 16.374-6.203 31.322-16.377 42.632-3.364-12.738-12.056-23.325-23.535-29.244zm-147.73-179.488c0-12.406 10.093-22.5 22.5-22.5h118.772c1.061 5.204 2.636 10.222 4.672 15h-119.444c-6.341 0-11.5 5.159-11.5 11.5v128.609c0 4.143 3.358 7.5 7.5 7.5s7.5-3.357 7.5-7.5v-125.109h124.375c7.709 10.774 18.123 19.503 30.053 25.276l-38.481 57.685c-7.025-2.059-14.445-3.183-22.126-3.183-43.462 0-78.821 35.359-78.821 78.821 0 43.671 36.009 78.82 78.821 78.82 36.898 0 69.191-26.086 77.011-62h35.337c7.766 35.836 40.3 62 77.011 62 43.023 0 78.821-35.492 78.821-78.82 0-43.462-35.359-78.821-78.821-78.821-7.682 0-15.101 1.125-22.126 3.183l-38.481-57.685c11.952-5.769 22.334-14.489 30.053-25.276h124.374v252.42h-377v-92.311c0-4.143-3.358-7.5-7.5-7.5s-7.5 3.357-7.5 7.5v95.811c0 6.341 5.159 11.5 11.5 11.5h384c6.341 0 11.5-5.159 11.5-11.5v-259.42c0-6.341-5.159-11.5-11.5-11.5h-119.444c2.035-4.778 3.61-9.796 4.672-15h118.772c12.407 0 22.5 10.094 22.5 22.5v304.92h-437zm253.955 319.92v12.5c0 1.379-1.122 2.5-2.5 2.5h-65.91c-1.378 0-2.5-1.121-2.5-2.5v-12.5zm205.545 32.049c0 15.412-12.539 27.951-27.951 27.951h-426.098c-15.412 0-27.951-12.539-27.951-27.951v-32.049h190.545v12.5c0 9.649 7.851 17.5 17.5 17.5h65.91c9.649 0 17.5-7.851 17.5-17.5v-12.5h190.545z" />
+                                </g>
+                            </svg>
+                            Events and webinars
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-link" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="icofont-gear-alt"></i>
+                            settings
+                        </span>
+                        <ul class="dropdown-menu ms-5 " aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="./myProfile.html">My profile</a></li>
+                            <li><a class="dropdown-item" href="#">Edit profile</a></li>
+                            <li><a class="dropdown-item">Admin User Panel</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <span href="" class="nav-link" id="supportDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="icofont-life-buoy"></i>
+                            support
+                        </span>
+                        <ul class="dropdown-menu ms-5 " aria-labelledby="supportDropdown">
+                            <li><a class="dropdown-item" href="./support.html">Admin View</a></li>
+                            <li><a class="dropdown-item" href="./supportStaffView.html">Stuff View</a></li>
+                            <li><a class="dropdown-item" href="./allTeckets.html">All Tickets</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- nav links ends here -->
+            </div>
+        </aside>
+        <!-- sidebar section ends here -->
+    </header>
+    <!-- main section starts -->
+    <main>
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md-3">
+                    <div class="panel-box blue1">
+                        <h2>SUPPORT STAFF</h2>
+                        <div class="panel-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="34.5" height="34.5" viewBox="0 0 34.5 34.5">
+                                <g id="user_icon" data-name="user icon" transform="translate(-853 -223)">
+                                    <path id="Path_8" data-name="Path 8"
+                                        d="M33.75,33.75H31.5V28.125A5.632,5.632,0,0,0,25.875,22.5V20.25a7.884,7.884,0,0,1,7.875,7.875Z"
+                                        transform="translate(853.75 223.75)" fill="#fff" />
+                                    <path id="Path_9" data-name="Path 9"
+                                        d="M24.75,33.75H22.5V28.125A5.632,5.632,0,0,0,16.875,22.5h-6.75A5.632,5.632,0,0,0,4.5,28.125V33.75H2.25V28.125a7.884,7.884,0,0,1,7.875-7.875h6.75a7.884,7.884,0,0,1,7.875,7.875Z"
+                                        transform="translate(850.75 223.75)" fill="#fff" />
+                                    <path id="Path_10" data-name="Path 10"
+                                        d="M22.5,2.25V4.5a5.625,5.625,0,0,1,0,11.25V18a7.875,7.875,0,1,0,0-15.75Z"
+                                        transform="translate(853.75 220.75)" fill="#fff" />
+                                    <path id="Path_11" data-name="Path 11"
+                                        d="M13.5,4.5a5.625,5.625,0,1,1-5.625,5.625A5.625,5.625,0,0,1,13.5,4.5m0-2.25a7.875,7.875,0,1,0,7.875,7.875A7.875,7.875,0,0,0,13.5,2.25Z"
+                                        transform="translate(850.75 220.75)" fill="#fff" />
+                                </g>
+                            </svg>
+                            <p>8</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="panel-box blue2">
+                        <h2>Ticket Assigned</h2>
+                        <div class="panel-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24.643" height="34.5"
+                                viewBox="0 0 24.643 34.5">
+                                <g id="ticket" transform="translate(333.393 105.821) rotate(90)">
+                                    <path id="Path_48" data-name="Path 48"
+                                        d="M35.518,16.607a1.232,1.232,0,0,0,1.232-1.232V9.214A2.464,2.464,0,0,0,34.286,6.75H4.714A2.464,2.464,0,0,0,2.25,9.214v6.161a1.232,1.232,0,0,0,1.232,1.232,2.464,2.464,0,0,1,0,4.929A1.232,1.232,0,0,0,2.25,22.768v6.161a2.464,2.464,0,0,0,2.464,2.464H34.286a2.464,2.464,0,0,0,2.464-2.464V22.768a1.232,1.232,0,0,0-1.232-1.232,2.464,2.464,0,1,1,0-4.929ZM34.286,23.84v5.088H25.661v-3.7H23.2v3.7H4.714V23.84a4.929,4.929,0,0,0,0-9.536V9.214H23.2v3.7h2.464v-3.7h8.625V14.3a4.929,4.929,0,0,0,0,9.536Z"
+                                        transform="translate(-108.071 302)" fill="#fff" />
+                                </g>
+                            </svg>
+
+                            <p>15</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="panel-box blue3">
+                        <h2>TICKET RESOLVED</h2>
+                        <div class="panel-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24.643" height="34.5"
+                                viewBox="0 0 24.643 34.5">
+                                <g id="ticket" transform="translate(333.393 105.821) rotate(90)">
+                                    <path id="Path_48" data-name="Path 48"
+                                        d="M35.518,16.607a1.232,1.232,0,0,0,1.232-1.232V9.214A2.464,2.464,0,0,0,34.286,6.75H4.714A2.464,2.464,0,0,0,2.25,9.214v6.161a1.232,1.232,0,0,0,1.232,1.232,2.464,2.464,0,0,1,0,4.929A1.232,1.232,0,0,0,2.25,22.768v6.161a2.464,2.464,0,0,0,2.464,2.464H34.286a2.464,2.464,0,0,0,2.464-2.464V22.768a1.232,1.232,0,0,0-1.232-1.232,2.464,2.464,0,1,1,0-4.929ZM34.286,23.84v5.088H25.661v-3.7H23.2v3.7H4.714V23.84a4.929,4.929,0,0,0,0-9.536V9.214H23.2v3.7h2.464v-3.7h8.625V14.3a4.929,4.929,0,0,0,0,9.536Z"
+                                        transform="translate(-108.071 302)" fill="#fff" />
+                                </g>
+                            </svg>
+
+                            <p>8</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="panel-box blue4">
+                        <h2>TICKET Resolved</h2>
+                        <div class="panel-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24.643" height="34.5"
+                                viewBox="0 0 24.643 34.5">
+                                <g id="ticket" transform="translate(333.393 105.821) rotate(90)">
+                                    <path id="Path_48" data-name="Path 48"
+                                        d="M35.518,16.607a1.232,1.232,0,0,0,1.232-1.232V9.214A2.464,2.464,0,0,0,34.286,6.75H4.714A2.464,2.464,0,0,0,2.25,9.214v6.161a1.232,1.232,0,0,0,1.232,1.232,2.464,2.464,0,0,1,0,4.929A1.232,1.232,0,0,0,2.25,22.768v6.161a2.464,2.464,0,0,0,2.464,2.464H34.286a2.464,2.464,0,0,0,2.464-2.464V22.768a1.232,1.232,0,0,0-1.232-1.232,2.464,2.464,0,1,1,0-4.929ZM34.286,23.84v5.088H25.661v-3.7H23.2v3.7H4.714V23.84a4.929,4.929,0,0,0,0-9.536V9.214H23.2v3.7h2.464v-3.7h8.625V14.3a4.929,4.929,0,0,0,0,9.536Z"
+                                        transform="translate(-108.071 302)" fill="#fff" />
+                                </g>
+                            </svg>
+
+                            <p>4</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2 class="heading">SUPPORT TEAM MEMBERS</h2>
+            <div class="table-container">
+                <table class="shadow-table">
+                    <thead>
+                        <tr class="head-row">
+                            <th>Name</th>
+                            <th>Ticket Assign</th>
+                            <th>Last Assign</th>
+                            <th>Ticket Resolved</th>
+                            <th>Last Resolved</th>
+                            <th>Status</th>
+                            <th>Service Name</th>
+                            <th>Sub Service</th>
+                            <th>Working On</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="data-row">
+                            <td>
+                                <a href="support_staff.html" class="staff-link">Azharul</a>
+                            </td>
+                            <td>3</td>
+                            <td>30 minutes ago</td>
+                            <td>2</td>
+                            <td>20 minutes ago</td>
+                            <td>
+                                Active
+                                <i class="bi bi-circle-fill" style="color: #5bbc2e; font-size: 10px"></i>
+                            </td>
+                            <td>bcs</td>
+                            <td>hack recovery</td>
+                            <td>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                    <g id="ticket" transform="translate(0 0)">
+                                        <path id="Path_50" data-name="Path 50"
+                                            d="M15.918,5.383,15.9,5.371,13.946,3.413a.979.979,0,0,1-1.357-1.358L10.618.083a.283.283,0,0,0-.4,0L.083,10.218h0a.282.282,0,0,0,0,.4h0l1.972,1.97a.979.979,0,0,1,1.358,1.357L5.36,15.89a.235.235,0,0,0,.023.028.282.282,0,0,0,.4,0h0L15.918,5.781a.282.282,0,0,0,0-.4Zm-2.234.4-7.9,7.9a.282.282,0,0,1-.4,0L2.318,10.618a.282.282,0,0,1,0-.4l7.9-7.9a.282.282,0,0,1,.4,0l3.066,3.066a.282.282,0,0,1,0,.4Z" />
+                                        <path id="Path_51" data-name="Path 51"
+                                            d="M22.292,18.548l-2.456-1.173.3-2.568a.185.185,0,0,0-.314-.152L17.986,16.49l-2.4-1.144a.184.184,0,0,0-.246.245l1.144,2.4-1.835,1.835a.184.184,0,0,0,.151.313l2.568-.3,1.174,2.456a.185.185,0,0,0,.345-.035l.673-2.691,2.692-.674a.187.187,0,0,0,.139-.161.185.185,0,0,0-.1-.184Z"
+                                            transform="translate(-10.353 -10.353)" />
+                                    </g>
+                                </svg>
+                                56458
+                            </td>
+                        </tr>
+                        <tr class="data-row">
+                            <td>
+                                <a href="support_staff.html" class="staff-link">Shomit</a>
+                            </td>
+                            <td>5</td>
+                            <td>15 minutes ago</td>
+                            <td>1</td>
+                            <td>10 minutes ago</td>
+                            <td>
+                                Active
+                                <i class="bi bi-circle-fill" style="color: #5bbc2e; font-size: 10px"></i>
+                            </td>
+                            <td>bcs</td>
+                            <td>hack recovery</td>
+                            <td>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                    <g id="ticket" transform="translate(0 0)">
+                                        <path id="Path_50" data-name="Path 50"
+                                            d="M15.918,5.383,15.9,5.371,13.946,3.413a.979.979,0,0,1-1.357-1.358L10.618.083a.283.283,0,0,0-.4,0L.083,10.218h0a.282.282,0,0,0,0,.4h0l1.972,1.97a.979.979,0,0,1,1.358,1.357L5.36,15.89a.235.235,0,0,0,.023.028.282.282,0,0,0,.4,0h0L15.918,5.781a.282.282,0,0,0,0-.4Zm-2.234.4-7.9,7.9a.282.282,0,0,1-.4,0L2.318,10.618a.282.282,0,0,1,0-.4l7.9-7.9a.282.282,0,0,1,.4,0l3.066,3.066a.282.282,0,0,1,0,.4Z" />
+                                        <path id="Path_51" data-name="Path 51"
+                                            d="M22.292,18.548l-2.456-1.173.3-2.568a.185.185,0,0,0-.314-.152L17.986,16.49l-2.4-1.144a.184.184,0,0,0-.246.245l1.144,2.4-1.835,1.835a.184.184,0,0,0,.151.313l2.568-.3,1.174,2.456a.185.185,0,0,0,.345-.035l.673-2.691,2.692-.674a.187.187,0,0,0,.139-.161.185.185,0,0,0-.1-.184Z"
+                                            transform="translate(-10.353 -10.353)" />
+                                    </g>
+                                </svg>
+                                56149
+                            </td>
+                        </tr>
+                        <tr class="data-row">
+                            <td>
+                                <a href="support_staff.html" class="staff-link">Tanzil</a>
+                            </td>
+                            <td>1</td>
+                            <td>40 minutes ago</td>
+                            <td>4</td>
+                            <td>5 minutes ago</td>
+                            <td>
+                                Offline
+                                <i class="bi bi-circle-fill" style="color: gray; font-size: 10px"></i>
+                            </td>
+                            <td>bcs</td>
+                            <td>hack recovery</td>
+                            <td>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                                    <g id="ticket" transform="translate(0 0)">
+                                        <path id="Path_50" data-name="Path 50"
+                                            d="M15.918,5.383,15.9,5.371,13.946,3.413a.979.979,0,0,1-1.357-1.358L10.618.083a.283.283,0,0,0-.4,0L.083,10.218h0a.282.282,0,0,0,0,.4h0l1.972,1.97a.979.979,0,0,1,1.358,1.357L5.36,15.89a.235.235,0,0,0,.023.028.282.282,0,0,0,.4,0h0L15.918,5.781a.282.282,0,0,0,0-.4Zm-2.234.4-7.9,7.9a.282.282,0,0,1-.4,0L2.318,10.618a.282.282,0,0,1,0-.4l7.9-7.9a.282.282,0,0,1,.4,0l3.066,3.066a.282.282,0,0,1,0,.4Z" />
+                                        <path id="Path_51" data-name="Path 51"
+                                            d="M22.292,18.548l-2.456-1.173.3-2.568a.185.185,0,0,0-.314-.152L17.986,16.49l-2.4-1.144a.184.184,0,0,0-.246.245l1.144,2.4-1.835,1.835a.184.184,0,0,0,.151.313l2.568-.3,1.174,2.456a.185.185,0,0,0,.345-.035l.673-2.691,2.692-.674a.187.187,0,0,0,.139-.161.185.185,0,0,0-.1-.184Z"
+                                            transform="translate(-10.353 -10.353)" />
+                                    </g>
+                                </svg>
+                                75869
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <!-- bootstrap scripts CDN link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <!-- jquery scripts -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <!-- data table library -->
+    <script src="https://cdn.datatables.net/1.11.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.1/js/dataTables.bootstrap5.min.js"></script>
+    <!-- date range picker -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <!-- custom scripts -->
+    <script src="./scripts/eventWebinar.js"></script>
+    <script src="./scripts/nav.js"></script>
+</body>
+
+</html>
