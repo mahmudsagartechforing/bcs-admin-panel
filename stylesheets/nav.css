@@ -143,6 +143,10 @@ aside {
 .nav-link {
     color: var(--var-link-color);
     text-transform: uppercase;
+    display: grid;
+    grid-template-columns: 35px 1fr 10px;
+    align-items: center;
+    grid-gap: 7px;
 }
 
 .nav-link i {
@@ -321,7 +325,7 @@ body {
     width: 35px;
     height: 33px;
     margin-right: 5px;
-    display: inline;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -396,9 +400,7 @@ body {
     padding-block: 0;
 }
 
-.dropdown-container .active::after {
-    top: 17px !important;
-}
+
 
 #event-details td .btn {
     display: contents;
