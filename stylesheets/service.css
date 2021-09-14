@@ -95,6 +95,9 @@
 .tox-notifications-container{
     display: none;
 }
+#service-list tbody{
+    text-align: center;
+}
 
 @media (max-width:1241px) {
     #sub-service-list_filter{

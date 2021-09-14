@@ -1,6 +1,7 @@
 :root {
     --var-primary-color: #182f59;
-    --var-first-ring-color: #182f59;
+    --var-primary-color-dark: #111125;
+    --var-primary-color-25: #022E75;
     --var-sidebar-color: #f2f3f7;
     --var-box-shadow-color: #d9d9d9;
     --var-link-color: #111125;
@@ -51,7 +52,15 @@ a {
     background-color: var(--var-btn-background-purple);
     color: #fff;
 }
-
+.bg-primary-25 {
+    background-color: var(--var-primary-color-25);
+}
+.bg-primary-50 {
+    background-color: var(--var-primary-color);
+}
+.bg-primary-dark {
+    background-color: var(--var-primary-color-dark);
+}
 /* topbar nav style starts here */
 
 nav {

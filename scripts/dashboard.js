@@ -50,18 +50,6 @@ $(document).ready(function () {
         sorting: false,
     });
 });
-const firstBox = document.getElementById("firstBox");
-const secondBox = document.getElementById("secondBox");
-
-const showDetailOption = (box) => {
-    if (box == firstBox) {
-        secondBox.classList.remove("show-detail");
-        box.classList.add("show-detail");
-    } else {
-        firstBox.classList.remove("show-detail");
-        box.classList.add("show-detail");
-    }
-};
 
 const useraStats = document.querySelectorAll(".user-stat-bubble");
 const businessUsersDetail = document.querySelector(".business-users-detail");
