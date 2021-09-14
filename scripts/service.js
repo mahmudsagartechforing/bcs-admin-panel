@@ -59,3 +59,16 @@ tinymce.init({
     content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
   });
   
+const addServiceBtn = document.querySelector(".addService")
+const addServiceFormClose = document.querySelector(".form-close")
+const addServiceForm = document.querySelector(".add-form")
+const tableContainer = document.querySelector(".table-container")
+
+addServiceBtn.addEventListener("click", ()=>{
+    tableContainer.classList.add("d-none")
+    addServiceForm.classList.remove("d-none")
+})
+addServiceFormClose.addEventListener("click", ()=>{
+    addServiceForm.classList.add("d-none")
+    tableContainer.classList.remove("d-none")
+})
