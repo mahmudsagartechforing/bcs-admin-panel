@@ -145,3 +145,31 @@
 .accordion-body{
     text-transform: capitalize;
 }
+.revenue-stat{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 2fr;
+}
+.revenue{
+    border: 5px solid #5bbc2e;
+    padding: 1.5rem;
+    width: 10rem;
+    height: 10rem;
+}
+.revenue:last-child{
+    width: 100%;
+}
+
+.revenue h4{
+    font-size: 14px;
+}
+.revenue p{
+    font-size: 1.5rem;
+}
+
+@media (max-width:1241px) {
+    .revenue{
+        width: 9rem;
+        height: 9rem;
+    }
+}
