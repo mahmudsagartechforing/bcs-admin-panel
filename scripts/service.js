@@ -9,7 +9,6 @@ $(document).ready(function () {
         }],
         sorting: false,
         oLanguage: {
-            sLengthMenu: "Sub-service list",
             sSearch: `_INPUT_ <i class="bi bi-search"></i>`,
             sSearchPlaceholder: "Search...",
         },
@@ -27,7 +26,6 @@ $(document).ready(function () {
         }],
         sorting: false,
         oLanguage: {
-            sLengthMenu: "Sub-service list",
             sSearch: `_INPUT_ <i class="bi bi-search"></i>`,
             sSearchPlaceholder: "Search...",
         },

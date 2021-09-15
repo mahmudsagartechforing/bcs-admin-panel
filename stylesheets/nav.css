@@ -108,7 +108,7 @@ aside {
 }
 
 .aside-container {
-    width: 260px;
+    width: 20%;
     position: fixed;
     top: 6.4rem;
     bottom: 0;
@@ -206,8 +206,8 @@ textarea:focus {
 /* main section style starts */
 
 main {
-    width: calc(100% - 260px);
-    margin-inline-start: 260px;
+    width: calc(100% - 20%);
+    margin-inline-start: 20%;
     padding-inline: 1rem;
     margin-block-start: 7rem;
 }

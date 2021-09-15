@@ -109,9 +109,17 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{% host_url 'main_admin_events' %}" class="nav-link">
-                            <i class="bi bi-tag-fill"></i> subscription
-                        </a>
+                        <span class="nav-link dropdown-btn dropdown-toggle" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-tag-fill"></i>
+                            Subscription
+                        </span>
+                        <ul class="dropdown-container" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item nav-link" href="./subscriptionList.html"><i
+                                        class="bi bi-tag-fill"></i>Subscription List</a></li>
+                            <li><a class="dropdown-item nav-link" href="./subService.html"><i
+                                        class="bi bi-collection-fill"></i>Sub Service</a></li>
+                        </ul>
                     </li>
                     <li>
                         <a href="{% host_url 'main_admin_events' %}" class="nav-link">
