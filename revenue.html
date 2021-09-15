@@ -179,13 +179,12 @@
         </section>
         <section class="info">
             <div class="container">
-
                 <div class="row my-5">
 
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <div class="multiselect">
                             <div class="selectBox"
-                                onclick="if (!window.__cfRLUnblockHandlers) return false; showCheckboxes(checkboxes)">
+                                onclick="showCheckboxes(checkboxes)">
                                 <select>
                                     <option>Select an option</option>
                                 </select>
@@ -207,49 +206,14 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-md-4">
-                        <div class="multiselect">
-                            <div class="selectBox"
-                                onclick="if (!window.__cfRLUnblockHandlers) return false; showCheckboxes(checkboxes2)">
-                                <select>
-                                    <option>Select an option</option>
-                                </select>
-                                <div class="overSelect"></div>
-                            </div>
-                            <div id="checkboxes2">
-                                <label for="one">
-                                    <input type="checkbox" id="one">Concierge
-                                    Cybersecurity</label>
-                                <label for="two">
-                                    <input type="checkbox" id="two">Managed
-                                    Cybersecurity</label>
-                                <label for="three">
-                                    <input type="checkbox" id="three">Plug &amp;
-                                    Play Program</label>
-                                <label for="three">
-                                    <input type="checkbox" id="three">Professional (Academy)</label>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                         <input type="text" id="dashboardDaterange" value="Select By Time range" name="daterange">
                     </div>
                 </div>
                 <div class="row">
 
                     <div class="col-md-12">
-                        <div class="chartjs-size-monitor">
-                            <div class="chartjs-size-monitor-expand">
-                                <div class=""></div>
-                            </div>
-                            <div class="chartjs-size-monitor-shrink">
-                                <div class=""></div>
-                            </div>
-                        </div>
-                        <canvas id="info-chart" height="184" class="chartjs-render-monitor" width="1107"
-                            style="display: block; width: 1107px; height: 184px;"></canvas>
+                        <canvas id="info-chart"></canvas>
 
                         <div class="filter-options d-flex w-85 float-end justify-content-between mb-3">
                             <button class="btn btn-secondary mx-2 rounded-pill">1d</button>
