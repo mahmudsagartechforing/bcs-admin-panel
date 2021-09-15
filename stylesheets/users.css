@@ -39,3 +39,8 @@
 .service thead th{
     font-size: 12px !important;
 }
+@media (max-width: 1241px){
+    #all-user-info_filter {
+        width: 100%;
+    }
+}

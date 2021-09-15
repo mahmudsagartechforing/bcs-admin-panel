@@ -28,32 +28,21 @@ p {
 
 .subscription-info {
     color: var(--var-topbar-background-color);
-    text-align: center;
-    padding-block: 1rem;
+    padding: 1rem;
 }
-.filter-btn-container .subscription-filter-btn{
-    font-size: 1.125rem;
-    color: #7a7a7a;
+
+.subscription-info h3{
+    font-size: 22px;
 }
-.filter-btn-container .active{
-    font-weight: 700;
-    text-decoration: underline;
-    color: #000000;
-}
-.byMedium{
-    display: none;
-}
-#daterange{
-    background-color: var(--var-icon-color);
-    border: none;
-    padding: .5rem 1rem;
-    width: 100%;
-    color: #ffffff;
+
+.subscription-info p{
+    font-size: 18px;
 }
 #subscription-list,
 #subscription-list td, #subscription-details,
 #subscription-details td {
     border: .5px solid #707070;
+    font-size: 14px;
 }
 
 #subscription-list {
@@ -68,13 +57,7 @@ p {
     width: 100px;
 }
 
-#subscription-list td:nth-child(6) i {
-    font-size: 8px;
-}
 
-#subscription-list td:nth-child(7) {
-    text-align: start;
-}
 
 #subscription-list thead, #subscription-details thead {
     background: #182f5910;
@@ -82,6 +65,7 @@ p {
 }
 #subscription-list thead th, #subscription-details thead th {
     border: 1px solid #707070;
+    font-size: 15px;
 }
 
 #subscription-list_filter{
@@ -102,23 +86,15 @@ p {
 }
 
 
-table.dataTable > thead .sorting:before,
-table.dataTable > thead .sorting:after,
-table.dataTable > thead .sorting_asc:before,
-table.dataTable > thead .sorting_asc:after,
-table.dataTable > thead .sorting_desc:before,
-table.dataTable > thead .sorting_desc:after,
-table.dataTable > thead .sorting_asc_disabled:before,
-table.dataTable > thead .sorting_asc_disabled:after,
-table.dataTable > thead .sorting_desc_disabled:before,
-table.dataTable > thead .sorting_desc_disabled:after {
-    display: none;
-}
-
-.dataTables_length select{
-    display: inline-block;
-}
 #subscription-details_filter input{
     display: inline !important;
     width: auto !important;
+}
+@media (max-width: 1241px){
+    .subscription-info {
+        height: 140px;
+    }
+    #subscription-list_filter {
+        width: 100%;
+    }
 }

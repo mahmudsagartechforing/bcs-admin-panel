@@ -117,16 +117,16 @@
                             <li><a class="dropdown-item nav-link" href="./subscriptionList.html"><i
                                         class="bi bi-tag-fill"></i>Subscription List</a></li>
                             <li><a class="dropdown-item nav-link" href="./subService.html"><i
-                                        class="bi bi-collection-fill"></i>Sub Service</a></li>
+                                        class="bi bi-collection-fill"></i>Subscription package</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="{% host_url 'main_admin_events' %}" class="nav-link">
+                        <a href="{% host_url 'main_admin_subscriptions' %}" class="nav-link">
                             <i class="bi bi-currency-dollar"></i> revenue
                         </a>
                     </li>
                     <li>
-                        <a href="{% host_url 'main_admin_events' %}" class="nav-link">
+                        <a href="{% host_url 'main_admin_subscriptions' %}" class="nav-link">
                             <i class="bi bi-hand-index-fill"></i> user interest
                         </a>
                     </li>
@@ -150,37 +150,46 @@
     </header>
     <!-- main section starts -->
     <main>
-        <section class="event-count mb-5">
+        <section class="subscription-count mb-5">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="event-info bg-primary-25">
-                            <h3>Active Events</h3>
-                            <p class="display-6 fw-bolder">
-                                <i class="bi bi-calendar2-check"></i> 20
+                <div class="row"> 
+                    <h2 class="float-start text-uppercase mb-4">total client</h2>
+                    <div class="col-md-3">
+                        <div class="subscription-info bg-primary-dark">
+                            <h3>Risk assessment</h3>
+                            <p class="fw-bolder">
+                                <i class="bi bi-person"></i> <span style="font-size: 25px;">750</span> users
                             </p>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="event-info bg-primary-50">
-                            <h3>Previous Events</h3>
-                            <p class="display-6 fw-bolder">
-                                <i class="bi bi-calendar2-check"></i> 15
+                    <div class="col-md-3">
+                        <div class="subscription-info bg-primary-25">
+                            <h3>Incident response</h3>
+                            <p class="fw-bolder">
+                                <i class="bi bi-person"></i> <span style="font-size: 25px;">750</span> users
                             </p>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="event-info bg-saphire">
-                            <h3>Upcoming Events</h3>
-                            <p class="display-6 fw-bolder">
-                                <i class="bi bi-calendar2-check"></i> 50
+                    <div class="col-md-3">
+                        <div class="subscription-info bg-primary-50">
+                            <h3>Security comliance</h3>
+                            <p class="fw-bolder">
+                                <i class="bi bi-person"></i> <span style="font-size: 25px;">750</span> users
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="subscription-info" style="background-color: #3869C1;">
+                            <h3>SMB Solution</h3>
+                            <p class="fw-bolder">
+                                <i class="bi bi-person"></i> <span style="font-size: 25px;">750</span> users
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="event-control">
+        <section class="subscription-control">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12 position-relative" style="margin-block-end: 15rem;">
@@ -188,136 +197,56 @@
                         <table id="subscription-list" class="display" style="width: 100%">
                             <thead>
                                 <tr>
-                                    <th>#</th>
-                                    <th>Event Name</th>
-                                    <th>Date</th>
-                                    <th>Time</th>
-                                    <th>Medium</th>
-                                    <th>Status</th>
-                                    <th>Description</th>
-                                    <th>Action</th>
+                                    <th>SL</th>
+                                    <th>User Name</th>
+                                    <th>Service Name</th>
+                                    <th>Sub Service Name</th>
+                                    <th>Price</th>
+                                    <th>Package Name</th>
+                                    <th>Start Date</th>
+                                    <th>Expire Date</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>1</td>
-                                    <td>
-                                        <a href="./eventDetail.html">CCSP for HNWI</a>
-                                    </td>
-                                    <td>2011/04/25</td>
-                                    <td>8:00 AM</td>
-                                    <td>Online</td>
-                                    <td>Active <i class="bi bi-circle-fill text-success"></i></td>
-                                    <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto ab dolore
-                                        nisi beatae perspiciatis earum!</td>
-                                    <td>
-                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                            <i class="
-                                                        icofont-edit
-                                                        text-primary
-                                                        rounded-circle
-                                                        activites-icon
-                                                    "></i>
-                                        </button>
-                                        <button class="btn">
-                                            <i class="
-                                                        bi bi-trash-fill
-                                                        text-danger
-                                                        rounded-circle
-                                                        activites-icon
-                                                    "></i>
-                                        </button>
-                                    </td>
+                                    <td>Afsana</td>
+                                    <td>SMB Solution</td>
+                                    <td>Plug & Play Program</td>
+                                    <td>$500</td>
+                                    <td>BASIC</td>
+                                    <td>01.02.2021</td>
+                                    <td>01.02.2021</td>
                                 </tr>
                                 <tr>
                                     <td>1</td>
-                                    <td>
-                                        <a href="./eventDetail.html">CCSP for HNWI</a>
-                                    </td>
-                                    <td>2011/04/25</td>
-                                    <td>8:00 AM</td>
-                                    <td>Online</td>
-                                    <td>Deactive <i class="bi bi-circle-fill text-danger"></i></td>
-                                    <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto ab dolore
-                                        nisi beatae perspiciatis earum!</td>
-                                    <td>
-                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                            <i class="
-                                                        icofont-edit
-                                                        text-primary
-                                                        rounded-circle
-                                                        activites-icon
-                                                    "></i>
-                                        </button>
-                                        <button class="btn">
-                                            <i class="
-                                                        bi bi-trash-fill
-                                                        text-danger
-                                                        rounded-circle
-                                                        activites-icon
-                                                    "></i>
-                                        </button>
-                                    </td>
+                                    <td>Afsana</td>
+                                    <td>SMB Solution</td>
+                                    <td>Managed security Solution</td>
+                                    <td>$1000</td>
+                                    <td>MEDIUM</td>
+                                    <td>01.02.2021</td>
+                                    <td>01.02.2021</td>
                                 </tr>
                                 <tr>
                                     <td>1</td>
-                                    <td>
-                                        <a href="./eventDetail.html">CCSP for HNWI</a>
-                                    </td>
-                                    <td>2011/04/25</td>
-                                    <td>8:00 AM</td>
-                                    <td>Online</td>
-                                    <td>Completed <i class="bi bi-circle-fill text-dark"></i></td>
-                                    <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto ab dolore
-                                        nisi beatae perspiciatis earum!</td>
-                                    <td>
-                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                            <i class="
-                                                        icofont-edit
-                                                        text-primary
-                                                        rounded-circle
-                                                        activites-icon
-                                                    "></i>
-                                        </button>
-                                        <button class="btn">
-                                            <i class="
-                                                        bi bi-trash-fill
-                                                        text-danger
-                                                        rounded-circle
-                                                        activites-icon
-                                                    "></i>
-                                        </button>
-                                    </td>
+                                    <td>Afsana</td>
+                                    <td>SMB Solution</td>
+                                    <td>Plug & Play Program</td>
+                                    <td>$1100</td>
+                                    <td>PREMIUM</td>
+                                    <td>01.02.2021</td>
+                                    <td>01.02.2021</td>
                                 </tr>
                                 <tr>
                                     <td>1</td>
-                                    <td>
-                                        <a href="./eventDetail.html">CCSP for HNWI</a>
-                                    </td>
-                                    <td>2011/04/25</td>
-                                    <td>8:00 AM</td>
-                                    <td>Online</td>
-                                    <td>Canceled <i class="bi bi-circle-fill text-yellow"></i></td>
-                                    <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto ab dolore
-                                        nisi beatae perspiciatis earum!</td>
-                                    <td>
-                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                            <i class="
-                                                        icofont-edit
-                                                        text-primary
-                                                        rounded-circle
-                                                        activites-icon
-                                                    "></i>
-                                        </button>
-                                        <button class="btn">
-                                            <i class="
-                                                        bi bi-trash-fill
-                                                        text-danger
-                                                        rounded-circle
-                                                        activites-icon
-                                                    "></i>
-                                        </button>
-                                    </td>
+                                    <td>Afsana</td>
+                                    <td>SMB Solution</td>
+                                    <td>Managed security Solution</td>
+                                    <td>$2000</td>
+                                    <td>MAXIMUM</td>
+                                    <td>01.02.2021</td>
+                                    <td>01.02.2021</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -335,9 +264,9 @@
                     <div class="modal-body">
                         <form action="">
                             <div class="col-auto mb-3">
-                                <label for="eventName">Event Name</label>
-                                <input type="eventName" class="form-control" id="eventName"
-                                    placeholder="Enter Event Name" />
+                                <label for="subscriptionName">subscription Name</label>
+                                <input type="subscriptionName" class="form-control" id="subscriptionName"
+                                    placeholder="Enter subscription Name" />
                             </div>
                             <div class="col-auto mb-3">
                                 <label for="medium">Medium</label>
