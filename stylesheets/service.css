@@ -31,6 +31,15 @@
 .service{
     color: #000000;
 }
+#reading-list th{
+    font-size: 15px !important;
+    text-align: start;
+}
+#reading-list td{
+    font-size: 14px !important;
+    text-align: start;
+}
+
 #sub-service-list th{
     font-size: 15px !important;
 }
@@ -42,24 +51,18 @@
     align-items: center;
     align-content: center;
 }
-#sub-service-list_length label{
-    font-weight: 600;
-    font-size: 28px;
-    margin-top: 2rem;
-    line-height: 10px;
-    text-transform: capitalize;
-}
-#sub-service-list_filter{
+
+#sub-service-list_filter, #reading-list_filter{
     margin-bottom: 2rem;
     float: right;
     width: 60%;
 }
-#sub-service-list_filter label{
+#sub-service-list_filter label, #reading-list_filter label{
     padding: .5rem 1rem;
     width: 100%;
     border: 1px solid #707070;
 }
-#sub-service-list_filter input{
+#sub-service-list_filter input, #reading-list_filter input{
     display: inline !important;
     border-color: transparent;
     width: 90%;
@@ -97,6 +100,9 @@
 }
 #service-list tbody{
     text-align: center;
+}
+.form-close-back{
+    border: 1px solid #182f59;
 }
 
 @media (max-width:1241px) {

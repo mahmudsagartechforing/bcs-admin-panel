@@ -87,7 +87,7 @@
                     <li>
                         <span class="nav-link dropdown-btn dropdown-toggle" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bi bi-collection-fill"></i>
+                            <i class="bi bi-people-fill"></i>
                             users
                         </span>
                         <ul class="dropdown-container" aria-labelledby="navbarDropdown">
@@ -104,7 +104,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="{% host_url 'main_admin_events' %}" class="nav-link">
+                        <a href="./readingList.html" class="nav-link">
                             <i class="bi bi-file-earmark-fill"></i> Reading List
                         </a>
                     </li>
@@ -145,7 +145,11 @@
     <main>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-12 ">
+                <div class="col-lg-12">
+                    <button class="btn border-1 form-close form-close-back float-start my-4 d-none" >
+                        <i class="bi bi-arrow-left-circle-fill"></i>
+                        Go back to list
+                    </button>
                     <button class="btn border-1 addService float-end my-4" >
                         Add Sub Service
                         <i class="bi bi-plus-circle-fill"></i></button>
@@ -156,6 +160,7 @@
                     <div class="modal-dialog modal-lg add-form d-none">
                         <div class="modal-content">
                             <div class="modal-header">
+                                <h4>Add Sub Service</h4>
                                 <button type="button" class="btn-close form-close"></button>
                             </div>
                             <div class="modal-body px-3">
@@ -536,7 +541,7 @@
                                     Save and add another
                                 </button> -->
                                 <button class="btn btn-primary text-capitalize" id="save-short-service">
-                                    save
+                                    Update
                                 </button>
                             </div>
                         </form>

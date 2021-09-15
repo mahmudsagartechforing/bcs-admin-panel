@@ -4,6 +4,13 @@
     padding-inline-start: .58rem;
     margin-bottom: 1.5rem;
 }
+.user-info h3{
+    font-size: 22px;
+}
+
+.user-info p{
+    font-size: 18px;
+}
 
 .filter-options .active{
     background-color: #182f59;
