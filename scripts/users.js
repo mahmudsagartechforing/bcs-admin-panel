@@ -93,10 +93,8 @@ userInfoFilters.forEach(btn =>{
 
 $(document).ready(function () {
     $("#all-user-info").DataTable({
-        scrollY: "410px",
-        scrollCollapse: true,
+        scrollX: true,
         info: false,
-        responsive: true,
         columnDefs: [{
             orderable: false,
             targets: -1

@@ -192,15 +192,14 @@
             
             <div class="row">
                 <div class="col-lg-12" style="margin-top: 5rem; position: relative;">
-                    <div class="float-start heading mb-3 position-absolute">
+                    <div class="float-start heading mb-3 position-absolute" style="z-index: 1;">
                         <h2 class=" text-uppercase d-inline me-5">ALL USERS</h2>
                         <button class="btn btn-primary text-uppercase" data-bs-toggle="modal" data-bs-target="#exampleModal">Inivite users</button>
                     </div>
-                    <table id="all-user-info" class="table display service">
+                    <table id="all-user-info" class="table table-bordered display service nowrap" style="width:100%">
                         <thead>
                             <tr>
-                                <th>first name</th>
-                                <th>last Name</th>
+                                <th>Full name</th>
                                 <th>Business email</th>
                                 <th>phone number</th>
                                 <th>organization</th>
@@ -216,7 +215,6 @@
                         <tbody>
                             <tr>
                                 <td>jhon</td>
-                                <td>doe</td>
                                 <td>jhone123@mail.com</td>
                                 <td>+880172589225</td>
                                 <td><a href="">ABCD group</a></td>
@@ -227,18 +225,15 @@
                                 <td>1</td>
                                 <td>10</td>
                                 <td>
-                                    <button class="btn trash">
-                                        <i class="bi-person-x-fill text-danger rounded-circle activites-icon"></i>
-                                    </button>
                                     <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal1">
                                         <i class="bi bi-pencil-square text-primary rounded-circle activites-icon"></i>
                                     </button>
                                     <button class="btn trash">
                                         <i class="bi bi-trash-fill text-danger rounded-circle activites-icon"></i>
                                     </button>
-                                    <button class="btn trash">
-                                        <i class="bi bi-eye-fill text-danger rounded-circle activites-icon"></i>
-                                    </button>
+                                    <a href="./userPanel.html" class="btn view">
+                                        <i class="bi bi-eye-fill text-success rounded-circle activites-icon"></i>
+                                    </a>
                                 </td>
                             </tr>
                         </tbody>
@@ -248,41 +243,132 @@
         </div>
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-dialog modal-dialog-centered expanded-modal">
                 <div class="modal-content">
                     <div class="modal-header">
+                        <h2>Invite User</h2>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form action="">
                             <div class="col-auto mb-3">
-                                <label for="serviceName">Service Name</label>
-                                <select class="form-select" name="serviceName" id="serviceName">
-                                    <option selected>Select a Service</option>
-                                    <option value="active">Risk Assessment</option>
-                                    <option value="deactive">Incident Response</option>
-                                    <option value="canceled">Security Compliance</option>
-                                    <option value="upcoming">SMB Solution</option>
-                                </select>
-                                <input type="serviceName" class="form-control" id="serviceName"
-                                    placeholder="Enter Service Name" />
+                                <label for="subServiceName">First Name</label>
+                                <input type="text" class="form-control" id="subServiceName"
+                                    placeholder="Enter First Name" />
                             </div>
                             <div class="col-auto mb-3">
-                                <label for="subServiceName">Service Name</label>
-                                <input type="subServiceName" class="form-control" id="subServiceName"
-                                    placeholder="Enter Sub Service Name" />
+                                <label for="subServiceName">Last Name</label>
+                                <input type="text" class="form-control" id="subServiceName"
+                                    placeholder="Enter Last Name" />
                             </div>
                             <div class="col-auto mb-3">
-                                <label for="description">Description</label>
-                                <textarea name="description" id="description" class="form-control" cols="30"
-                                    rows="10"></textarea>
+                                <label for="subServiceName">Email Name</label>
+                                <input type="email" class="form-control" id="subServiceName"
+                                    placeholder="Enter Email Address" />
+                            </div>
+                            <div class="col-auto mb-3">
+                                <label for="subServiceName">Password</label>
+                                <input type="password" class="form-control" id="subServiceName"
+                                    placeholder="Enter Password" />
+                            </div>
+                            <div class="col-auto mb-3">
+                                <label for="subServiceName">Confirm Password</label>
+                                <input type="password" class="form-control" id="subServiceName"
+                                    placeholder="Confirm Password" />
+                            </div>
+                            <div class="col-auto mb-3">
+                                <label for="subServiceName">Organization</label>
+                                <input type="text" class="form-control" id="subServiceName"
+                                    placeholder="Enter Organization Name" />
+                            </div>
+                            <div class="col-auto mb-3">
+                                <label for="subServiceName">Position</label>
+                                <input type="text" class="form-control" id="subServiceName"
+                                    placeholder="Enter Position Name" />
+                            </div>
+                            <div class="col-auto mb-3">
+                                <div class="accordion" id="accordionExample">
+                                    <div class="accordion-item">
+                                      <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Interest List
+                                        </button>
+                                      </h2>
+                                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                          <div class="row">
+                                              <div class="col-md-4">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                    Risk Assessment
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                                    <label class="form-check-label" for="flexCheckChecked">
+                                                    Risk Assessment  
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                                    <label class="form-check-label" for="flexCheckChecked">
+                                                    Risk Assessment
+                                                    </label>
+                                                  </div>
+                                              </div>
+                                              <div class="col-md-4">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                    Risk Assessment
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                                    <label class="form-check-label" for="flexCheckChecked">
+                                                    Risk Assessment
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                                    <label class="form-check-label" for="flexCheckChecked">
+                                                    Risk Assessment  
+                                                    </label>
+                                                  </div>
+                                              </div>
+                                              <div class="col-md-4">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                    Risk Assessment
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                                    <label class="form-check-label" for="flexCheckChecked">
+                                                    Risk Assessment
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                                    <label class="form-check-label" for="flexCheckChecked">
+                                                    Risk Assessment
+                                                    </label>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
                             </div>
                             <div class="d-flex justify-content-between">
-                                <button type="button" class="btn btn-primary">
+                                <!-- <button type="button" class="btn btn-primary">
                                     Save and add another
-                                </button>
+                                </button> -->
                                 <button type="button" class="btn btn-primary">
-                                    save
+                                    Invite User
                                 </button>
                             </div>
                         </form>
@@ -292,34 +378,125 @@
         </div>
         <!-- Modal -->
         <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-dialog modal-dialog-centered expanded-modal">
                 <div class="modal-content">
                     <div class="modal-header">
+                        <h2>Edit User</h2>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form action="">
                             <div class="col-auto mb-3">
-                                <label for="serviceName">Service Name</label>
-                                <select class="form-select" name="serviceName" id="serviceName">
-                                    <option selected>Select a Service</option>
-                                    <option value="active">Risk Assessment</option>
-                                    <option value="deactive">Incident Response</option>
-                                    <option value="canceled">Security Compliance</option>
-                                    <option value="upcoming">SMB Solution</option>
-                                </select>
-                                <input type="serviceName" class="form-control" id="serviceName"
-                                    placeholder="Enter Service Name" />
+                                <label for="subServiceName">First Name</label>
+                                <input type="text" class="form-control" id="subServiceName"
+                                    placeholder="Enter First Name" />
                             </div>
                             <div class="col-auto mb-3">
-                                <label for="subServiceName">Service Name</label>
-                                <input type="subServiceName" class="form-control" id="subServiceName"
-                                    placeholder="Enter Sub Service Name" />
+                                <label for="subServiceName">Last Name</label>
+                                <input type="text" class="form-control" id="subServiceName"
+                                    placeholder="Enter Last Name" />
                             </div>
                             <div class="col-auto mb-3">
-                                <label for="description">Description</label>
-                                <textarea name="description" id="description" class="form-control" cols="30"
-                                    rows="10"></textarea>
+                                <label for="subServiceName">Email Name</label>
+                                <input type="email" class="form-control" id="subServiceName"
+                                    placeholder="Enter Email Address" />
+                            </div>
+                            <div class="col-auto mb-3">
+                                <label for="subServiceName">Password</label>
+                                <input type="password" class="form-control" id="subServiceName"
+                                    placeholder="Enter Password" />
+                            </div>
+                            <div class="col-auto mb-3">
+                                <label for="subServiceName">Confirm Password</label>
+                                <input type="password" class="form-control" id="subServiceName"
+                                    placeholder="Confirm Password" />
+                            </div>
+                            <div class="col-auto mb-3">
+                                <label for="subServiceName">Organization</label>
+                                <input type="text" class="form-control" id="subServiceName"
+                                    placeholder="Enter Organization Name" />
+                            </div>
+                            <div class="col-auto mb-3">
+                                <label for="subServiceName">Position</label>
+                                <input type="text" class="form-control" id="subServiceName"
+                                    placeholder="Enter Position Name" />
+                            </div>
+                            <div class="col-auto mb-3">
+                                <div class="accordion" id="accordionExample">
+                                    <div class="accordion-item">
+                                      <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Interest List
+                                        </button>
+                                      </h2>
+                                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                          <div class="row">
+                                              <div class="col-md-4">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                    Risk Assessment
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                                    <label class="form-check-label" for="flexCheckChecked">
+                                                    Risk Assessment  
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                                    <label class="form-check-label" for="flexCheckChecked">
+                                                    Risk Assessment
+                                                    </label>
+                                                  </div>
+                                              </div>
+                                              <div class="col-md-4">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                    Risk Assessment
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                                    <label class="form-check-label" for="flexCheckChecked">
+                                                    Risk Assessment
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                                    <label class="form-check-label" for="flexCheckChecked">
+                                                    Risk Assessment  
+                                                    </label>
+                                                  </div>
+                                              </div>
+                                              <div class="col-md-4">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                    Risk Assessment
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                                    <label class="form-check-label" for="flexCheckChecked">
+                                                    Risk Assessment
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                                    <label class="form-check-label" for="flexCheckChecked">
+                                                    Risk Assessment
+                                                    </label>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
                             </div>
                             <div class="d-flex justify-content-between">
                                 <!-- <button type="button" class="btn btn-primary">

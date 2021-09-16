@@ -18,6 +18,24 @@
 .heading h2 {
     vertical-align: middle;
 }
+.view{
+    color: #2AC83A;
+}
+.expanded-modal  .accordion-button::after{
+    display: block;
+}
+.expanded-modal{
+    min-width: 750px;
+}
+
+#all-user-info_wrapper .dataTables_scrollHead{
+    background-color: #5BBC2E;
+    color: #fff;
+}
+#all-user-info_wrapper .dataTables_scrollHead thead{
+    color: #fff;
+    text-align: start;
+}
 
 #all-user-info_filter {
     margin-bottom: 2rem;

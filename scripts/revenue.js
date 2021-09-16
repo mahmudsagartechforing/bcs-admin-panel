@@ -1,7 +1,7 @@
 let revenueChart = document.getElementById("revenue-chart").getContext("2d");
 let infoChart = document.getElementById("info-chart").getContext("2d");
 
-let userLineChart = new Chart(revenueChart, {
+let revenuePieChart = new Chart(revenueChart, {
     type: "pie",
     data: {
         labels: ["Total", "Subscribed", "Unsubscribed"],
