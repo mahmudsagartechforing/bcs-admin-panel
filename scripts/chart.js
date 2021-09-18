@@ -112,3 +112,4 @@ let infoLineChart = new Chart(infoChart, {
         },
     },
 });
+

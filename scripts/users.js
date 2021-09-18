@@ -1,3 +1,63 @@
+let userInfo = document.getElementById("user-info-chart").getContext("2d");
+let userInfoLineChart = new Chart(userInfo, {
+    type: "line",
+    data: {
+        labels: ["text", "text", "text", "text", "text"],
+        datasets: [{
+            label: "Subscribed client",
+            backgroundColor: "#182F59",
+            borderColor: "#182F59",
+            data: [5, 45, 41, 50, 42],
+            fill: false,
+        }, {
+            label: "non- subscribed client",
+            backgroundColor: "#5BBC2E",
+            borderColor: "#5BBC2E",
+            data: [75, 35, 45, 55, 15],
+            fill: false,
+        },  ],
+    },
+    options: {
+        responsive: true,
+        legend: {
+            display: true,
+            labels: {
+                fontColor: "black",
+                boxWidth: 20,
+                boxHeight: 20,
+            },
+            position: "top",
+        },
+        title: {
+            display: false,
+            position: "top",
+            align: 'start',
+            text: "all users",
+        },
+        tooltips: {
+            mode: "index",
+            intersect: false,
+        },
+        hover: {
+            mode: "nearest",
+            intersect: true,
+        },
+        scales: {
+            xAxes: [{
+                gridLines: {
+                    display: false
+                }
+            }],
+            yAxes: [{
+                gridLines: {
+                    display: false
+                }
+            }]
+        },
+    },
+});
+
+
 $(function () {
     $('input[name="daterange"]').daterangepicker({
         autoUpdateInput: false,
@@ -96,17 +156,6 @@ $(document).ready(function () {
     });
 })
 
-const overviewRow = document.querySelectorAll("#individual-user-info tr")
-const overviewDialogue = document.querySelector(".overview-dialogue")
-const overviewDialogueClose = document.querySelector(".close-overview")
-overviewRow.forEach(items =>{
-    items.addEventListener("click", ()=>{
-        overviewDialogue.classList.toggle("d-none")
-    })
-})
-overviewDialogueClose.addEventListener("click", ()=>{
-    overviewDialogue.classList.add("d-none")
-})
 
 
 
@@ -114,62 +163,3 @@ overviewDialogueClose.addEventListener("click", ()=>{
 
 
 
-
-let userInfo = document.getElementById("user-info-chart").getContext("2d");
-let userInfoLineChart = new Chart(userInfo, {
-    type: "line",
-    data: {
-        labels: ["text", "text", "text", "text", "text"],
-        datasets: [{
-            label: "Subscribed client",
-            backgroundColor: "#182F59",
-            borderColor: "#182F59",
-            data: [5, 45, 41, 50, 42],
-            fill: false,
-        }, {
-            label: "non- subscribed client",
-            backgroundColor: "#5BBC2E",
-            borderColor: "#5BBC2E",
-            data: [75, 35, 45, 55, 15],
-            fill: false,
-        },  ],
-    },
-    options: {
-        responsive: true,
-        legend: {
-            display: true,
-            labels: {
-                fontColor: "black",
-                boxWidth: 20,
-                boxHeight: 20,
-            },
-            position: "top",
-        },
-        title: {
-            display: false,
-            position: "top",
-            align: 'start',
-            text: "all users",
-        },
-        tooltips: {
-            mode: "index",
-            intersect: false,
-        },
-        hover: {
-            mode: "nearest",
-            intersect: true,
-        },
-        scales: {
-            xAxes: [{
-                gridLines: {
-                    display: false
-                }
-            }],
-            yAxes: [{
-                gridLines: {
-                    display: false
-                }
-            }]
-        },
-    },
-});

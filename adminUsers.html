@@ -222,10 +222,10 @@
                                     </td>
                                     <td>Developer</td>
                                     <td>
-                                       <button class="btn">
+                                       <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal1">
                                            <i class="icofont-edit text-primary rounded-circle activites-icon"></i>
                                        </button> 
-                                       <button class="btn">
+                                       <button class="btn trash">
                                            <i class="bi bi-trash-fill text-danger rounded-circle activites-icon"></i>
                                        </button>
                                     </td>
@@ -246,10 +246,10 @@
                                     </td>
                                     <td>Developer</td>
                                     <td>
-                                       <button class="btn">
+                                       <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal1">
                                            <i class="icofont-edit text-primary rounded-circle activites-icon"></i>
                                        </button> 
-                                       <button class="btn">
+                                       <button class="btn trash">
                                            <i class="bi bi-trash-fill text-danger rounded-circle activites-icon"></i>
                                        </button>
                                     </td>
@@ -270,10 +270,10 @@
                                     </td>
                                     <td>Developer</td>
                                     <td>
-                                       <button class="btn">
+                                       <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal1">
                                            <i class="icofont-edit text-primary rounded-circle activites-icon"></i>
                                        </button> 
-                                       <button class="btn">
+                                       <button class="btn trash">
                                            <i class="bi bi-trash-fill text-danger rounded-circle activites-icon"></i>
                                        </button>
                                     </td>
@@ -294,10 +294,10 @@
                                     </td>
                                     <td>Developer</td>
                                     <td>
-                                       <button class="btn">
+                                       <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal1">
                                            <i class="icofont-edit text-primary rounded-circle activites-icon"></i>
                                        </button> 
-                                       <button class="btn">
+                                       <button class="btn trash">
                                            <i class="bi bi-trash-fill text-danger rounded-circle activites-icon"></i>
                                        </button>
                                     </td>
@@ -318,10 +318,10 @@
                                     </td>
                                     <td>Developer</td>
                                     <td>
-                                       <button class="btn">
+                                       <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal1">
                                            <i class="icofont-edit text-primary rounded-circle activites-icon"></i>
                                        </button> 
-                                       <button class="btn">
+                                       <button class="btn trash">
                                            <i class="bi bi-trash-fill text-danger rounded-circle activites-icon"></i>
                                        </button>
                                     </td>
@@ -360,7 +360,41 @@
                                 <option value="3">Editor</option>
                             </select>
                         </div>
-                        <button type="button" class="btn btn-primary">Send Invitation</button>
+                        <button type="button" class="btn btn-primary">Add</button>
+                    </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title w-100 text-center" id="exampleModalLabel">Add User</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control w-100" id="Name" placeholder="Enter Name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control w-100" id="email" placeholder="name@mail.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label">Role Name</label>
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected="">Select Role</option>
+                                <option value="1">Super Admin</option>
+                                <option value="2">Admin</option>
+                                <option value="3">Moderator</option>
+                                <option value="3">Editor</option>
+                            </select>
+                        </div>
+                        <button type="button" class="btn btn-primary">Update</button>
                     </form>
                 </div>
               </div>
@@ -413,5 +447,5 @@
     <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script> -->
     <!-- custom scripts -->
     <script src="./scripts/nav.js"></script>
-    <script src="./scripts/users.js"></script>
+    <script src="./scripts/userProfile.js"></script>
 </body>

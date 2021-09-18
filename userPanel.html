@@ -260,7 +260,7 @@
                     <div class="overview-body my-3">
                         <div class="overview-head d-flex align-content-center justify-content-between">
                             <h4>Overview</h4>
-                            <button class="btn btn-dark">Edit <i class="bi bi-pencil-fill"></i> </button>
+                            <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal1">Edit <i class="bi bi-pencil-fill"></i> </button>
                         </div>
                         <div class="row">
                             <div class="col-md-3">
@@ -344,6 +344,141 @@
                 </div>
             </div>
         </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered expanded-modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Edit User</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="">
+                            <div class="col-auto mb-3">
+                                <label for="subServiceName">First Name</label>
+                                <input type="text" class="form-control" id="subServiceName"
+                                    placeholder="Enter First Name" />
+                            </div>
+                            <div class="col-auto mb-3">
+                                <label for="subServiceName">Last Name</label>
+                                <input type="text" class="form-control" id="subServiceName"
+                                    placeholder="Enter Last Name" />
+                            </div>
+                            <div class="col-auto mb-3">
+                                <label for="subServiceName">Email Name</label>
+                                <input type="email" class="form-control" id="subServiceName"
+                                    placeholder="Enter Email Address" />
+                            </div>
+                            <div class="col-auto mb-3">
+                                <label for="subServiceName">Password</label>
+                                <input type="password" class="form-control" id="subServiceName"
+                                    placeholder="Enter Password" />
+                            </div>
+                            <div class="col-auto mb-3">
+                                <label for="subServiceName">Confirm Password</label>
+                                <input type="password" class="form-control" id="subServiceName"
+                                    placeholder="Confirm Password" />
+                            </div>
+                            <div class="col-auto mb-3">
+                                <label for="subServiceName">Organization</label>
+                                <input type="text" class="form-control" id="subServiceName"
+                                    placeholder="Enter Organization Name" />
+                            </div>
+                            <div class="col-auto mb-3">
+                                <label for="subServiceName">Position</label>
+                                <input type="text" class="form-control" id="subServiceName"
+                                    placeholder="Enter Position Name" />
+                            </div>
+                            <div class="col-auto mb-3">
+                                <div class="accordion" id="accordionExample">
+                                    <div class="accordion-item">
+                                      <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Interest List
+                                        </button>
+                                      </h2>
+                                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                          <div class="row">
+                                              <div class="col-md-4">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                    Risk Assessment
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                                    <label class="form-check-label" for="flexCheckChecked">
+                                                    Risk Assessment  
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                                    <label class="form-check-label" for="flexCheckChecked">
+                                                    Risk Assessment
+                                                    </label>
+                                                  </div>
+                                              </div>
+                                              <div class="col-md-4">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                    Risk Assessment
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                                    <label class="form-check-label" for="flexCheckChecked">
+                                                    Risk Assessment
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                                    <label class="form-check-label" for="flexCheckChecked">
+                                                    Risk Assessment  
+                                                    </label>
+                                                  </div>
+                                              </div>
+                                              <div class="col-md-4">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                    <label class="form-check-label" for="flexCheckDefault">
+                                                    Risk Assessment
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                                    <label class="form-check-label" for="flexCheckChecked">
+                                                    Risk Assessment
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                                    <label class="form-check-label" for="flexCheckChecked">
+                                                    Risk Assessment
+                                                    </label>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <!-- <button type="button" class="btn btn-primary">
+                                    Save and add another
+                                </button> -->
+                                <button type="button" class="btn btn-primary">
+                                    Update
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <!-- main section ends -->
     <footer id="footer-small" class="footer footer-shrink mt-5" class="bg-blue p-2 pt-4 p-md-5 pb-md-2">
@@ -392,5 +527,5 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
     <!-- custom scripts -->
     <script src="./scripts/nav.js"></script>
-    <script src="./scripts/users.js"></script>
+    <script src="./scripts/userProfile.js"></script>
 </body>
