@@ -37,28 +37,129 @@
     text-align: start;
 }
 
-#all-user-info_filter {
+#all-user-info_filter, #individual-user-info_filter {
     margin-bottom: 2rem;
     float: right;
     width: 60%;
 }
-#all-user-info_filter label {
+#all-user-info_filter label, #individual-user-info_filter label {
     padding: .5rem 1rem;
     width: 100%;
     border: 1px solid #707070;
 }
-#all-user-info_filter input {
+#all-user-info_filter input, #individual-user-info_filter input {
     display: inline !important;
     border-color: transparent;
     width: 90%;
     padding: 0 .75rem;
 }
+#individual-user-info thead{
+    background-color: #182f593d;
+}
+
+#individual-user-info thead th{
+    text-align: start;
+}
+
+#individual-user-info tbody tr:hover{
+    background-color: #5bbc2e2f;
+    cursor: pointer;
+}
 
 .service thead th{
     font-size: 12px !important;
 }
+
+.info-container {
+    border-inline-start: 4rem solid #182f59;
+    background-color: #182f591f;
+    border-radius: 10px;
+    position: relative;
+    padding-block: .5rem;
+    padding-inline: .5rem;
+}
+.info-container h3{
+    text-transform: capitalize;
+}
+.short-info {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    grid-gap: 5px;
+    align-items: center;
+    transform: translateY(-50%);
+    top: 50%;
+    left: -28px;
+}
+.avatar{
+    border-radius: 50%;
+}
+.info-body{
+    color: #000000;
+}
+.info-body p{
+    margin-bottom: 0;
+}
+.details,.subscription-details {
+    display: grid;
+    grid-gap: 1rem;
+}
+.details li{
+    margin-bottom: .25rem;
+    display: grid;
+    grid-template-columns: 15px 1fr;
+    grid-gap: 1rem;
+}
+.details li i{
+    color: #5BBC2E;
+}
+
+.close-overview{
+    justify-self: end;
+}
+
+.overview-body{
+    background-color: #182f591f;
+    padding: .5rem;
+    border: 1px solid #707070;
+}
+
+.overview-body p{
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    font-weight: 600;
+    margin-block-start: 1rem;
+}
+
 @media (max-width: 1241px){
     #all-user-info_filter {
         width: 100%;
     }
+}
+
+/* Admin User */
+.subscription-info {
+    color: var(--var-topbar-background-color);
+    padding: 1rem;
+}
+.subscription-info h3 {
+    font-size: 20px;
+}
+.subscription-info p {
+    font-size: 18px;
+}
+
+#admin-list tbody td{
+    text-align: center;
+}
+#admin-list thead {
+    background-color: #182f59;
+    color: white;
+    font-weight: 500;
+}
+#admin-list thead th{
+    font-weight: 500;
+}
+#admin-list tbody td:first-child, #admin-list thead th:first-child{
+    text-align: start;
 }

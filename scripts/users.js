@@ -1,6 +1,122 @@
-const userInfoChart = document.getElementById("user-info-chart").getContext("2d");
+$(function () {
+    $('input[name="daterange"]').daterangepicker({
+        autoUpdateInput: false,
+        locale: {
+            cancelLabel: "Clear",
+        },
+    });
 
-const userInfoLineChart = new Chart(userInfoChart, {
+    $('input[name="daterange"]').on(
+        "apply.daterangepicker",
+        function (ev, picker) {
+            $(this).val(
+                picker.startDate.format("MM/DD/YYYY") +
+                    " - " +
+                    picker.endDate.format("MM/DD/YYYY")
+            );
+        }
+    );
+});
+
+const userInfoFilterContaner = document.querySelector(".filter-options")
+const userInfoFilters = document.querySelectorAll(".filter-options .btn")
+
+userInfoFilters.forEach(btn =>{
+    btn.addEventListener("click", ()=>{
+        const currentOption = userInfoFilterContaner.querySelector(".active")
+        currentOption.classList.remove("active")
+        btn.classList.add("active")
+    })
+})
+
+$(document).ready(function () {
+    $("#all-user-info").DataTable({
+        scrollX: true,
+        info: false,
+        columnDefs: [{
+            className: 'select-checkbox',
+            orderable: false,
+            targets: [0]
+        }],
+        select: {
+            style:    'multi+shift',
+            selector: 'td:first-child'
+        },
+        sorting: false,
+        oLanguage: {
+            sLengthMenu: "Sub-service list",
+            sSearch: `_INPUT_ <i class="bi bi-search"></i>`,
+            sSearchPlaceholder: "Search...",
+        },
+        "initComplete": function (settings, json) {
+            $('body').find('.dataTables_scrollBody').addClass("scrollbar");
+        },
+        "paging": false,
+    });
+
+    $(".selectAll").on( "click", function(e) {
+        if ($(this).is( ":checked" )) {
+            $("#all-user-info").DataTable().rows(  ).select();        
+        } else {
+            $("#all-user-info").DataTable().rows(  ).deselect(); 
+        }
+    });
+
+    $("#individual-user-info").DataTable({
+        responsive: true,
+        info: false,
+        columnDefs: [{
+            // className: 'select-checkbox',
+            orderable: false,
+            targets: [-1]
+        }],
+        select: {
+            style:    'multi+shift',
+            selector: 'td:first-child'
+        },
+        sorting: false,
+        oLanguage: {
+            sLengthMenu: "Sub-service list",
+            sSearch: `_INPUT_ <i class="bi bi-search"></i>`,
+            sSearchPlaceholder: "Search...",
+        },
+        "paging": false,
+    });
+
+    $("#admin-list").DataTable({
+        responsive: true,
+        info: false,
+        columnDefs: [{
+            orderable: false,
+            targets: [-1]
+        }],
+        sorting: false,
+        searching: false,
+        "paging": false,
+    });
+})
+
+const overviewRow = document.querySelectorAll("#individual-user-info tr")
+const overviewDialogue = document.querySelector(".overview-dialogue")
+const overviewDialogueClose = document.querySelector(".close-overview")
+overviewRow.forEach(items =>{
+    items.addEventListener("click", ()=>{
+        overviewDialogue.classList.toggle("d-none")
+    })
+})
+overviewDialogueClose.addEventListener("click", ()=>{
+    overviewDialogue.classList.add("d-none")
+})
+
+
+
+
+
+
+
+
+let userInfo = document.getElementById("user-info-chart").getContext("2d");
+let userInfoLineChart = new Chart(userInfo, {
     type: "line",
     data: {
         labels: ["text", "text", "text", "text", "text"],
@@ -10,15 +126,13 @@ const userInfoLineChart = new Chart(userInfoChart, {
             borderColor: "#182F59",
             data: [5, 45, 41, 50, 42],
             fill: false,
-        }, 
-        {
+        }, {
             label: "non- subscribed client",
-            backgroundColor: "#182F59",
-            borderColor: "#182F59",
+            backgroundColor: "#5BBC2E",
+            borderColor: "#5BBC2E",
             data: [75, 35, 45, 55, 15],
             fill: false,
-        },
-    ],
+        },  ],
     },
     options: {
         responsive: true,
@@ -59,55 +173,3 @@ const userInfoLineChart = new Chart(userInfoChart, {
         },
     },
 });
-
-$(function () {
-    $('input[name="daterange"]').daterangepicker({
-        autoUpdateInput: false,
-        locale: {
-            cancelLabel: "Clear",
-        },
-    });
-
-    $('input[name="daterange"]').on(
-        "apply.daterangepicker",
-        function (ev, picker) {
-            $(this).val(
-                picker.startDate.format("MM/DD/YYYY") +
-                    " - " +
-                    picker.endDate.format("MM/DD/YYYY")
-            );
-        }
-    );
-});
-
-const userInfoFilterContaner = document.querySelector(".filter-options")
-const userInfoFilters = document.querySelectorAll(".filter-options .btn")
-
-userInfoFilters.forEach(btn =>{
-    btn.addEventListener("click", ()=>{
-        const currentOption = userInfoFilterContaner.querySelector(".active")
-        currentOption.classList.remove("active")
-        btn.classList.add("active")
-    })
-})
-
-$(document).ready(function () {
-    $("#all-user-info").DataTable({
-        scrollX: true,
-        info: false,
-        columnDefs: [{
-            orderable: false,
-            targets: -1
-        }],
-        sorting: false,
-        oLanguage: {
-            sLengthMenu: "Sub-service list",
-            sSearch: `_INPUT_ <i class="bi bi-search"></i>`,
-            sSearchPlaceholder: "Search...",
-        },
-        "initComplete": function (settings, json) {
-            $('body').find('.dataTables_scrollBody').addClass("scrollbar");
-        },
-        "paging": false,
-    });
-})

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechForig BCS admin</title>
+    <!-- bootstrap CDN link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <!-- data table css -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.1/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/rowreorder/1.2.8/css/rowReorder.dataTables.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.dataTables.min.css" />
+    <!-- date range picker css -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <!-- Icofont CDN link -->
+    <link rel="stylesheet" href="./stylesheets/icofont/icofont.min.css" />
+    <!-- bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="./stylesheets/nav.css" />
+    <link rel="stylesheet" href="./stylesheets/users.css" />
+    <!-- charts js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+
+<body>
+    <header>
+        <!-- top bar section starts here -->
+        <nav class="navbar fixed-top">
+            <div class="container">
+                <!-- Brand/logo-->
+                <a class="navbar-brand" href="#">
+                    <img src="./images/TechForingLogo.png" alt="Tech Foring" />
+                </a>
+                <!-- page title -->
+                <span class="navbar-text rounded-0 px-2  fw-bold text-primary">
+                    <a href="" class="">Business Cybersecurity</a>
+                </span>
+                <span class="navbar-text rounded-0 px-2 fw-bold text-primary">
+                    <a href="" class="">Personal Cybersecurity</a>
+                </span>
+                <span class="dropdown">
+                    <a class="nav-link btn-primary dropdown text-white" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Admin
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="./myProfile.html">My profile</a></li>
+                        <li><a class="dropdown-item" href="#">Sgn out</a></li>
+                    </ul>
+                </span>
+            </div>
+        </nav>
+        <!-- top bar section ends here -->
+        <!-- sidebar section starts here -->
+        <aside>
+            <div class="aside-container position-fixed bg-white px-1 pt-2 d-none d-lg-block">
+                <!-- Nav links starts here -->
+                <ul class="menubar">
+                    <li>
+                        <a href="./index.html" class="nav-link active">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="29.273" height="23"
+                                viewBox="0 0 29.273 23">
+                                <path id="list-alt"
+                                    d="M6.273,17.25V18.3a.53.53,0,0,1-.523.523H4.7a.529.529,0,0,1-.522-.523V17.25a.53.53,0,0,1,.523-.523H5.751a.53.53,0,0,1,.523.523Zm0-4.182v1.046a.53.53,0,0,1-.523.523H4.7a.529.529,0,0,1-.522-.523V13.068a.529.529,0,0,1,.523-.522H5.751a.529.529,0,0,1,.522.522Zm0-4.182V9.932a.53.53,0,0,1-.523.523H4.7a.529.529,0,0,1-.522-.523V8.886A.529.529,0,0,1,4.7,8.364H5.751a.529.529,0,0,1,.522.523ZM25.092,17.25V18.3a.53.53,0,0,1-.523.523H8.887a.53.53,0,0,1-.523-.523V17.25a.53.53,0,0,1,.523-.523H24.569a.53.53,0,0,1,.523.523Zm0-4.182v1.046a.53.53,0,0,1-.523.523H8.887a.53.53,0,0,1-.523-.523V13.068a.529.529,0,0,1,.523-.522H24.569a.53.53,0,0,1,.523.523Zm0-4.182V9.932a.53.53,0,0,1-.523.523H8.887a.53.53,0,0,1-.523-.523V8.886a.529.529,0,0,1,.523-.522H24.569a.53.53,0,0,1,.523.523Zm2.091,11.5V6.8a.53.53,0,0,0-.522-.523H2.613a.53.53,0,0,0-.523.523V20.387a.53.53,0,0,0,.523.523H26.659a.53.53,0,0,0,.523-.523ZM29.273,2.613V20.387A2.621,2.621,0,0,1,26.659,23H2.613a2.517,2.517,0,0,1-1.846-.768A2.517,2.517,0,0,1,0,20.387V2.613A2.517,2.517,0,0,1,.768.768,2.517,2.517,0,0,1,2.613,0H26.659a2.517,2.517,0,0,1,1.846.768,2.517,2.517,0,0,1,.768,1.846Z"
+                                    fill="#111125" />
+                            </svg>
+                            dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <span class="nav-link dropdown-btn dropdown-toggle" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-collection-fill"></i>
+                            services
+                        </span>
+                        <ul class="dropdown-container" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item nav-link" href="./service.html"><i
+                                        class="bi bi-collection-fill"></i>Main Service</a></li>
+                            <li><a class="dropdown-item nav-link" href="./subService.html"><i
+                                        class="bi bi-collection-fill"></i>Sub Service</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="nav-link dropdown-btn dropdown-toggle" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-people-fill"></i>
+                            users
+                        </span>
+                        <ul class="dropdown-container" aria-labelledby="navbarDropdown">
+                            <li>
+                                <a href="./users.html" class="nav-link">
+                                    <i class="bi bi-people-fill"></i> users
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./adminUsers.html" class="nav-link">
+                                    <i class="bi bi-people-fill"></i> admin users
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="./readingList.html" class="nav-link">
+                            <i class="bi bi-file-earmark-fill"></i> Reading List
+                        </a>
+                    </li>
+                    <li>
+                        <span class="nav-link dropdown-btn dropdown-toggle" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-tag-fill"></i>
+                            Subscription
+                        </span>
+                        <ul class="dropdown-container" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item nav-link" href="./subscriptionList.html"><i
+                                        class="bi bi-tag-fill"></i>Subscription List</a></li>
+                            <li><a class="dropdown-item nav-link" href="./subService.html"><i
+                                        class="bi bi-collection-fill"></i>Sub Service</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="{% host_url 'main_admin_events' %}" class="nav-link">
+                            <i class="bi bi-currency-dollar"></i> revenue
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% host_url 'main_admin_events' %}" class="nav-link">
+                            <i class="bi bi-hand-index-fill"></i> user interest
+                        </a>
+                    </li>
+
+                    <!-- <li>
+                        <span href="" class="nav-link dropdown-btn dropdown-toggle" id="supportDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="icofont-life-buoy"></i>
+                            support
+                        </span>
+                        <ul class="dropdown-container " aria-labelledby="supportDropdown">
+                            <li><a class="dropdown-item nav-link" href="{% host_url 'main_admin_support_view' %}">Admin View</a></li>
+                            <li><a class="dropdown-item nav-link" href="{% host_url 'main_admin_stuff_view' %}">Stuff View</a></li>
+                            <li><a class="dropdown-item nav-link" href="{% host_url 'main_admin_all_tickets' %}">All Tickets</a></li>
+                        </ul>
+                    </li> -->
+                </ul>
+                <!-- nav links ends here -->
+            </div>
+        </aside>
+        <!-- sidebar section ends here -->
+    </header>
+    <!-- main section starts -->
+    <main>
+        <div class="container-fluid">
+            <div class="info-container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="short-info">
+                            <img src="./images/Clip.jpg" alt="" class="avatar">
+                            <div class="info-body">
+                                <p class="text-primary">MR. ISLAM</p>
+                                <p>BIYOG PVT LTD</p>
+                                <p class="text-success">OWNER</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="details">
+                            <h3>Personal Details</h3>
+                            <ul>
+                                <li>
+                                    <i class="bi bi-map-fill"></i> 
+                                    <span>Cecilia Chapman 711-2880 Nulla St. Mankato Mississippi 96522(257) 563-7401</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-geo-alt-fill"></i> 
+                                    <span>United State</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-telephone-fill"></i> 
+                                    <span>+88017153535382</span>
+                                </li>
+                                <li>
+                                    <svg class="details-icon" xmlns="http://www.w3.org/2000/svg" width="16.414" height="18" viewBox="0 0 16.414 18">
+                                        <path id="birthday-cake" d="M16.539,8.442h-4.03V4.924H11.19a3.13,3.13,0,0,0,.624-1.889A3,3,0,0,0,10.564.552l-.327-.22-.327.22A3,3,0,0,0,8.659,3.035a3.13,3.13,0,0,0,.625,1.889H7.819V8.442H4.375A2.128,2.128,0,0,0,2.25,10.567V17.16a1.174,1.174,0,0,0,1.172,1.172H17.492a1.174,1.174,0,0,0,1.172-1.172V10.567a2.128,2.128,0,0,0-2.125-2.125Zm-6.3-6.614a1.937,1.937,0,0,1,.405,1.207,1.936,1.936,0,0,1-.405,1.207,1.937,1.937,0,0,1-.405-1.207A1.937,1.937,0,0,1,10.237,1.828ZM8.992,6.1h2.345V8.442H8.992Zm-5.569,4.47a.954.954,0,0,1,.953-.953H16.539a.954.954,0,0,1,.953.953v1.157l-.792.349a1.219,1.219,0,0,1-.982,0l-1.377-.607-1.378.608a1.219,1.219,0,0,1-.982,0L10.6,11.466l-1.378.608a1.219,1.219,0,0,1-.982,0l-1.377-.608-1.377.608a1.219,1.219,0,0,1-.982,0l-1.084-.478ZM17.492,17.16H3.422V12.876l.611.269a2.394,2.394,0,0,0,1.929,0l.9-.4.9.4a2.394,2.394,0,0,0,1.929,0l.9-.4.9.4a2.394,2.394,0,0,0,1.929,0l.9-.4.9.4a2.394,2.394,0,0,0,1.929,0l.318-.141V17.16Z" transform="translate(-2.25 -0.332)" fill="#5bbc2e"/>
+                                    </svg>
+                                    <span>21 April, 1996</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-envelope-fill"></i> 
+                                    <span>youremail.gmail.com</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-gender-male"></i> 
+                                    <span>Male</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="details">
+                            <h3>Business Details</h3>
+                            <ul>
+                                <li>
+                                    <i class="bi bi-telephone-fill"></i> 
+                                    <span>+88017153535382</span>
+                                </li>
+                                <li>
+                                    <svg class="details-icon" xmlns="http://www.w3.org/2000/svg" width="14.138" height="17" viewBox="0 0 14.138 17">
+                                        <path id="__TEMP__SVG__" d="M41.252,2.376A5.176,5.176,0,0,0,34.3.887L30.332,3.411a4.51,4.51,0,0,0-2.049,3.049,4.723,4.723,0,0,0,.475,3.07,4.354,4.354,0,0,0-.674,1.7,4.85,4.85,0,0,0,.823,3.659,5.2,5.2,0,0,0,6.949,1.5l3.971-2.524a4.51,4.51,0,0,0,2.042-3.049,4.723,4.723,0,0,0-.475-3.063,4.815,4.815,0,0,0-.142-5.382ZM33.906,15.111a3.141,3.141,0,0,1-3.375-1.255,2.9,2.9,0,0,1-.5-2.205l.078-.376.071-.234.213.142a4.922,4.922,0,0,0,1.553.78l.142.05-.014.142a.97.97,0,0,0,.156.589.952.952,0,0,0,1.028.39,1.227,1.227,0,0,0,.241-.1l3.957-2.524a.852.852,0,0,0,.376-.546.916.916,0,0,0-.142-.667.966.966,0,0,0-1.028-.376,1.308,1.308,0,0,0-.248.106l-1.5.95a3.141,3.141,0,0,1-4.184-.908,2.907,2.907,0,0,1-.5-2.205A2.73,2.73,0,0,1,31.5,5.021L35.445,2.5a3.181,3.181,0,0,1,.808-.355A3.15,3.15,0,0,1,39.628,3.39a2.921,2.921,0,0,1,.4,2.581l-.071.234-.206-.142a5.261,5.261,0,0,0-1.56-.78l-.142-.043.014-.142a.979.979,0,0,0-.156-.6.955.955,0,0,0-1.028-.376,1.227,1.227,0,0,0-.241.1L32.679,6.773a.831.831,0,0,0-.369.553.9.9,0,0,0,.142.659.944.944,0,0,0,1.021.376,1.133,1.133,0,0,0,.248-.1l1.51-.964a2.854,2.854,0,0,1,.808-.362,3.138,3.138,0,0,1,3.375,1.255,2.925,2.925,0,0,1,.511,2.2,2.73,2.73,0,0,1-1.241,1.844L34.728,14.75A3.474,3.474,0,0,1,33.906,15.111Z" transform="translate(-28.01 -0.135)" fill="#5bbc2e"/>
+                                    </svg>                                   
+                                    <span>www.biyogpvt.com</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-envelope"></i> 
+                                    <span>biyog pvt@gmail.com</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-grid-3x3-gap-fill"></i> 
+                                    <span>Small  (5 to 50 employees)</span>
+                                </li>
+                                <li>
+                                    <i class="bi bi-building"></i> 
+                                    <span>Software Company</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="subscription-details">
+                            <h3>subscription details</h3>
+                            <ul>
+                                <li>
+                                    <h5>Subscribed Service Name</h5>
+                                    <p class="text-primary fw-bold">Business Cybersecurity</p>
+                                    <p class="text-primary">Plug & Play Program</p>
+                                </li>
+                                <li>
+                                    <h5>Starting at</h5>
+                                    <p class="text-primary">21 Jan, 2021</p>
+                                </li>
+                                <li>
+                                    <h5>Registration Date</h5> 
+                                    <p class="text-primary">21 Dec, 2020</p>
+                                </li>
+                                <li>
+                                    <h5>Status</h5>
+                                    <button class="btn btn-primary">Status</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="overview-dialogue d-none mt-4">
+                    <div class="btn-wrap d-flex justify-content-end">
+                        <button class="btn btn-primary close-overview">Back to list</button>
+                    </div>
+                    <div class="overview-body my-3">
+                        <div class="overview-head d-flex align-content-center justify-content-between">
+                            <h4>Overview</h4>
+                            <button class="btn btn-dark">Edit <i class="bi bi-pencil-fill"></i> </button>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <p><span>Total workstations: </span> <span>20</span></p>
+                                <p><span>Last monitoring time: </span> <span>-------</span></p>
+                                <p><span>Next monitoring time:  </span> <span>-------</span></p>
+                            </div>
+                            <div class="col-md-1"></div>
+                            <div class="col-md-3">
+                                <p><span>Total servers:  </span> <span>5</span></p>
+                                <p><span>Last update sent time: </span> <span>-------</span></p>
+                                <p><span>Next update sent time:  </span> <span>-------</span></p>
+                            </div>
+                            <div class="col-md-1"></div>
+                            <div class="col-md-3">
+                                <p><span>Total websites:  </span> <span>5</span></p>
+                                <p><span>Last audit time: </span> <span>-------</span></p>
+                                <p><span>Next audit time:  </span> <span>-------</span></p>
+                            </div>
+                            <div class="col-md-1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12" style="margin-top: 5rem; position: relative;">
+                    <div class="float-start heading mb-3 position-absolute" style="z-index: 1;">
+                        <h2 class=" text-uppercase d-inline me-5">SERVICE LIST</h2>
+                    </div>
+                    <table id="individual-user-info" class="table table-bordered display service nowrap" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>SL</th>
+                                <th>Service Name</th>
+                                <th>Sub Service Name</th>
+                                <th>Start Date</th>
+                                <th>Payment Status</th>
+                                <th>Order Status</th>
+                                <th>Renewal Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1.</td>
+                                <td>Risk Assessment</td>
+                                <td>Concierge Cybersecurity</td>
+                                <td>03/08/2021</td>
+                                <td>PAID</td>
+                                <td>COMPLETED</td>
+                                <td>03/09/2021</td>
+                            </tr>
+                            <tr>
+                                <td>2.1</td>
+                                <td>Incident Response</td>
+                                <td>Open Source Intelligence</td>
+                                <td>03/08/2021</td>
+                                <td>PAID</td>
+                                <td>PROCESSING</td>
+                                <td>03/09/2021</td>
+                            </tr>
+                            <tr>
+                                <td>2.2</td>
+                                <td>Incident Response</td>
+                                <td>Crime Investigation</td>
+                                <td>03/08/2021</td>
+                                <td>PROCESSING</td>
+                                <td>HOLD</td>
+                                <td>03/09/2021</td>
+                            </tr>
+                            <tr>
+                                <td>3.</td>
+                                <td>SMB Solution</td>
+                                <td>Hack Recovery</td>
+                                <td>03/08/2021</td>
+                                <td>PAID</td>
+                                <td>PROCESSING</td>
+                                <td>03/09/2021</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- main section ends -->
+    <footer id="footer-small" class="footer footer-shrink mt-5" class="bg-blue p-2 pt-4 p-md-5 pb-md-2">
+        <div class="d-flex justify-content-center mb-4">
+            <a href="" class="me-5">PRIVACY POLICY</a>
+            <a href="">TERMS OF USE</a>
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+            <a href="https://www.facebook.com/techforing/">
+                <!-- <img src="{% static '' %}tfimg/user_panel/facebook.png" class="me-3" alt=""> -->
+                <i class="bi bi-facebook me-3"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/techforingltd./">
+                <!-- <img src="{% static '' %}tfimg/user_panel/linkedin.png" class="me-3" alt=""> -->
+                <i class="bi bi-linkedin me-3"></i>
+            </a>
+            <a href="https://twitter.com/techforingltd?lang=en">
+                <!-- <img src="{% static '' %}tfimg/user_panel/twitter.png" class="me-3" alt=""> -->
+                <i class="bi bi-twitter me-3"></i>
+            </a>
+            <a href="https://www.instagram.com/techforingltd/">
+                <!-- <img src="{% static '' %}tfimg/user_panel/Instagram.png" alt=""> -->
+                <i class="bi bi-instagram me-3"></i>
+            </a>
+        </div>
+        <div class="p-3 p-md-4 pb-2 text-center text-white ">
+            <p class="pt-4 border-top border-light">Copyright © 2021 Techforing Ltd.
+            </p>
+        </div>
+    </footer>
+    <!-- bootstrap scripts CDN link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <!-- jquery scripts -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+
+    <!-- data table library -->
+    <script src="https://cdn.datatables.net/1.11.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.1/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/rowreorder/1.2.8/js/dataTables.rowReorder.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+
+    <!-- date range picker -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <!-- custom scripts -->
+    <script src="./scripts/nav.js"></script>
+    <script src="./scripts/users.js"></script>
+</body>
