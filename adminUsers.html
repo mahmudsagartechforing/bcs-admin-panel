@@ -28,7 +28,7 @@
     <header>
         <!-- top bar section starts here -->
         <nav class="navbar fixed-top">
-            <div class="container">
+            <div class="container-fluid">
                 <!-- Brand/logo-->
                 <a class="navbar-brand" href="#">
                     <img src="./images/TechForingLogo.png" alt="Tech Foring" />
@@ -76,40 +76,49 @@
                             services
                         </span>
                         <ul class="dropdown-container" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item nav-link" href="./service.html"><i
-                                        class="bi bi-collection-fill"></i>Main Service</a></li>
-                            <li><a class="dropdown-item nav-link" href="./subService.html"><i
-                                        class="bi bi-collection-fill"></i>Sub Service</a></li>
+                            <li><a class="dropdown-item nav-link" href="./service.html">
+                                    Main Service
+                                </a></li>
+                            <li>
+                                <a class="dropdown-item nav-link" href="./subService.html">
+                                    Sub Service
+                                </a></li>
                         </ul>
                     </li>
                     <li>
                         <span class="nav-link dropdown-btn dropdown-toggle" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bi bi-collection-fill"></i>
-                            users
+                            <i class="bi bi-people-fill"></i>
+                            users & admin
                         </span>
                         <ul class="dropdown-container" aria-labelledby="navbarDropdown">
                             <li>
                                 <a href="./users.html" class="nav-link">
-                                    <i class="bi bi-people-fill"></i> users
+                                    users
                                 </a>
                             </li>
                             <li>
                                 <a href="./adminUsers.html" class="nav-link">
-                                    <i class="bi bi-people-fill"></i> admin users
+                                    admin users
                                 </a>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="{% host_url 'main_admin_events' %}" class="nav-link">
+                        <a href="./readingList.html" class="nav-link">
                             <i class="bi bi-file-earmark-fill"></i> Reading List
                         </a>
                     </li>
                     <li>
-                        <a href="{% host_url 'main_admin_events' %}" class="nav-link">
-                            <i class="bi bi-tag-fill"></i> subscription
-                        </a>
+                        <span class="nav-link dropdown-btn dropdown-toggle" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-tag-fill"></i>
+                            Subscription
+                        </span>
+                        <ul class="dropdown-container" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item nav-link" href="./subscriptionList.html">Subscription List</a></li>
+                            <li><a class="dropdown-item nav-link" href="./subscriptionPack.html">Subscription Package</a></li>
+                        </ul>
                     </li>
                     <li>
                         <a href="{% host_url 'main_admin_events' %}" class="nav-link">
@@ -147,8 +156,7 @@
                     <h2 class="float-start text-uppercase mb-4">total client</h2>
                     <div class="col-md-3">
                         <div class="subscription-info bg-primary-dark">
-                            <h3>TOTAL ADMIN
-                                BUSINESS CYBERSECURITY</h3>
+                            <h3>TOTAL ADMIN</h3>
                             <p class="fw-bolder">
                                 <i class="bi bi-person"></i> <span style="font-size: 25px;">8</span> users
                             </p>
@@ -156,8 +164,7 @@
                     </div>
                     <div class="col-md-3">
                         <div class="subscription-info bg-primary-25">
-                            <h3>TOTAL MODERATOR
-                                BUSINESS CYBERSECURITY</h3>
+                            <h3>TOTAL MODERATOR</h3>
                             <p class="fw-bolder">
                                 <i class="bi bi-person"></i> <span style="font-size: 25px;">3</span> users
                             </p>
@@ -165,8 +172,7 @@
                     </div>
                     <div class="col-md-3">
                         <div class="subscription-info bg-primary-50">
-                            <h3>TOTAL EDITOR
-                                BUSINESS CYBERSECURITY</h3>
+                            <h3>TOTAL EDITOR</h3>
                             <p class="fw-bolder">
                                 <i class="bi bi-person"></i> <span style="font-size: 25px;">2</span> users
                             </p>
@@ -174,8 +180,7 @@
                     </div>
                     <div class="col-md-3">
                         <div class="subscription-info" style="background-color: #3869C1;">
-                            <h3>TOTAL CONTRIBUTOR
-                                BUSINESS CYBERSECURITY</h3>
+                            <h3>TOTAL CONTRIBUTOR</h3>
                             <p class="fw-bolder">
                                 <i class="bi bi-person"></i> <span style="font-size: 25px;">3</span> users
                             </p>

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 :root {
     --var-primary-color: #182f59;
     --var-primary-color-dark: #111125;
@@ -16,6 +17,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
 }
 
 ul {
@@ -140,13 +142,12 @@ aside {
 
 .dropdown-container {
     display: none;
-    padding-left: 8px;
-    margin-left: 27px;
 }
+
 
 /* sidebar links style starts here */
 
-.nav-link {
+.aside-container .nav-link {
     color: var(--var-link-color);
     display: grid;
     grid-template-columns: 35px 1fr 10px;
@@ -162,7 +163,9 @@ aside {
 .icon {
     width: 25px;
 }
-
+.icon path {
+    fill: #182f59;
+}
 
 input:focus,
 button:focus,
@@ -182,6 +185,10 @@ textarea:focus {
 .navbar .nav-link:hover {
     color: #fff;
     background-color: var(--var-primary-color) !important;
+}
+
+.navbar .nav-link:hover .icon path{
+    fill: #fff;
 }
 
 .navbar .nav-link:focus,
@@ -290,10 +297,6 @@ body {
     background-color: #f5f5f5;
 }
 
-.dropdown-menu {
-    position: absolute;
-
-}
 
 .modal {
     left: 70px;
@@ -312,8 +315,6 @@ body {
 }
 
 .menubar li {
-    padding: 10px 0;
-    padding-left: 15px;
     border-bottom: 1px solid rgba(128, 128, 128, 0.5);
 }
 
@@ -390,10 +391,10 @@ body {
     background-color: white;
     width: 25px;
     border-radius: 5px;
-    transform: rotate(90deg);
-    top: 25px;
+    top: 50%;
     right: 0;
     position: absolute;
+    transform: translateY(-50%) rotate(90deg);
 }
 
 .menubar .active {
@@ -403,9 +404,14 @@ body {
 .menubar .dropdown-container li {
     border: none !important;
     padding-block: 0;
+    background-color: #182f591c;
+    margin-bottom: 5px;
 }
 
-
+.menubar .dropdown-container li a{
+    padding-left: 3.5rem;
+    display: block;
+}
 
 #event-details td .btn {
     display: contents;
@@ -414,7 +420,12 @@ body {
 #event-details thead {
     font-size: 14px;
 }
-
+table.dataTable tbody td, table.dataTable thead th{
+    text-align: center;
+}
+table.dataTable tbody td.select-checkbox:before, table.dataTable tbody td.select-checkbox:after, table.dataTable tbody th.select-checkbox:before, table.dataTable tbody th.select-checkbox:after{
+    top: 50%;
+}
 /*Footer*/
 
 footer {
