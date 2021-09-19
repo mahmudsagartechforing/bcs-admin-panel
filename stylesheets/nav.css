@@ -68,6 +68,7 @@ a {
 nav {
     box-shadow: 1px 1px 1px 1px var(--var-box-shadow-color);
     background-color: var(--var-topbar-background-color);
+    padding-inline: 20px;
 }
 
 .topbar-dropdown {
