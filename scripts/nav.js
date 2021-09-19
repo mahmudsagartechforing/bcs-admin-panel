@@ -2,8 +2,10 @@ const links = document.querySelectorAll('.nav-link')
 links.forEach(link => {
   if (link.href == document.URL) {
     link.classList.add("active")
-    if (link.classList.contains("dropdown-item"))
+    if (link.classList.contains("dropdown-item")){
+      console.log("clicked");
       link.parentElement.parentElement.style.display = "block"
+    }
 
   } else {
     link.classList.remove("active")
