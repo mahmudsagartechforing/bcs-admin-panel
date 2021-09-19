@@ -119,8 +119,10 @@
                             Subscription
                         </span>
                         <ul class="dropdown-container" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item nav-link" href="./subscriptionList.html">Subscription List</a></li>
-                            <li><a class="dropdown-item nav-link" href="./subscriptionPack.html">Subscription Package</a></li>
+                            <li><a class="dropdown-item nav-link" href="./subscriptionList.html">Subscription List</a>
+                            </li>
+                            <li><a class="dropdown-item nav-link" href="./subscriptionPack.html">Subscription
+                                    Package</a></li>
                         </ul>
                     </li>
                     <li>
@@ -160,14 +162,14 @@
                         <div class="package-stat">
                             <div class="shadow p-4 mt-4" style="vertical-align: middle;">
                                 <h4>Monthly Revenue</h4>
-                                <canvas id="revenue-chart"></canvas>
+                                <canvas id="package-chart"></canvas>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-8" style="align-self: end;">
                         <div class="row g-4 align-content-center">
                             <div class="col-md-6">
-                                <div class="subscription-info bg-primary-dark">
+                                <div class="subscription-info" style="background-color: #4566A0;">
                                     <h3>Risk assessment</h3>
                                     <p class="fw-bolder">
                                         <i class="bi bi-person"></i> <span style="font-size: 25px;">750</span> users
@@ -175,7 +177,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="subscription-info bg-primary-25">
+                                <div class="subscription-info" style="background-color: #2C4C8C;">
                                     <h3>Incident response</h3>
                                     <p class="fw-bolder">
                                         <i class="bi bi-person"></i> <span style="font-size: 25px;">750</span> users
@@ -183,7 +185,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="subscription-info bg-primary-50">
+                                <div class="subscription-info" style="background-color: #2C4C8C;">
                                     <h3>Security comliance</h3>
                                     <p class="fw-bolder">
                                         <i class="bi bi-person"></i> <span style="font-size: 25px;">750</span> users
@@ -191,7 +193,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="subscription-info" style="background-color: #3869C1;">
+                                <div class="subscription-info" style="background-color: #182F59;">
                                     <h3>SMB Solution</h3>
                                     <p class="fw-bolder">
                                         <i class="bi bi-person"></i> <span style="font-size: 25px;">750</span> users
@@ -206,53 +208,282 @@
         <section class="info">
             <div class="container">
                 <div class="row my-5">
+                    <div class="subscription-container position-relative px-0 px-md-2 text-center">
+                        <div class="border-bottom border-gray pb-1">
 
-                    <div class="col-md-6">
-                        <div class="multiselect position-relative">
-                            <div class="selectBox" onclick="showCheckboxes(checkboxes)">
-                                <select>
-                                    <option>Select an option</option>
-                                </select>
-                                <div class="overSelect"></div>
-                            </div>
-                            <div id="checkboxes" class="w-100">
-                                <label for="one">
-                                    <input type="checkbox" id="one">By New
-                                    User</label>
-                                <label for="two">
-                                    <input type="checkbox" id="two">By
-                                    Revenue</label>
-                                <label for="three">
-                                    <input type="checkbox" id="three">By
-                                    Order</label>
-                                <label for="three">
-                                    <input type="checkbox" id="three">By
-                                    interest List</label>
+                            <div class="d-flex justify-content-between">
+                                <h4 class="fw-bold">SUBSCRIPTION PACKAGES (plug & play program)</h4>
+                                <button class="btn btn-primary">Add package</button>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <input type="text" id="dashboardDaterange" value="Select By Time range" name="daterange">
-                    </div>
-                </div>
-                <div class="row">
-
-                    <div class="col-md-12">
-                        <canvas id="info-chart"></canvas>
-
-                        <div class="filter-options d-flex w-85 float-end justify-content-between mb-3">
-                            <button class="btn btn-secondary mx-2 rounded-pill">1d</button>
-                            <button class="btn btn-secondary mx-2 rounded-pill active">1w</button>
-                            <button class="btn btn-secondary mx-2 rounded-pill">1mo</button>
-                            <button class="btn btn-secondary mx-2 rounded-pill">3mo</button>
-                            <button class="btn btn-secondary mx-2 rounded-pill">6mo</button>
-                            <button class="btn btn-secondary mx-2 rounded-pill">1y</button>
-                            <button class="btn btn-secondary mx-2 rounded-pill">all</button>
-                        </div>
+                        <section class="package-details mt-4">
+                            <div class="package col-9 col-sm-4 col-md-3 col-xl-auto bg-lightgreen shadow p-3 rounded">
+                                <h3 class="fw-bold fs-4">BASIC</h3>
+                                <table class="mx-auto mb-3">
+                                    <tbody>
+                                        <tr>
+                                            <td>Cybersecurity & Privacy Program
+                                            </td>
+                                            <td>✓</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Risk Assessment
+                                            </td>
+                                            <td>✓</td>
+                                        </tr>
+                                        <tr>
+                                            <td> Data Privacy & Protection
+                                            </td>
+                                            <td>✓</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Vendor Screening
+                                            </td>
+                                            <td>✓</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Incident Response Strategy
+                                            </td>
+                                            <td>✓</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Awareness & Training
+                                            </td>
+                                            <td>✓</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Continuous consultation
+                                            </td>
+                                            <td>●</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Certification
+                                            </td>
+                                            <td>✓</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="info-btn">
+                                    <p class="mb-0">
+                                        <i class="bi bi-person-fill"></i> Max workstations
+                                    </p>
+                                    <p class="mb-0 fw-bold">5</p>
+                                </div>
+                                <div class="info-btn">
+                                    <p class="mt-2">
+                                        <i class="bi bi-person-fill"></i> Max servers
+                                    </p>
+                                    <p class="mb-0 fw-bold">5</p>
+                                </div>
+                                <div class="info-btn">
+                                    <p class="mt-2">
+                                        <i class="bi bi-person-fill"></i> Max websites
+                                    </p>
+                                    <p class="mb-0 fw-bold">5</p>
+                                </div>
+                                <div class="mt-2 info-btn">
+                                    <p class="mb-0">
+                                        <i class="icofont-tag"></i> Price
+                                    </p>
+                                    <p class="mb-0 fw-bold">500$
+                                    </p>
+                                </div>
+                                <button class="mt-3 btn bg-navy px-5 py-1 text-uppercase" data-bs-toggle="modal"
+                                    data-bs-target="#subscribeModal-1">Edit</button>
+                            </div>
+                            <div class="package col-9 col-sm-4 col-md-3 col-xl-auto bg-lightgreen shadow p-3 rounded">
+                                <h3 class="fw-bold fs-4 text-uppercase">Medium</h3>
+                                <table class="mx-auto mb-3">
+                                    <tbody>
+                                        <tr>
+                                            <td>Cybersecurity & Privacy Program
+                                            </td>
+                                            <td>✓</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Risk Assessment
+                                            </td>
+                                            <td>✓</td>
+                                        </tr>
+                                        <tr>
+                                            <td> Data Privacy & Protection
+                                            </td>
+                                            <td>✓</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Vendor Screening
+                                            </td>
+                                            <td>✓</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Incident Response Strategy
+                                            </td>
+                                            <td>✓</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Awareness & Training
+                                            </td>
+                                            <td>✓</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Continuous consultation
+                                            </td>
+                                            <td>●</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Certification
+                                            </td>
+                                            <td>✓</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="info-btn">
+                                    <p class="mb-0">
+                                        <i class="bi bi-person-fill"></i> Max workstations
+                                    </p>
+                                    <p class="mb-0 fw-bold">5</p>
+                                </div>
+                                <div class="info-btn">
+                                    <p class="mt-2">
+                                        <i class="bi bi-person-fill"></i> Max servers
+                                    </p>
+                                    <p class="mb-0 fw-bold">5</p>
+                                </div>
+                                <div class="info-btn">
+                                    <p class="mt-2">
+                                        <i class="bi bi-person-fill"></i> Max websites
+                                    </p>
+                                    <p class="mb-0 fw-bold">5</p>
+                                </div>
+                                <div class="mt-2 info-btn">
+                                    <p class="mb-0">
+                                        <i class="icofont-tag"></i> Price
+                                    </p>
+                                    <p class="mb-0 fw-bold">500$
+                                    </p>
+                                </div>
+                                <button class="mt-3 btn bg-navy px-5 py-1 text-uppercase" data-bs-toggle="modal"
+                                    data-bs-target="#subscribeModal-1">Edit</button>
+                            </div>
+                            <div class="package col-9 col-sm-4 col-md-3 col-xl-auto bg-lightgreen shadow p-3 rounded">
+                                <h3 class="fw-bold fs-4 text-uppercase">Advanced</h3>
+                                <table class="mx-auto mb-3">
+                                    <tbody>
+                                        <tr>
+                                            <td>Cybersecurity & Privacy Program
+                                            </td>
+                                            <td>✓</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Risk Assessment
+                                            </td>
+                                            <td>✓</td>
+                                        </tr>
+                                        <tr>
+                                            <td> Data Privacy & Protection
+                                            </td>
+                                            <td>✓</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Vendor Screening
+                                            </td>
+                                            <td>✓</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Incident Response Strategy
+                                            </td>
+                                            <td>✓</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Awareness & Training
+                                            </td>
+                                            <td>✓</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Continuous consultation
+                                            </td>
+                                            <td>●</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Certification
+                                            </td>
+                                            <td>✓</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="info-btn">
+                                    <p class="mb-0">
+                                        <i class="bi bi-person-fill"></i> Max workstations
+                                    </p>
+                                    <p class="mb-0 fw-bold">5</p>
+                                </div>
+                                <div class="info-btn">
+                                    <p class="mt-2">
+                                        <i class="bi bi-person-fill"></i> Max servers
+                                    </p>
+                                    <p class="mb-0 fw-bold">5</p>
+                                </div>
+                                <div class="info-btn">
+                                    <p class="mt-2">
+                                        <i class="bi bi-person-fill"></i> Max websites
+                                    </p>
+                                    <p class="mb-0 fw-bold">5</p>
+                                </div>
+                                <div class="mt-2 info-btn">
+                                    <p class="mb-0">
+                                        <i class="icofont-tag"></i> Price
+                                    </p>
+                                    <p class="mb-0 fw-bold">500$
+                                    </p>
+                                </div>
+                                <button class="mt-3 btn bg-navy px-5 py-1 text-uppercase" data-bs-toggle="modal"
+                                    data-bs-target="#subscribeModal-1">Edit</button>
+                            </div>
+                            <div class="package col-9 col-sm-4 col-md-3 col-xl-auto bg-lightgreen shadow p-3 rounded">
+                                <h3 class="fw-bold fs-4 text-uppercase">Custom</h3>
+                                <article class="custom-info fw-bold">
+                                    <p>
+                                        Lorem Ipsum is simply dummy text
+                                        of the printing and typesetting industry.
+                                        Lorem Ipsum has been the industry's
+                                        standard dummy text ever since the
+                                        1500s, when an unknown printer took a
+                                        galley of type and scrambled it to make
+                                        a type specimen book. It has survived
+                                        not only five centuries, but also the
+                                        leap into electronic typesetting.
+                                    </p>
+                                </article>
+                                <li class="mt-4 mb-3 custom-info-listing"><span>Lorem Ipsum is simply dummy text of the
+                                        printing.</span> </li>
+                                <li class="mt-4 mb-3 custom-info-listing"><span>Lorem Ipsum is simply dummy text of the
+                                        printing.</span> </li>
+                                <li class="mt-4 mb-3 custom-info-listing"><span>Lorem Ipsum is simply dummy text of the
+                                        printing.</span> </li>
+                            </div>
+                        </section>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- modal -->
+        <div class="modal fade" id="subscribeModal-1" tabindex="-1" aria-labelledby="subscribeModal-1Label"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h5 class="fs-3 fw-bold">First you need to make an one time purchase for your
+                            data &amp; privacy only then you will eligible for monthly subscription
+                        </h5>
+                        <h6 class="fs-4 text-green">Please go to the service menu
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <!-- main section ends -->
     <footer id="footer-small" class="footer footer-shrink bg-blue py-4">
@@ -279,7 +510,7 @@
             </a>
         </div>
         <div class="p-3 p pb-2 text-center text-white ">
-            <p >Copyright © 2021 Techforing Ltd.
+            <p>Copyright © 2021 Techforing Ltd.
             </p>
         </div>
     </footer>
@@ -298,7 +529,7 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
     <!-- custom scripts -->
     <script src="./scripts/nav.js"></script>
-    <script src="./scripts/dashboard.js"></script>
+    <script src="./scripts/subscription.js"></script>
 </body>
 
 </html>

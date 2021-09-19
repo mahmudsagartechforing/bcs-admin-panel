@@ -584,6 +584,13 @@ footer a i{
 
 
 @media (max-width:1241px) {
+    .aside-container{
+        width: 19%;
+    }
+    main{
+        width: calc(100% - 19%);
+        margin-left: 18%;
+    }
     .jumbotron .col-lg-4 {
         width: 50%;
     }
@@ -605,9 +612,15 @@ footer a i{
     }
 
     .event-filter-btn,
-    .btn,
     .event-control #filter {
         font-size: 14px !important;
         padding: 4px 2px !important;
+    }
+    .show-dropdown-container {
+        padding: 1rem .25rem;
+    }
+    .menubar .active::after {
+        right: -8px;
+        display: none;
     }
 }
