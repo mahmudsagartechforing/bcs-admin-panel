@@ -4,11 +4,12 @@ links.forEach(link => {
     link.classList.add("active")
     if (link.classList.contains("dropdown-item")){
       console.log("clicked");
-      link.parentElement.parentElement.style.display = "block"
+      link.parentElement.parentElement.classList.add("show-dropdown-container");
     }
 
   } else {
     link.classList.remove("active")
+    // link.parentElement.parentElement.classList.remove("show-dropdown-container");
   }
 })
 
@@ -17,10 +18,11 @@ const dropdown = document.querySelectorAll(".dropdown-btn");
 for (let i = 0; i < dropdown.length; i++) {
   dropdown[i].addEventListener("click", function () {
     var dropdownContent = this.nextElementSibling;
-    if (dropdownContent.style.display === "block") {
-      dropdownContent.style.display = "none";
+    console.log(dropdownContent);
+    if (dropdownContent.classList.contains("show-dropdown-container")) {
+      dropdownContent.classList.remove( "show-dropdown-container");
     } else {
-      dropdownContent.style.display = "block";
+      dropdownContent.classList.add("show-dropdown-container");
     }
   });
 }

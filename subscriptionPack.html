@@ -21,6 +21,7 @@
     <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <!-- custom css -->
     <link rel="stylesheet" href="./stylesheets/nav.css" />
+    <link rel="stylesheet" href="./stylesheets/dashboard.css" />
     <link rel="stylesheet" href="./stylesheets/subscription.css" />
     <!-- charts js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
@@ -207,14 +208,14 @@
                 <div class="row my-5">
 
                     <div class="col-md-6">
-                        <div class="multiselect">
+                        <div class="multiselect position-relative">
                             <div class="selectBox" onclick="showCheckboxes(checkboxes)">
                                 <select>
                                     <option>Select an option</option>
                                 </select>
                                 <div class="overSelect"></div>
                             </div>
-                            <div id="checkboxes">
+                            <div id="checkboxes" class="w-100">
                                 <label for="one">
                                     <input type="checkbox" id="one">By New
                                     User</label>
@@ -253,8 +254,9 @@
             </div>
         </section>
     </main>
-    <footer id="footer-small" class="footer footer-shrink bg-blue p-2 pt-4 p-md-5 pb-md-2 mt-5">
-        <div class="d-flex justify-content-center mb-4">
+    <!-- main section ends -->
+    <footer id="footer-small" class="footer footer-shrink bg-blue py-4">
+        <div class="d-flex justify-content-center">
             <a href="" class="me-5">PRIVACY POLICY</a>
             <a href="">TERMS OF USE</a>
         </div>
@@ -276,8 +278,8 @@
                 <i class="bi bi-instagram me-3"></i>
             </a>
         </div>
-        <div class="p-3 p-md-4 pb-2 text-center text-white ">
-            <p class="pt-4 border-top border-light">Copyright © 2021 Techforing Ltd.
+        <div class="p-3 p pb-2 text-center text-white ">
+            <p >Copyright © 2021 Techforing Ltd.
             </p>
         </div>
     </footer>
@@ -296,6 +298,7 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
     <!-- custom scripts -->
     <script src="./scripts/nav.js"></script>
+    <script src="./scripts/dashboard.js"></script>
 </body>
 
 </html>

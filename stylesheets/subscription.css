@@ -25,12 +25,6 @@ p {
 .bg-primary-25 {
     background-color: var(--var-primary-color-25);
 }
-.user-stat .multiselect {
-    position: relative;
-}
-.selectBox {
-    position: relative;
-}
 .selectBox select {
     width: 100%;
     font-weight: 500;

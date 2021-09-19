@@ -171,9 +171,6 @@
 #admin-list thead th{
     font-weight: 500;
 }
-#admin-list tbody td:first-child, #admin-list thead th:first-child{
-    text-align: start;
-}
-#admin-list tbody td:first-child i{
-    padding: 4px 5px;
+#admin-list tbody td {
+    text-align: center;
 }
