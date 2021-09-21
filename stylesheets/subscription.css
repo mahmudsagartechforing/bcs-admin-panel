@@ -200,3 +200,13 @@ p {
         grid-gap: 15px;
     }
 }
+
+.input{
+    background-color: #F2F3F7;
+    align-items: center;
+    padding-block: .5rem;
+    padding-inline: .5rem;
+    grid-template-columns: 1fr 350px 1fr;
+    margin-bottom: .5rem;
+    box-shadow: 1px 1px 4px  #707070;
+}
