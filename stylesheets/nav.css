@@ -28,7 +28,18 @@ ul {
 a {
     text-decoration: none;
 }
-
+h2{
+    font-size: 22px;
+}
+h3{
+    font-size: 20px;
+}
+h4{
+    font-size: 18px;
+}
+table tbody td, table thead th{
+    text-align: center;
+}
 .w-85 {
     width: 85%;
 }
