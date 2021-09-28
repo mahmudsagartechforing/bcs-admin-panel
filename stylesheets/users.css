@@ -57,9 +57,11 @@
     background-color: #182f593d;
 }
 
-
 #individual-user-info tbody tr:hover{
     background-color: #5bbc2e2f;
+}
+
+#individual-user-info tbody .service:hover{
     cursor: pointer;
 }
 

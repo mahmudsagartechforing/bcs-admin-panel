@@ -315,7 +315,7 @@
                         <tbody>
                             <tr>
                                 <td>1.</td>
-                                <td>Risk Assessment</td>
+                                <td class="service">Risk Assessment</td>
                                 <td>Concierge Cybersecurity</td>
                                 <td>Subscription based</td>
                                 <td>03/08/2021</td>
@@ -323,14 +323,14 @@
                                 <td>COMPLETED</td>
                                 <td>03/09/2021</td>
                                 <td>
-                                    <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                                    <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal2">
                                         <i class="bi bi-pencil-square text-primary rounded-circle activites-icon"></i>
                                     </button>
                                 </td>
                             </tr>
                             <tr>
                                 <td>2.1</td>
-                                <td>Incident Response</td>
+                                <td class="service">Incident Response</td>
                                 <td>Open Source Intelligence</td>
                                 <td>Subscription based</td>
                                 <td>03/08/2021</td>
@@ -345,7 +345,7 @@
                             </tr>
                             <tr>
                                 <td>2.2</td>
-                                <td>Incident Response</td>
+                                <td class="service">Incident Response</td>
                                 <td>Crime Investigation</td>
                                 <td>Subscription based</td>
                                 <td>03/08/2021</td>
@@ -360,7 +360,7 @@
                             </tr>
                             <tr>
                                 <td>3.</td>
-                                <td>SMB Solution</td>
+                                <td class="service">SMB Solution</td>
                                 <td>Hack Recovery</td>
                                 <td>Subscription based</td>
                                 <td>03/08/2021</td>
@@ -436,40 +436,27 @@
             <div class="modal-dialog modal-dialog-centered expanded-modal">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h2>Edit Overview</h2>
+                        <h2>Edit Service list</h2>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <form action="">
                             <div class="col-auto mb-3">
-                                <label for="subServiceName">Last Monitoring time</label>
-                                <input type="text" class="form-control" id="subServiceName"
-                                    placeholder="Enter Last Monitoring time" />
+                                <label for="subServiceName">Payment Status</label>
+                                <select class="form-select" name="serviceName" id="serviceName" required>
+                                    <option selected disabled value="">Select Payment Status</option>
+                                    <option value="paid">Paid</option>
+                                    <option value="proccessing">Proccessing</option>
+                                </select>
                             </div>
                             <div class="col-auto mb-3">
                                 <label for="subServiceName">Next Monnitoring time</label>
-                                <input type="text" class="form-control" id="subServiceName"
-                                    placeholder="Enter Next Monnitoring time" />
-                            </div>
-                            <div class="col-auto mb-3">
-                                <label for="subServiceName">Last Update Time</label>
-                                <input type="text" class="form-control" id="subServiceName"
-                                    placeholder="Enter Last Update Time " />
-                            </div>
-                            <div class="col-auto mb-3">
-                                <label for="subServiceName">Next Update Time</label>
-                                <input type="text" class="form-control" id="subServiceName"
-                                    placeholder="Enter Next Update Time" />
-                            </div>
-                            <div class="col-auto mb-3">
-                                <label for="subServiceName">Last Audit Time</label>
-                                <input type="text" class="form-control" id="subServiceName"
-                                    placeholder="Last Audit Time" />
-                            </div>
-                            <div class="col-auto mb-3">
-                                <label for="subServiceName">Next Audit Time</label>
-                                <input type="text" class="form-control" id="subServiceName"
-                                    placeholder="Enter Next Audit Time" />
+                                <select class="form-select" name="serviceName" id="serviceName" required>
+                                    <option selected disabled value="">Select a Service Category</option>
+                                    <option value="active">Completed</option>
+                                    <option value="deactive">Hold</option>
+                                    <option value="canceled">Proccessing</option>
+                                </select>
                             </div>
                             <div class="d-flex justify-content-between">
                                 <!-- <button type="button" class="btn btn-primary">

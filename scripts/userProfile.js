@@ -33,7 +33,7 @@ $(document).ready(function () {
         "paging": false,
     });
 })
-const overviewRow = document.querySelectorAll("#individual-user-info tr")
+const overviewRow = document.querySelectorAll("#individual-user-info .service")
 const overviewDialogue = document.querySelector(".overview-dialogue")
 const overviewDialogueClose = document.querySelector(".close-overview")
 overviewRow.forEach(items =>{
