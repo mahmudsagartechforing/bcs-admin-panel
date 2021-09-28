@@ -239,16 +239,13 @@
                     </div>
                 </div>
                 <div class="subscription-details">
-                    <h3>subscription details</h3>
+                    <h3></h3>
                     <ul>
                         <li>
-                            <h5>Subscribed Service Name</h5>
-                            <p class="text-primary fw-bold">Business Cybersecurity</p>
-                            <p class="text-primary">Plug & Play Program</p>
+                            
                         </li>
                         <li>
-                            <h5>Starting at</h5>
-                            <p class="text-primary">21 Jan, 2021</p>
+                            
                         </li>
                         <li>
                             <h5>Registration Date</h5>
@@ -305,12 +302,14 @@
                         <thead>
                             <tr>
                                 <th>SL</th>
+                                <th>Service Category Name</th>
                                 <th>Service Name</th>
-                                <th>Sub Service Name</th>
+                                <th>Purchase Type</th>
                                 <th>Start Date</th>
                                 <th>Payment Status</th>
                                 <th>Order Status</th>
                                 <th>Renewal Date</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -318,37 +317,61 @@
                                 <td>1.</td>
                                 <td>Risk Assessment</td>
                                 <td>Concierge Cybersecurity</td>
+                                <td>Subscription based</td>
                                 <td>03/08/2021</td>
                                 <td>PAID</td>
                                 <td>COMPLETED</td>
                                 <td>03/09/2021</td>
+                                <td>
+                                    <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                                        <i class="bi bi-pencil-square text-primary rounded-circle activites-icon"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>2.1</td>
                                 <td>Incident Response</td>
                                 <td>Open Source Intelligence</td>
+                                <td>Subscription based</td>
                                 <td>03/08/2021</td>
                                 <td>PAID</td>
                                 <td>PROCESSING</td>
                                 <td>03/09/2021</td>
+                                <td>
+                                    <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                                        <i class="bi bi-pencil-square text-primary rounded-circle activites-icon"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>2.2</td>
                                 <td>Incident Response</td>
                                 <td>Crime Investigation</td>
+                                <td>Subscription based</td>
                                 <td>03/08/2021</td>
                                 <td>PROCESSING</td>
                                 <td>HOLD</td>
                                 <td>03/09/2021</td>
+                                <td>
+                                    <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                                        <i class="bi bi-pencil-square text-primary rounded-circle activites-icon"></i>
+                                    </button>
+                                </td>
                             </tr>
                             <tr>
                                 <td>3.</td>
                                 <td>SMB Solution</td>
                                 <td>Hack Recovery</td>
+                                <td>Subscription based</td>
                                 <td>03/08/2021</td>
                                 <td>PAID</td>
                                 <td>PROCESSING</td>
                                 <td>03/09/2021</td>
+                                <td>
+                                    <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                                        <i class="bi bi-pencil-square text-primary rounded-circle activites-icon"></i>
+                                    </button>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
@@ -357,6 +380,59 @@
         </div>
         <!-- Modal -->
         <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered expanded-modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Edit Overview</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="">
+                            <div class="col-auto mb-3">
+                                <label for="subServiceName">Last Monitoring time</label>
+                                <input type="text" class="form-control" id="subServiceName"
+                                    placeholder="Enter Last Monitoring time" />
+                            </div>
+                            <div class="col-auto mb-3">
+                                <label for="subServiceName">Next Monnitoring time</label>
+                                <input type="text" class="form-control" id="subServiceName"
+                                    placeholder="Enter Next Monnitoring time" />
+                            </div>
+                            <div class="col-auto mb-3">
+                                <label for="subServiceName">Last Update Time</label>
+                                <input type="text" class="form-control" id="subServiceName"
+                                    placeholder="Enter Last Update Time " />
+                            </div>
+                            <div class="col-auto mb-3">
+                                <label for="subServiceName">Next Update Time</label>
+                                <input type="text" class="form-control" id="subServiceName"
+                                    placeholder="Enter Next Update Time" />
+                            </div>
+                            <div class="col-auto mb-3">
+                                <label for="subServiceName">Last Audit Time</label>
+                                <input type="text" class="form-control" id="subServiceName"
+                                    placeholder="Last Audit Time" />
+                            </div>
+                            <div class="col-auto mb-3">
+                                <label for="subServiceName">Next Audit Time</label>
+                                <input type="text" class="form-control" id="subServiceName"
+                                    placeholder="Enter Next Audit Time" />
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <!-- <button type="button" class="btn btn-primary">
+                                    Save and add another
+                                </button> -->
+                                <button type="button" class="btn btn-primary">
+                                    Update
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabe2" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered expanded-modal">
                 <div class="modal-content">
                     <div class="modal-header">

@@ -1,10 +1,10 @@
 
 $(document).ready(function () {
     $("#individual-user-info").DataTable({
-        responsive: true,
+        responsive: false,
+        "scrollX": true,
         info: false,
         columnDefs: [{
-            // className: 'select-checkbox',
             orderable: false,
             targets: [-1]
         }],
