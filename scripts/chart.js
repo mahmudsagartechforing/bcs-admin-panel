@@ -60,7 +60,7 @@ let infoLineChart = new Chart(infoChart, {
             data: [5, 45, 41, 50, 42],
             fill: false,
         }, {
-            label: "non- subscribed client",
+            label: "One-time purchase client",
             backgroundColor: "#5BBC2E",
             borderColor: "#5BBC2E",
             data: [75, 35, 45, 55, 15],

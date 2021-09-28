@@ -77,11 +77,11 @@
                         </span>
                         <ul class="dropdown-container" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item nav-link" href="./service.html">
-                                    Main Service
+                                    Service Category
                                 </a></li>
                             <li>
                                 <a class="dropdown-item nav-link" href="./subService.html">
-                                    Sub Service
+                                    Services
                                 </a></li>
                         </ul>
                     </li>
@@ -152,13 +152,20 @@
     <main>
         <div class="container">
             <div class="row">
+                <div class="col-md-12">
+                    <button class="btn border-1 servicesBtn float-end my-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Add Service Category
+                        <i class="bi bi-plus-circle-fill"></i></button>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-lg-12" style="margin-bottom: 15rem;">
                     <h2 class="text-capitalize my-4">service list</h2>
                     <table id="service-list" class="table display" style="width: 100%">
                         <thead>
                             <tr>
                                 <th>SL</th>
-                                <th>Service Name</th>
+                                <th>Service Category Name</th>
                                 <th>Description</th>
                                 <th>Action</th>
                             </tr>
@@ -247,9 +254,9 @@
                     <div class="modal-body">
                         <form action="">
                             <div class="col-auto mb-3">
-                                <label for="serviceName">Service Name</label>
+                                <label for="serviceName">Service Category Name</label>
                                 <input type="serviceName" class="form-control" id="serviceName"
-                                    placeholder="Enter Service Name" />
+                                    placeholder="Enter Service Category Name" />
                             </div>
                             <div class="col-auto mb-3">
                                 <label for="description">Description</label>
@@ -278,14 +285,9 @@
                     <div class="modal-body">
                         <form action="">
                             <div class="col-auto mb-3">
-                                <label for="serviceName">Service Name</label>
+                                <label for="serviceName">Service Category Name</label>
                                 <input type="serviceName" class="form-control" id="serviceName"
-                                    placeholder="Enter Service Name" />
-                            </div>
-                            <div class="col-auto mb-3">
-                                <label for="serviceName">Service Name</label>
-                                <input type="serviceName" class="form-control" id="serviceName"
-                                    placeholder="Enter Service Name" />
+                                    placeholder="Enter Service Category Name" />
                             </div>
                             <div class="col-auto mb-3">
                                 <label for="description">Description</label>

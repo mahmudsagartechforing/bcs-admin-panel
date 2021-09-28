@@ -55,8 +55,21 @@
     box-shadow: 1px 1px 3px 1px #7a7a7a;
     font-weight: 800;
 }
+input#dashboardDaterange {
+    width: 25% !important;
+}
+.subscription-info {
+    color: var(--var-topbar-background-color);
+    padding: 1rem;
+}
 
+.subscription-info h3 {
+    font-size: 22px;
+}
 
+.subscription-info p {
+    font-size: 18px;
+}
 /* individual user bubble style ends */
 /* info select filter starts */
 

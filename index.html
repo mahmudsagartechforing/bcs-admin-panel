@@ -77,11 +77,11 @@
                         </span>
                         <ul class="dropdown-container" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item nav-link" href="./service.html">
-                                    Main Service
+                                    Service Category
                                 </a></li>
                             <li>
                                 <a class="dropdown-item nav-link" href="./subService.html">
-                                    Sub Service
+                                    Services
                                 </a></li>
                         </ul>
                     </li>
@@ -153,37 +153,46 @@
         <section class="user-stat">
             <div class="container">
                 <div class="row">
-                    <!-- select by users -->
-                    <div class="col-md-4">
-                        <div class="multiselect">
-                            <div class="selectBox" onclick="showCheckboxes(checkboxes)">
-                                <select>
-                                    <option>Select an option</option>
-                                </select>
-                                <div class="overSelect"></div>
+                    <div class="col-md-8">
+                        <div class="row g-4 align-content-center">
+                            <div class="col-md-6">
+                                <div class="subscription-info" style="background-color: #4566A0;">
+                                    <h3>Risk assessment</h3>
+                                    <p class="fw-bolder">
+                                        <i class="bi bi-person"></i> <span style="font-size: 25px;">750</span> users
+                                    </p>
+                                </div>
                             </div>
-                            <div id="checkboxes" class="w-100">
-                                <label for="one">
-                                    <input type="checkbox" id="one" />Plug & Play Program</label>
-                                <label for="one">
-                                    <input type="checkbox" id="one" />Managed Security Solution</label>
-                                <label for="two">
-                                    <input type="checkbox" id="two" />Vulnerability Assessment</label>
-                                <label for="three">
-                                    <input type="checkbox" id="three" />Penetration Testing</label>
-                                <label for="three">
-                                    <input type="checkbox" id="three" />Penetration Testing</label>
-                                <label for="three">
-                                    <input type="checkbox" id="three" />Malware Removal</label>
+                            <div class="col-md-6">
+                                <div class="subscription-info" style="background-color: #2C4C8C;">
+                                    <h3>Incident response</h3>
+                                    <p class="fw-bolder">
+                                        <i class="bi bi-person"></i> <span style="font-size: 25px;">750</span> users
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="subscription-info" style="background-color: #2C4C8C;">
+                                    <h3>Security comliance</h3>
+                                    <p class="fw-bolder">
+                                        <i class="bi bi-person"></i> <span style="font-size: 25px;">750</span> users
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="subscription-info" style="background-color: #182F59;">
+                                    <h3>SMB Solution</h3>
+                                    <p class="fw-bolder">
+                                        <i class="bi bi-person"></i> <span style="font-size: 25px;">750</span> users
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- date picker -->
-                    <div class="col-md-4">
-                        <input type="text" id="dashboardDaterange" value="Select By Time range" name="daterange" />
-                    </div>
+                    
                     <!-- User Stat Chart -->
                     <div class="col-lg-4">
+                        
                         <canvas id="user-chart" style="
                                     display: block;
                                     width: 821px;
@@ -197,7 +206,9 @@
             <div class="container">
                 <div class="row">
                     <!-- info chart -->
-                    <div class="col-md-12">
+                    <div class="col-md-12 mt-5">
+                        <!-- date picker -->
+                        <input type="text" id="dashboardDaterange" class="float-end" value="Select By Time range" name="daterange" />
                         <canvas id="info-chart" height="50" class="chartjs-render-monitor"></canvas>
                         <!-- filter buttons -->
                         <div class="filter-options d-flex w-85 float-end justify-content-between mb-3">

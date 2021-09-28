@@ -1,9 +1,9 @@
-.addService,.addService:hover{
+.servicesBtn,.servicesBtn:hover{
     border-color: #707070;
     background: #182f59;
     color: white;
 }
-.addService i{
+.servicesBtn i{
     color: #fff;
 }
 .service{
