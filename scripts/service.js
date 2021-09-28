@@ -99,10 +99,17 @@ addSubServiceBtn.addEventListener("click", (e)=>{
     const div = document.createElement("div")
     div.innerHTML = `<div class="col-auto mb-3">
     <label for="subServiceName">Sub Service Title</label>
+    <span class="btn float-end close-btn close-sub">X</span>
     <input type="text" class="form-control" id="subServiceName"
         placeholder="Enter Service Title" required />
     <label for="subServiceName">Sub Service Description</label>
     <textarea class="form-control"></textarea>
 </div>`
     subServiceContainer.appendChild(div) 
+    const closeSub = document.querySelectorAll(".close-sub")
+    closeSub.forEach(closeBtn =>{
+        closeBtn.addEventListener("click", ()=>{
+            closeBtn.parentElement.classList.add("d-none")
+        })
+    })
 })
