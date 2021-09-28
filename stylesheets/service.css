@@ -114,3 +114,20 @@
         font-size: 13px !important;
     }
 }
+
+#reading-list thead th, #reading-list tbody td{
+    text-align: center;
+}
+#reading-list thead th:nth-child(2){
+    min-width: 135px;
+}
+#reading-list tbody td:nth-child(2){
+    min-width: 135px;
+}
+
+.part{
+    white-space: nowrap;
+    width: 35ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
