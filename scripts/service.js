@@ -90,3 +90,19 @@ addServiceFormCloses.forEach(addServiceFormClose => {
         tableContainer.classList.remove("d-none")
     })
 })
+
+const addSubServiceBtn = document.querySelector(".addSubService")
+const subServiceContainer = document.querySelector(".subServiceContainer")
+
+addSubServiceBtn.addEventListener("click", (e)=>{
+    e.preventDefault()
+    const div = document.createElement("div")
+    div.innerHTML = `<div class="col-auto mb-3">
+    <label for="subServiceName">Sub Service Title</label>
+    <input type="text" class="form-control" id="subServiceName"
+        placeholder="Enter Service Title" required />
+    <label for="subServiceName">Sub Service Description</label>
+    <textarea class="form-control"></textarea>
+</div>`
+    subServiceContainer.appendChild(div) 
+})
