@@ -394,7 +394,7 @@ body {
 }
 
 .menubar .active:hover {
-    color: #000!important;
+    color: #fff!important;
 }
 
 .menubar .active i,
