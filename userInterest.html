@@ -18,7 +18,7 @@
     <!-- bootstrap icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <!-- Select2 style -->
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" /> -->
     <!-- custom css -->
     <link rel="stylesheet" href="./stylesheets/nav.css" />
     <link rel="stylesheet" href="./stylesheets/service.css" />
@@ -156,7 +156,7 @@
     <main>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-12" style="margin-block-start: 5rem; margin-block-end: 15rem; position: relative;">
+                <div class="col-lg-12" style="margin-block-start: .5rem; margin-block-end: 15rem; position: relative;">
                     <div class="table-container">
                         <h2 class="float-start position-absolute text-uppercase">interest List</h2>
                         <table id="reading-list" class="table display service">
@@ -282,12 +282,73 @@
                                     placeholder="Enter Email" />
                             </div>
                             <div class="col-auto mb-3">
-                                <label for="serviceName">Select Interests</label>
-                                <select class="js-example-basic-multiple" name="states[]" multiple="multiple">
-                                    <option value="">Concierge Cybersecurity</option>
-                                    <option value="">Security Compliance</option>
-                                    <option value="">Training Program</option>
-                                </select>
+                                <label for="serviceName">Select Interest</label>
+                                <div class="row gx-0 mt-4 d-flex justify-content-center">
+                                    <div class="col-md-5 me-lg-5">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" checked>
+                                            <label class="form-check-label text-truncate" for="defaultCheck1">
+                                                Newsletter Notification
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" checked>
+                                            <label class="form-check-label text-truncate" for="defaultCheck1">
+                                                Email Notification
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                            <label class="form-check-label text-truncate" for="defaultCheck1">
+                                                New Article Notification
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" checked>
+                                            <label class="form-check-label text-truncate" for="defaultCheck1">
+                                                Regular Blog Notification
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                            <label class="form-check-label text-truncate" for="defaultCheck1">
+                                                Risk Assessment
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" checked>
+                                            <label class="form-check-label text-truncate" for="defaultCheck1">
+                                                Push Notification
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                            <label class="form-check-label text-truncate" for="defaultCheck1">
+                                                New Article Notification
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                            <label class="form-check-label text-truncate" for="defaultCheck1">
+                                                Events &amp; Webinar Notification
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" checked>
+                                            <label class="form-check-label text-truncate" for="defaultCheck1" >
+                                                New Service Notification
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                            <label class="form-check-label text-truncate" for="defaultCheck1">
+                                                General Notification
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="d-flex justify-content-between">
                                 <!-- <button type="button" class="btn btn-primary">
@@ -344,7 +405,7 @@
     <script src="https://cdn.datatables.net/1.11.1/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.1/js/dataTables.bootstrap5.min.js"></script>
     <!-- Select2 script -->
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script> -->
     <!-- date range picker -->
     <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script> -->
     <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script> -->
