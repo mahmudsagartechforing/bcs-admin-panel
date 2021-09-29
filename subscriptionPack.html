@@ -119,8 +119,10 @@
                             Subscription
                         </span>
                         <ul class="dropdown-container" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item nav-link" href="./subscriptionList.html">Subscription List</a></li>
-                            <li><a class="dropdown-item nav-link" href="./subscriptionPack.html">Subscription Package</a></li>
+                            <li><a class="dropdown-item nav-link" href="./subscriptionList.html">Subscription List</a>
+                            </li>
+                            <li><a class="dropdown-item nav-link" href="./subscriptionPack.html">Subscription
+                                    Package</a></li>
                         </ul>
                     </li>
                     <li>
@@ -167,7 +169,7 @@
                         <div class="row g-4 align-content-center">
                             <div class="col-md-6">
                                 <div class="subscription-info" style="background-color: #4566A0;">
-                                    <h3>Risk assessment</h3>
+                                    <h3>Basic</h3>
                                     <p class="fw-bolder">
                                         <i class="bi bi-person"></i> <span style="font-size: 25px;">750</span> users
                                     </p>
@@ -175,7 +177,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="subscription-info" style="background-color: #2C4C8C;">
-                                    <h3>Incident response</h3>
+                                    <h3>Medium</h3>
                                     <p class="fw-bolder">
                                         <i class="bi bi-person"></i> <span style="font-size: 25px;">750</span> users
                                     </p>
@@ -183,7 +185,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="subscription-info" style="background-color: #2C4C8C;">
-                                    <h3>Security comliance</h3>
+                                    <h3>Advanced</h3>
                                     <p class="fw-bolder">
                                         <i class="bi bi-person"></i> <span style="font-size: 25px;">750</span> users
                                     </p>
@@ -191,7 +193,7 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="subscription-info" style="background-color: #182F59;">
-                                    <h3>SMB Solution</h3>
+                                    <h3>Custom</h3>
                                     <p class="fw-bolder">
                                         <i class="bi bi-person"></i> <span style="font-size: 25px;">750</span> users
                                     </p>
@@ -206,21 +208,29 @@
             <div class="container">
                 <div class="row my-5">
                     <div class="subscription-container position-relative px-0 px-md-2 text-center">
-                        <div class="togglebutton my-5">
-                            <div class="d-flex w-50 justify-content-between">
-                                <button class="btn plugAndPlayBtn border-1 border-primary btn-primary">Plug And Play</button>
-                                <button class="btn border-1 manageBtn border-primary">Managed Security Solution</button>
+                        <div class="d-flex togglebutton my-5">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                    value="option1">
+                                <label class="form-check-label" for="inlineRadio1">Plug And Play</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                    value="option2">
+                                <label class="form-check-label" for="inlineRadio2">Managed security Solution</label>
                             </div>
                         </div>
                         <div class="plugAndPlay">
                             <div class="border-bottom border-gray pb-1">
                                 <div class="d-flex justify-content-between">
                                     <h4 class="fw-bold">SUBSCRIPTION PACKAGES (plug & play program)</h4>
-                                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#subscribeModal-1">Add package</button>
+                                    <button class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#subscribeModal-1">Add package</button>
                                 </div>
                             </div>
                             <section class="package-details mt-4">
-                                <div class="package col-9 col-sm-4 col-md-3 col-xl-auto bg-lightgreen shadow p-3 rounded">
+                                <div
+                                    class="package col-9 col-sm-4 col-md-3 col-xl-auto bg-lightgreen shadow p-3 rounded">
                                     <h3 class="fw-bold fs-4">BASIC</h3>
                                     <table class="mx-auto mb-3">
                                         <tbody>
@@ -294,7 +304,8 @@
                                     <button class="mt-3 btn bg-navy px-5 py-1 text-uppercase" data-bs-toggle="modal"
                                         data-bs-target="#subscribeModal-2">Edit</button>
                                 </div>
-                                <div class="package col-9 col-sm-4 col-md-3 col-xl-auto bg-lightgreen shadow p-3 rounded">
+                                <div
+                                    class="package col-9 col-sm-4 col-md-3 col-xl-auto bg-lightgreen shadow p-3 rounded">
                                     <h3 class="fw-bold fs-4 text-uppercase">Medium</h3>
                                     <table class="mx-auto mb-3">
                                         <tbody>
@@ -368,7 +379,8 @@
                                     <button class="mt-3 btn bg-navy px-5 py-1 text-uppercase" data-bs-toggle="modal"
                                         data-bs-target="#subscribeModal-2">Edit</button>
                                 </div>
-                                <div class="package col-9 col-sm-4 col-md-3 col-xl-auto bg-lightgreen shadow p-3 rounded">
+                                <div
+                                    class="package col-9 col-sm-4 col-md-3 col-xl-auto bg-lightgreen shadow p-3 rounded">
                                     <h3 class="fw-bold fs-4 text-uppercase">Advanced</h3>
                                     <table class="mx-auto mb-3">
                                         <tbody>
@@ -442,7 +454,8 @@
                                     <button class="mt-3 btn bg-navy px-5 py-1 text-uppercase" data-bs-toggle="modal"
                                         data-bs-target="#subscribeModal-2">Edit</button>
                                 </div>
-                                <div class="package col-9 col-sm-4 col-md-3 col-xl-auto bg-lightgreen shadow p-3 rounded">
+                                <div
+                                    class="package col-9 col-sm-4 col-md-3 col-xl-auto bg-lightgreen shadow p-3 rounded">
                                     <h3 class="fw-bold fs-4 text-uppercase">Custom</h3>
                                     <article class="custom-info fw-bold">
                                         <p>
@@ -457,11 +470,14 @@
                                             leap into electronic typesetting.
                                         </p>
                                     </article>
-                                    <li class="mt-4 mb-3 custom-info-listing"><span>Lorem Ipsum is simply dummy text of the
+                                    <li class="mt-4 mb-3 custom-info-listing"><span>Lorem Ipsum is simply dummy text of
+                                            the
                                             printing.</span> </li>
-                                    <li class="mt-4 mb-3 custom-info-listing"><span>Lorem Ipsum is simply dummy text of the
+                                    <li class="mt-4 mb-3 custom-info-listing"><span>Lorem Ipsum is simply dummy text of
+                                            the
                                             printing.</span> </li>
-                                    <li class="mt-4 mb-3 custom-info-listing"><span>Lorem Ipsum is simply dummy text of the
+                                    <li class="mt-4 mb-3 custom-info-listing"><span>Lorem Ipsum is simply dummy text of
+                                            the
                                             printing.</span> </li>
                                 </div>
                             </section>
@@ -470,11 +486,13 @@
                             <div class="border-bottom border-gray pb-1">
                                 <div class="d-flex justify-content-between">
                                     <h4 class="fw-bold">SUBSCRIPTION PACKAGES (Managed security Solution)</h4>
-                                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#subscribeModal-1">Add package</button>
+                                    <button class="btn btn-primary" data-bs-toggle="modal"
+                                        data-bs-target="#subscribeModal-1">Add package</button>
                                 </div>
                             </div>
                             <section class="package-details mt-4">
-                                <div class="package col-9 col-sm-4 col-md-3 col-xl-auto bg-lightgreen shadow p-3 rounded">
+                                <div
+                                    class="package col-9 col-sm-4 col-md-3 col-xl-auto bg-lightgreen shadow p-3 rounded">
                                     <h3 class="fw-bold fs-4">BASIC</h3>
                                     <table class="mx-auto mb-3">
                                         <tbody>
@@ -548,7 +566,8 @@
                                     <button class="mt-3 btn bg-navy px-5 py-1 text-uppercase" data-bs-toggle="modal"
                                         data-bs-target="#subscribeModal-2">Edit</button>
                                 </div>
-                                <div class="package col-9 col-sm-4 col-md-3 col-xl-auto bg-lightgreen shadow p-3 rounded">
+                                <div
+                                    class="package col-9 col-sm-4 col-md-3 col-xl-auto bg-lightgreen shadow p-3 rounded">
                                     <h3 class="fw-bold fs-4 text-uppercase">Medium</h3>
                                     <table class="mx-auto mb-3">
                                         <tbody>
@@ -622,7 +641,8 @@
                                     <button class="mt-3 btn bg-navy px-5 py-1 text-uppercase" data-bs-toggle="modal"
                                         data-bs-target="#subscribeModal-2">Edit</button>
                                 </div>
-                                <div class="package col-9 col-sm-4 col-md-3 col-xl-auto bg-lightgreen shadow p-3 rounded">
+                                <div
+                                    class="package col-9 col-sm-4 col-md-3 col-xl-auto bg-lightgreen shadow p-3 rounded">
                                     <h3 class="fw-bold fs-4 text-uppercase">Advanced</h3>
                                     <table class="mx-auto mb-3">
                                         <tbody>
@@ -696,7 +716,8 @@
                                     <button class="mt-3 btn bg-navy px-5 py-1 text-uppercase" data-bs-toggle="modal"
                                         data-bs-target="#subscribeModal-2">Edit</button>
                                 </div>
-                                <div class="package col-9 col-sm-4 col-md-3 col-xl-auto bg-lightgreen shadow p-3 rounded">
+                                <div
+                                    class="package col-9 col-sm-4 col-md-3 col-xl-auto bg-lightgreen shadow p-3 rounded">
                                     <h3 class="fw-bold fs-4 text-uppercase">Custom</h3>
                                     <article class="custom-info fw-bold">
                                         <p>
@@ -711,11 +732,14 @@
                                             leap into electronic typesetting.
                                         </p>
                                     </article>
-                                    <li class="mt-4 mb-3 custom-info-listing"><span>Lorem Ipsum is simply dummy text of the
+                                    <li class="mt-4 mb-3 custom-info-listing"><span>Lorem Ipsum is simply dummy text of
+                                            the
                                             printing.</span> </li>
-                                    <li class="mt-4 mb-3 custom-info-listing"><span>Lorem Ipsum is simply dummy text of the
+                                    <li class="mt-4 mb-3 custom-info-listing"><span>Lorem Ipsum is simply dummy text of
+                                            the
                                             printing.</span> </li>
-                                    <li class="mt-4 mb-3 custom-info-listing"><span>Lorem Ipsum is simply dummy text of the
+                                    <li class="mt-4 mb-3 custom-info-listing"><span>Lorem Ipsum is simply dummy text of
+                                            the
                                             printing.</span> </li>
                                 </div>
                             </section>
@@ -737,6 +761,10 @@
                             <div class="d-flex justify-content-between">
                                 <h4>Package Details</h4>
                                 <h4>New Data</h4>
+                            </div>
+                            <div class="d-flex justify-content-between input">
+                                <label for="max-users">Package Name</label>
+                                <input type="text" id="max-users">
                             </div>
                             <div class="d-flex justify-content-between input">
                                 <label for="max-users">Max Servers</label>
@@ -761,7 +789,9 @@
                             <div class="input featureInputContainer">
                                 <h5 class="mb-5">Subscription Feature</h5>
                                 <div class="d-flex justify-content-between mb-3">
-                                    <input type="text" class="form-control w-85 feature-input" placeholder="Add a Feature"> <button class="btn btn-primary add-feature">Add</button>
+                                    <input type="text" class="form-control w-85 feature-input"
+                                        placeholder="Add a Feature"> <button
+                                        class="btn btn-primary add-feature">Add</button>
                                 </div>
                             </div>
                             <div class="d-flex justify-content-center">
@@ -793,6 +823,11 @@
                                 <h4 class="text-center">New Data</h4>
                             </div>
                             <div class="d-grid input">
+                                <label for="max-users">Package Name</label>
+                                <label for="max-users" class="text-center"></label>
+                                <input type="text" id="max-users">
+                            </div>
+                            <div class="d-grid input">
                                 <label for="max-users">Max Servers</label>
                                 <label for="max-users" class="text-center">5</label>
                                 <input type="text" id="max-users">
@@ -820,7 +855,9 @@
                             <div class="input featureInputContainer">
                                 <h5 class="mb-5">Subscription Feature</h5>
                                 <div class="d-flex justify-content-between mb-3">
-                                    <input type="text" class="form-control w-85 feature-input" placeholder="Add a Feature"> <button class="btn btn-primary add-feature">Add</button>
+                                    <input type="text" class="form-control w-85 feature-input"
+                                        placeholder="Add a Feature"> <button
+                                        class="btn btn-primary add-feature">Add</button>
                                 </div>
                                 <div class="d-flex justify-content-between align-content-center">
                                     <span>Cybersecurity & Privacy Program</span>

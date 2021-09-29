@@ -4,7 +4,7 @@ let infoChart = document.getElementById("info-chart").getContext("2d");
 let revenuePieChart = new Chart(revenueChart, {
     type: "pie",
     data: {
-        labels: ["Total", "Subscribed", "Unsubscribed"],
+        labels: ["Total", "Subscribed", "One Time Purchased"],
         datasets: [{
             label: "Subscribed client",
             backgroundColor: ['#182F59','#5C5CBC','#182F59',],
@@ -36,7 +36,7 @@ let infoLineChart = new Chart(infoChart, {
             data: [5, 4, 14, 10, 4],
             fill: false,
         }, {
-            label: "non- subscribed client",
+            label: "One time Purchased client",
             backgroundColor: "#5BBC2E",
             borderColor: "#5BBC2E",
             data: [15, 3, 5, 8, 15],

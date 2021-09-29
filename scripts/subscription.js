@@ -3,7 +3,7 @@ let packageChart = document.getElementById("package-chart").getContext("2d");
 let revenuePieChart = new Chart(packageChart, {
     type: "pie",
     data: {
-        labels: ["MAXIMUM", "BASIC", "PREMIUM", "MEDIUM"],
+        labels: ["CUSTOM", "BASIC", "ADVANCE", "MEDIUM"],
         datasets: [{
             label: "Subscribed client",
             backgroundColor: ['#182F59','#5BBC2E','#FFD500', '#DC143C'],
@@ -45,22 +45,20 @@ $(document).ready(function () {
 
 });
 
-const plugAndPlayBtn = document.querySelector(".plugAndPlayBtn")
-const managedBtn = document.querySelector(".manageBtn")
 const plugAndPlay = document.querySelector(".plugAndPlay")
+const selectElement = document.querySelectorAll('.form-check-input');
 const manage = document.querySelector(".managed")
-
-plugAndPlayBtn.addEventListener("click", ()=>{
-    manage.classList.add("d-none")
-    plugAndPlayBtn.classList.add("btn-primary")
-    plugAndPlay.classList.remove("d-none")
-    managedBtn.classList.remove("btn-primary")
-})
-managedBtn.addEventListener("click", ()=>{
-    manage.classList.remove("d-none")
-    plugAndPlayBtn.classList.remove("btn-primary")
-    plugAndPlay.classList.add("d-none")
-    managedBtn.classList.add("btn-primary")
+selectElement.forEach(select=>{
+    // console.log(select);
+    select.addEventListener("change",()=>{
+        if(select.value== "option1"){
+            manage.classList.add("d-none")
+            plugAndPlay.classList.remove("d-none")
+        }else{
+            manage.classList.remove("d-none")
+            plugAndPlay.classList.add("d-none")
+        }
+    })
 })
 
 const addFeature = document.querySelector(".add-feature")
