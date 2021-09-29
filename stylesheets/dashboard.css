@@ -58,6 +58,10 @@
 input#dashboardDaterange {
     width: 25% !important;
 }
+input#daterange {
+    padding: .5rem 1rem;
+    width: 100% !important;
+}
 .subscription-info {
     color: var(--var-topbar-background-color);
     padding: 1rem;
@@ -168,6 +172,7 @@ input#dashboardDaterange {
     padding: 1.5rem;
     width: 10rem;
     height: 10rem;
+    margin-block: auto;
 }
 .revenue:last-child{
     width: 100%;

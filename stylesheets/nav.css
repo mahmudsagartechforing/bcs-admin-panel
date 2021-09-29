@@ -280,12 +280,16 @@ input#dashboardDaterange {
 .daterangepicker.opensright:before {
     display: none;
 }
+.multiselect{
+    position: relative;
+}
 
 #checkboxes,
 #checkboxes2 {
     position: absolute;
-    width: 220px;
     background: #fff;
+    left: 0;
+    right: 0;
 }
 
 /* design for 1024 screen size */

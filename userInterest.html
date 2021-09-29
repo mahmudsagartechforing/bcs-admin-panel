@@ -17,8 +17,8 @@
     <link rel="stylesheet" href="./stylesheets/icofont/icofont.min.css" />
     <!-- bootstrap icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <!-- tiny script -->
-    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <!-- Select2 style -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <!-- custom css -->
     <link rel="stylesheet" href="./stylesheets/nav.css" />
     <link rel="stylesheet" href="./stylesheets/service.css" />
@@ -118,8 +118,10 @@
                             Subscription
                         </span>
                         <ul class="dropdown-container" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item nav-link" href="./subscriptionList.html">Subscription List</a></li>
-                            <li><a class="dropdown-item nav-link" href="./subscriptionPack.html">Subscription Package</a></li>
+                            <li><a class="dropdown-item nav-link" href="./subscriptionList.html">Subscription List</a>
+                            </li>
+                            <li><a class="dropdown-item nav-link" href="./subscriptionPack.html">Subscription
+                                    Package</a></li>
                         </ul>
                     </li>
                     <li>
@@ -155,7 +157,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12" style="margin-block-start: 5rem; margin-block-end: 15rem; position: relative;">
-                   <div class="table-container">
+                    <div class="table-container">
                         <h2 class="float-start position-absolute text-uppercase">interest List</h2>
                         <table id="reading-list" class="table display service">
                             <thead>
@@ -171,35 +173,14 @@
                                 <tr>
                                     <td>1</td>
                                     <td> Jhon </td>
-                                    <td> 
+                                    <td>
                                         Jhon@gmail.com
                                     </td>
-                                    <td> 
-                                       <li class="fw-bold"> Interest List 1</li>
-                                       <li class="fw-bold"> Interest List 2</li>
+                                    <td>
+                                        <li class="fw-bold"> Interest List 1</li>
+                                        <li class="fw-bold"> Interest List 2</li>
                                     </td>
                                     <td>
-                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal1">
-                                        <i class="icofont-edit text-primary rounded-circle activites-icon"></i>
-                                        Edit
-                                    </button>
-                                    <button class="btn trash">
-                                        <i class="bi bi-trash-fill text-danger rounded-circle activites-icon"></i>
-                                        Delete
-                                    </button> 
-                                </td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Helal</td>
-                                    <td> 
-                                        helal@mail.com
-                                     </td>
-                                     <td> 
-                                        <li class="fw-bold"> Interest List 1</li>
-                                       <li class="fw-bold"> Interest List 2</li>
-                                     </td>
-                                     <td>
                                         <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal1">
                                             <i class="icofont-edit text-primary rounded-circle activites-icon"></i>
                                             Edit
@@ -208,19 +189,40 @@
                                             <i class="bi bi-trash-fill text-danger rounded-circle activites-icon"></i>
                                             Delete
                                         </button>
-                                     </td>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Helal</td>
+                                    <td>
+                                        helal@mail.com
+                                    </td>
+                                    <td>
+                                        <li class="fw-bold"> Interest List 1</li>
+                                        <li class="fw-bold"> Interest List 2</li>
+                                    </td>
+                                    <td>
+                                        <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                                            <i class="icofont-edit text-primary rounded-circle activites-icon"></i>
+                                            Edit
+                                        </button>
+                                        <button class="btn trash">
+                                            <i class="bi bi-trash-fill text-danger rounded-circle activites-icon"></i>
+                                            Delete
+                                        </button>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>3</td>
                                     <td>Azharul</td>
-                                    <td> 
+                                    <td>
                                         azharul@gmial.com
-                                     </td>
-                                     <td> 
+                                    </td>
+                                    <td>
                                         <li class="fw-bold"> Interest List 1</li>
-                                       <li class="fw-bold"> Interest List 2</li>
-                                     </td>
-                                     <td>
+                                        <li class="fw-bold"> Interest List 2</li>
+                                    </td>
+                                    <td>
                                         <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal1">
                                             <i class="icofont-edit text-primary rounded-circle activites-icon"></i>
                                             Edit
@@ -234,14 +236,14 @@
                                 <tr>
                                     <td>4</td>
                                     <td>Neruz</td>
-                                    <td> 
+                                    <td>
                                         neruz@gmial.com
-                                     </td>
-                                     <td> 
+                                    </td>
+                                    <td>
                                         <li class="fw-bold"> Interest List 1</li>
-                                       <li class="fw-bold"> Interest List 2</li>
-                                     </td>
-                                     <td>
+                                        <li class="fw-bold"> Interest List 2</li>
+                                    </td>
+                                    <td>
                                         <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal1">
                                             <i class="icofont-edit text-primary rounded-circle activites-icon"></i>
                                             Edit
@@ -257,10 +259,11 @@
                     </div>
                 </div>
             </div>
+
         </div>
-        
+
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="exampleModal1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -279,8 +282,12 @@
                                     placeholder="Enter Email" />
                             </div>
                             <div class="col-auto mb-3">
-                                <label for="description">Interest</label>
-                                <textarea class="title-container"></textarea>
+                                <label for="serviceName">Select Interests</label>
+                                <select class="js-example-basic-multiple" name="states[]" multiple="multiple">
+                                    <option value="">Concierge Cybersecurity</option>
+                                    <option value="">Security Compliance</option>
+                                    <option value="">Training Program</option>
+                                </select>
                             </div>
                             <div class="d-flex justify-content-between">
                                 <!-- <button type="button" class="btn btn-primary">
@@ -322,7 +329,7 @@
             </a>
         </div>
         <div class="p-3 p pb-2 text-center text-white ">
-            <p >Copyright © 2021 Techforing Ltd.
+            <p>Copyright © 2021 Techforing Ltd.
             </p>
         </div>
     </footer>
@@ -336,9 +343,8 @@
     <!-- data table library -->
     <script src="https://cdn.datatables.net/1.11.1/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.1/js/dataTables.bootstrap5.min.js"></script>
-    <!-- Main Quill library -->
-    <!-- <script src="//cdn.quilljs.com/1.3.6/quill.js"></script>
-    <script src="//cdn.quilljs.com/1.3.6/quill.min.js"></script> -->
+    <!-- Select2 script -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <!-- date range picker -->
     <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script> -->
     <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script> -->

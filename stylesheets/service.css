@@ -131,3 +131,8 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.select2-container{
+    width: 100% !important;
+    margin-block: 1rem;
+}

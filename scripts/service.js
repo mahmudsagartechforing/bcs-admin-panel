@@ -31,6 +31,11 @@ $(document).ready(function () {
         },
         "paging": false,
     });
+    $('.js-example-basic-multiple').select2({
+        dropdownParent: $("#exampleModal1"),
+        tags: true,
+        tokenSeparators: [',', ' ']
+    });
 })
 
 
