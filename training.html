@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechForig BCS admin</title>
+    <!-- bootstrap CDN link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <!-- data table css -->
+    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.11.1/css/jquery.dataTables.min.css" /> -->
+    <!-- date range picker css -->
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" /> -->
+    <!-- Icofont CDN link -->
+    <link rel="stylesheet" href="./stylesheets/icofont/icofont.min.css" />
+    <!-- bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- filepond styles -->
+    <link href="https://unpkg.com/filepond@^4/dist/filepond.css" rel="stylesheet" />
+    <!-- tiny script -->
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <!-- custom css -->
+    <link rel="stylesheet" href="./stylesheets/nav.css" />
+    <link rel="stylesheet" href="./stylesheets/training.css" />
+
+    <!-- charts js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+</head>
+
+<body>
+    <header>
+        <!-- top bar section starts here -->
+        <nav class="navbar fixed-top">
+            <div class="container-fluid">
+                <!-- Brand/logo-->
+                <a class="navbar-brand" href="#">
+                    <img src="./images/TechForingLogo.png" alt="Tech Foring" />
+                </a>
+                <!-- page title -->
+                <span class="navbar-text rounded-0 px-2  fw-bold text-primary">
+                    <a href="" class="">Business Cybersecurity</a>
+                </span>
+                <span class="navbar-text rounded-0 px-2 fw-bold text-primary">
+                    <a href="" class="">Personal Cybersecurity</a>
+                </span>
+                <span class="dropdown">
+                    <a class="nav-link btn-primary dropdown text-white" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Admin
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="./myProfile.html">My profile</a></li>
+                        <li><a class="dropdown-item" href="#">Sign out</a></li>
+                    </ul>
+                </span>
+            </div>
+        </nav>
+        <!-- top bar section ends here -->
+        <!-- sidebar section starts here -->
+        <aside>
+            <div class="aside-container position-fixed bg-white px-1 pt-2 d-none d-lg-block">
+                <!-- Nav links starts here -->
+                <ul class="menubar">
+                    <li>
+                        <a href="./index.html" class="nav-link active">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="29.273" height="23"
+                                viewBox="0 0 29.273 23">
+                                <path id="list-alt"
+                                    d="M6.273,17.25V18.3a.53.53,0,0,1-.523.523H4.7a.529.529,0,0,1-.522-.523V17.25a.53.53,0,0,1,.523-.523H5.751a.53.53,0,0,1,.523.523Zm0-4.182v1.046a.53.53,0,0,1-.523.523H4.7a.529.529,0,0,1-.522-.523V13.068a.529.529,0,0,1,.523-.522H5.751a.529.529,0,0,1,.522.522Zm0-4.182V9.932a.53.53,0,0,1-.523.523H4.7a.529.529,0,0,1-.522-.523V8.886A.529.529,0,0,1,4.7,8.364H5.751a.529.529,0,0,1,.522.523ZM25.092,17.25V18.3a.53.53,0,0,1-.523.523H8.887a.53.53,0,0,1-.523-.523V17.25a.53.53,0,0,1,.523-.523H24.569a.53.53,0,0,1,.523.523Zm0-4.182v1.046a.53.53,0,0,1-.523.523H8.887a.53.53,0,0,1-.523-.523V13.068a.529.529,0,0,1,.523-.522H24.569a.53.53,0,0,1,.523.523Zm0-4.182V9.932a.53.53,0,0,1-.523.523H8.887a.53.53,0,0,1-.523-.523V8.886a.529.529,0,0,1,.523-.522H24.569a.53.53,0,0,1,.523.523Zm2.091,11.5V6.8a.53.53,0,0,0-.522-.523H2.613a.53.53,0,0,0-.523.523V20.387a.53.53,0,0,0,.523.523H26.659a.53.53,0,0,0,.523-.523ZM29.273,2.613V20.387A2.621,2.621,0,0,1,26.659,23H2.613a2.517,2.517,0,0,1-1.846-.768A2.517,2.517,0,0,1,0,20.387V2.613A2.517,2.517,0,0,1,.768.768,2.517,2.517,0,0,1,2.613,0H26.659a2.517,2.517,0,0,1,1.846.768,2.517,2.517,0,0,1,.768,1.846Z"
+                                    fill="#111125" />
+                            </svg>
+                            dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <span class="nav-link dropdown-btn dropdown-toggle" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-collection-fill"></i>
+                            services
+                        </span>
+                        <ul class="dropdown-container" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item nav-link" href="./service.html">
+                                    Service Category
+                                </a></li>
+                            <li>
+                                <a class="dropdown-item nav-link" href="./subService.html">
+                                    Services
+                                </a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="nav-link dropdown-btn dropdown-toggle" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-people-fill"></i>
+                            users & admin
+                        </span>
+                        <ul class="dropdown-container" aria-labelledby="navbarDropdown">
+                            <li>
+                                <a href="./users.html" class="dropdown-item nav-link">
+                                    users
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./adminUsers.html" class="dropdown-item nav-link">
+                                    admin users
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="./readingList.html" class="nav-link">
+                            <i class="bi bi-file-earmark-fill"></i> Reading List
+                        </a>
+                    </li>
+                    <li>
+                        <span class="nav-link dropdown-btn dropdown-toggle" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-tag-fill"></i>
+                            Subscription
+                        </span>
+                        <ul class="dropdown-container" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item nav-link" href="./subscriptionList.html">Subscription List</a>
+                            </li>
+                            <li><a class="dropdown-item nav-link" href="./subscriptionPack.html">Subscription
+                                    Package</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="./revenue.html" class="nav-link">
+                            <i class="bi bi-currency-dollar"></i> revenue
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./userInterest.html" class="nav-link">
+                            <i class="bi bi-hand-index-fill"></i> user interest
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./training.html" class="nav-link">
+                            <i class="bi bi-award-fill"></i> Training
+                        </a>
+                    </li>
+
+                    <!-- <li>
+                        <span href="" class="nav-link dropdown-btn dropdown-toggle" id="supportDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="icofont-life-buoy"></i>
+                            support
+                        </span>
+                        <ul class="dropdown-container " aria-labelledby="supportDropdown">
+                            <li><a class="dropdown-item nav-link" href="{% host_url 'main_admin_support_view' %}">Admin View</a></li>
+                            <li><a class="dropdown-item nav-link" href="{% host_url 'main_admin_stuff_view' %}">Stuff View</a></li>
+                            <li><a class="dropdown-item nav-link" href="{% host_url 'main_admin_all_tickets' %}">All Tickets</a></li>
+                        </ul>
+                    </li> -->
+                </ul>
+                <!-- nav links ends here -->
+            </div>
+        </aside>
+        <!-- sidebar section ends here -->
+    </header>
+    <!-- main section starts -->
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <button class="btn border-1 border-1 border-dark servicesBtn float-end my-4" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                        Add Training Course
+                        <i class="bi bi-plus-circle-fill"></i></button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 position-relative" style="margin-bottom: 15rem;">
+                    <h2 class="text-capitalize position-absolute my-4">Training Course list</h2>
+                    <table id="training-list" class="table display" style="width: 100%">
+                        <thead>
+                            <tr>
+                                <th>SL</th>
+                                <th>Course Name</th>
+                                <th>Duration</th>
+                                <th>Total Lectures</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1.</td>
+                                <td>
+                                    <a href="{% host_url 'main_admin_event_detail' %}">Corporate Training</a>
+                                </td>
+                                <td>2 Month</td>
+                                <td>40 Lectures</td>
+                                <td>
+                                    <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                                        <i class="icofont-edit text-primary rounded-circle activites-icon"></i>
+                                        Edit
+                                    </button>
+                                    <button class="btn trash">
+                                        <i class="bi bi-trash-fill text-danger rounded-circle activites-icon"></i>
+                                        Delete
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2.</td>
+                                <td>
+                                    <a href="{% host_url 'main_admin_event_detail' %}">Law Enforcement Training</a>
+                                </td>
+                                <td>2 Month</td>
+                                <td>50 Lectures</td>
+                                <td>
+                                    <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                                        <i class="icofont-edit text-primary rounded-circle activites-icon"></i>
+                                        Edit
+                                    </button>
+                                    <button class="btn trash">
+                                        <i class="bi bi-trash-fill text-danger rounded-circle activites-icon"></i>
+                                        Delete
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3.</td>
+                                <td>
+                                    <a href="{% host_url 'main_admin_event_detail' %}">Educational Institute
+                                        Training</a>
+                                </td>
+                                <td>2 Month</td>
+                                <td>60 Lectures</td>
+                                <td>
+                                    <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                                        <i class="icofont-edit text-primary rounded-circle activites-icon"></i>
+                                        Edit
+                                    </button>
+                                    <button class="btn trash">
+                                        <i class="bi bi-trash-fill text-danger rounded-circle activites-icon"></i>
+                                        Delete
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- course body -->
+                        <div class="main-course">
+                            <form action="">
+                                <div class="col-auto mb-3">
+                                    <label for="serviceName">Course Name</label>
+                                    <input type="serviceName" class="form-control" id="serviceName"
+                                        placeholder="Enter Service Category Name" />
+                                </div>
+                                <div class="col-auto mb-3">
+                                    <label for="serviceName">Duration</label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected></option>
+                                        <option value="1">One Month</option>
+                                        <option value="2">Two Month</option>
+                                        <option value="3">Three Month</option>
+                                    </select>
+                                </div>
+                                <div class="col-auto mb-3">
+                                    <label for="description">Short Description</label>
+                                    <textarea name="description" id="description" class="form-control" cols="30"
+                                        rows="10" style=" height: 25px;"></textarea>
+                                </div>
+                                <div class="col-auto mb-3">
+                                    <label for="description">Long Description</label>
+                                    <textarea name="description" id="longDescription" class="form-control"></textarea>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <button type="button" class="btn btn-primary mainCourseAddMulti">
+                                        Save and add another
+                                    </button>
+                                    <button type="button" class="btn btn-primary mainCourseAdd">
+                                        Save
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- course section body -->
+                        <div class="courseSection">
+                            <form action="">
+                                <div class="col-auto mb-3">
+                                    <label for="serviceName">Course Name</label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected></option>
+                                        <option value="1">Corporate Training</option>
+                                        <option value="2">Law Enforcement Training</option>
+                                        <option value="3">Educational Institute Training</option>
+                                    </select>
+                                </div>
+                                <div class="col-auto mb-3">
+                                    <label for="serviceName">Course Section</label>
+                                    <input type="serviceName" class="form-control" id="serviceName"
+                                        placeholder="Enter Course Section Name" />
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <button type="button" class="btn btn-primary courseSectionAddMulti">
+                                        Save and add another
+                                    </button>
+                                    <button type="button" class="btn btn-primary courseSectionAdd">
+                                        Save
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        <!-- course section module body -->
+                        <div class="courseSectionModule">
+                            <form action="">
+                                <div class="col-auto mb-3">
+                                    <label for="serviceName">Select Section</label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected></option>
+                                        <option value="1">Section 1</option>
+                                        <option value="2">Section 2</option>
+                                        <option value="3">Section 3</option>
+                                    </select>
+                                </div>
+                                <h4 class="text-uppercase">preview lectures:</h4>
+                                <div class="col-auto mb-3">
+                                    <label for="serviceName">Lecture Name</label>
+                                    <input type="serviceName" class="form-control" id="serviceName"
+                                        placeholder="Enter Lecture Name" />
+                                </div>
+                                <div class="col-auto mb-3">
+                                    <label for="serviceName">Lecture Name</label>
+                                    <input type="serviceName" class="form-control" id="serviceName"
+                                        placeholder="Enter Lecture Name" />
+                                </div>
+                                <input type="file" class="filepond" name="filepond" multiple data-allow-reorder="true"
+                                data-max-files="3">
+                                <div class="d-flex justify-content-between">
+                                    <button type="button" class="btn btn-primary courseSectionAddMulti">
+                                        Save and add another
+                                    </button>
+                                    <button type="button" class="btn btn-primary courseSectionAdd">
+                                        Save
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="">
+                            <div class="col-auto mb-3">
+                                <label for="serviceName">Service Category Name</label>
+                                <input type="serviceName" class="form-control" id="serviceName"
+                                    placeholder="Enter Service Category Name" />
+                            </div>
+                            <div class="col-auto mb-3">
+                                <label for="description">Description</label>
+                                <textarea name="description" id="description" class="form-control" cols="30"
+                                    rows="10"></textarea>
+                            </div>
+                            
+                            <div class="d-flex justify-content-between">
+                                <!-- <button type="button" class="btn btn-primary">
+                                    Save and add another
+                                </button> -->
+                                <button type="button" class="btn btn-primary">
+                                    Update
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- main section ends -->
+    <footer id="footer-small" class="footer footer-shrink bg-blue py-4">
+        <div class="d-flex justify-content-center">
+            <a href="" class="me-5">PRIVACY POLICY</a>
+            <a href="">TERMS OF USE</a>
+        </div>
+        <div class="d-flex justify-content-center align-items-center">
+            <a href="https://www.facebook.com/techforing/">
+                <!-- <img src="{% static '' %}tfimg/user_panel/facebook.png" class="me-3" alt=""> -->
+                <i class="bi bi-facebook me-3"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/techforingltd./">
+                <!-- <img src="{% static '' %}tfimg/user_panel/linkedin.png" class="me-3" alt=""> -->
+                <i class="bi bi-linkedin me-3"></i>
+            </a>
+            <a href="https://twitter.com/techforingltd?lang=en">
+                <!-- <img src="{% static '' %}tfimg/user_panel/twitter.png" class="me-3" alt=""> -->
+                <i class="bi bi-twitter me-3"></i>
+            </a>
+            <a href="https://www.instagram.com/techforingltd/">
+                <!-- <img src="{% static '' %}tfimg/user_panel/Instagram.png" alt=""> -->
+                <i class="bi bi-instagram me-3"></i>
+            </a>
+        </div>
+        <div class="p-3 p pb-2 text-center text-white ">
+            <p>Copyright © 2021 Techforing Ltd.
+            </p>
+        </div>
+    </footer>
+    <!-- bootstrap scripts CDN link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <!-- jquery scripts -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <!-- FilePond scripts -->
+    <script src="https://unpkg.com/filepond@^4/dist/filepond.js"></script>
+    <!-- data table library -->
+    <script src="https://cdn.datatables.net/1.11.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.1/js/dataTables.bootstrap5.min.js"></script>
+    <!-- custom scripts -->
+    <script src="./scripts/nav.js"></script>
+    <script src="./scripts/training.js"></script>
+    <script>
+        FilePond.create(
+            document.querySelector('.filepond')
+        );
+    </script>
+</body>
