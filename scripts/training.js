@@ -1,23 +1,3 @@
-// $(document).ready(function () {
-//     $("#training-list").DataTable({
-//         scrollCollapse: true,
-//         info: false,
-//         columnDefs: [{
-//             orderable: false,
-//             targets: -1
-//         }],
-//         sorting: false,
-//         oLanguage: {
-//             sSearch: `_INPUT_ <i class="bi bi-search"></i>`,
-//             sSearchPlaceholder: "Search...",
-//         },
-//         "initComplete": function (settings, json) {
-//             $('body').find('.dataTables_scrollBody').addClass("scrollbar");
-//         },
-//         "paging": false,
-//     });
-// })
-
 tinymce.init({
     selector: '#longDescription',
     plugins: 'image code lists',
@@ -45,43 +25,63 @@ FilePond.create(
     document.querySelector('.previewVideo')
 );
 var uppy = new Uppy.Core()
-.use(Uppy.Dashboard, {
-  inline: true,
-  target: '#drag-drop-area',
-  showProgressDetails: true,
-})
-.use(Uppy.Tus, {endpoint: 'https://tusd.tusdemo.net/files/'})
+    .use(Uppy.Dashboard, {
+        inline: true,
+        target: '#drag-drop-area',
+        showProgressDetails: true,
+    })
+    .use(Uppy.Tus, {
+        endpoint: 'https://tusd.tusdemo.net/files/'
+    })
 
 uppy.on('complete', (result) => {
-console.log('Upload complete! We’ve uploaded these files:', result.successful)
+    console.log('Upload complete! We’ve uploaded these files:', result.successful)
 })
 
 
 
 const addMulti = document.querySelectorAll(".addMulti")
-const mainCourseAdd = document.querySelector(".mainCourseAdd")
-const courseSectionAdd = document.querySelector(".courseSectionAdd")
-const courseSectionModuleAdd = document.querySelector(".courseSectionModule .courseSectionAdd")
+const mainCourseAdd = document.querySelectorAll(".mainCourseAdd")
+const courseSectionAdd = document.querySelectorAll(".courseSectionAdd")
 const mainCourse = document.querySelector(".main-course")
 const courseSection = document.querySelector(".courseSection")
 const courseSectionModule = document.querySelector(".courseSectionModule")
 const formInputs = document.querySelectorAll("select, input, textarea")
-addMulti.forEach(add=>{
-    add.addEventListener("click", (e)=>{
+addMulti.forEach(add => {
+    add.addEventListener("click", (e) => {
         e.preventDefault()
-        formInputs.forEach(input=>{
+        formInputs.forEach(input => {
             input.value = ""
         })
     })
 })
 
-mainCourseAdd.addEventListener("click", (e)=>{
-    e.preventDefault()
-    mainCourse.classList.add("d-none")
-    courseSection.classList.remove("d-none")
+mainCourseAdd.forEach(add => {
+    add.addEventListener("click", (e) => {
+        e.preventDefault()
+        mainCourse.classList.add("d-none")
+        courseSection.classList.remove("d-none")
+    })
+
 })
-courseSectionAdd.addEventListener("click", (e)=>{
-    e.preventDefault()
-    courseSection.classList.add("d-none")
-    courseSectionModule.classList.remove("d-none")
+courseSectionAdd.forEach(add => {
+    add.addEventListener("click", (e) => {
+        e.preventDefault()
+        courseSection.classList.add("d-none")
+        courseSectionModule.classList.remove("d-none")
+    })
+})
+
+
+const courseEdit = document.querySelector(".courseEdit")
+const saveCourse = document.querySelector(".saveCourse")
+const inputFields = document.querySelectorAll(".info-value input")
+
+courseEdit.addEventListener("click", ()=>{
+    courseEdit.classList.add("d-none")
+    saveCourse.classList.remove("d-none")
+    inputFields.forEach(inputField =>{
+        inputField.parentElement.classList.add("input-as-text")
+        inputField.removeAttribute("disabled")
+    })
 })

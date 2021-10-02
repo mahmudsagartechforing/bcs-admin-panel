@@ -163,217 +163,1095 @@
     </header>
     <!-- main section starts -->
     <main>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <button class="btn border-1 border-1 border-dark servicesBtn float-end my-4" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal">
-                        Add Training Course
-                        <i class="bi bi-plus-circle-fill"></i></button>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12" style="margin-bottom: 15rem;">
-                    <h2 class="text-capitalize my-4">Training Course list</h2>
-                    <table id="training-list" class="table display" style="width: 100%">
-                        <thead>
-                            <tr>
-                                <th>SL</th>
-                                <th>Course Name</th>
-                                <th>Duration</th>
-                                <th>Total Lectures</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1.</td>
-                                <td>
-                                    <a href="{% host_url 'main_admin_event_detail' %}">Corporate Training</a>
-                                </td>
-                                <td>2 Month</td>
-                                <td>40 Lectures</td>
-                                <td>
-                                    <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal1">
-                                        <i class="icofont-edit text-primary rounded-circle activites-icon"></i>
-                                        Edit
-                                    </button>
-                                    <button class="btn trash">
-                                        <i class="bi bi-trash-fill text-danger rounded-circle activites-icon"></i>
-                                        Delete
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2.</td>
-                                <td>
-                                    <a href="{% host_url 'main_admin_event_detail' %}">Law Enforcement Training</a>
-                                </td>
-                                <td>2 Month</td>
-                                <td>50 Lectures</td>
-                                <td>
-                                    <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal1">
-                                        <i class="icofont-edit text-primary rounded-circle activites-icon"></i>
-                                        Edit
-                                    </button>
-                                    <button class="btn trash">
-                                        <i class="bi bi-trash-fill text-danger rounded-circle activites-icon"></i>
-                                        Delete
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>3.</td>
-                                <td>
-                                    <a href="{% host_url 'main_admin_event_detail' %}">Educational Institute
-                                        Training</a>
-                                </td>
-                                <td>2 Month</td>
-                                <td>60 Lectures</td>
-                                <td>
-                                    <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal1">
-                                        <i class="icofont-edit text-primary rounded-circle activites-icon"></i>
-                                        Edit
-                                    </button>
-                                    <button class="btn trash">
-                                        <i class="bi bi-trash-fill text-danger rounded-circle activites-icon"></i>
-                                        Delete
-                                    </button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header border-0">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="course-container mt-2 position-relative">
+            <div class="preview-course px-2">
+                <h5 class="fw-bold border-bottom border-gray pb-14p text-primary">CCSP Course For Professional</h5>
+                <button class="btn border-1 border-dark float-end courseEdit">Edit <i
+                        class="bi bi-pencil-square"></i></button>
+                <form action="">
+                    <h6 class="mt-4 fw-bold">Requirements</h6>
+                    <ul>
+                        <li class="info-value"><input type="text" name="" class="form-control" disabled
+                                value="Lorem ipsum is simply dummy text of the printing and typesetting industry" id="">
+                        </li>
+                        <li class="info-value"><input type="text" name="" class="form-control" disabled
+                                value="Lorem ipsum is simply dummy text of the printing and typesetting industry" id="">
+                        </li>
+                        <li class="info-value"><input type="text" name="" class="form-control" disabled
+                                value="Lorem ipsum is simply dummy text of the printing and typesetting industry" id="">
+                        </li>
+                    </ul>
+                    <div class="learning-content mt-5 px-2">
+                        <h6 class="fw-bold mb-3">What You Will Learn:</h6>
+                        <div class="ps-2">
+                            <li class="text-truncate info-value">
+                                <i class="icofont-ui-check me-1"></i>
+                                <input type="text" name="" class="form-control" disabled value="Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum is simply dummy text of the printing and typesetting
+                                industry" />
+                            </li>
+                            <li class="text-truncate info-value">
+                                <i class="icofont-ui-check me-1"></i>
+                                <input type="text" name="" class="form-control" disabled value="Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum is simply dummy text of the printing and typesetting
+                                industry" />
+                            </li>
+                            <li class="text-truncate info-value">
+                                <i class="icofont-ui-check me-1"></i>
+                                <input type="text" name="" class="form-control" disabled value="Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum is simply dummy text of the printing and typesetting
+                                industry" />
+                            </li>
+                        </div>
                     </div>
-                    <div class="modal-body">
-                        <!-- course body -->
-                        <div class="main-course">
-                            <h3>Add Course</h3>
-                            <form action="">
-                                <div class="col-auto mb-3">
-                                    <label for="serviceName">Course Name</label>
-                                    <input type="text" class="form-control" id="serviceName"
-                                        placeholder="Enter Service Category Name" />
-                                </div>
-                                <div class="col-auto mb-3">
-                                    <label for="serviceName">Duration</label>
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option selected></option>
-                                        <option value="1">One Month</option>
-                                        <option value="2">Two Month</option>
-                                        <option value="3">Three Month</option>
-                                    </select>
-                                </div>
-                                <div class="col-auto mb-3">
-                                    <label for="description">Short Description</label>
-                                    <textarea name="shortdescription" id="description" class="form-control" cols="30"
-                                        rows="10" style=" height: 25px;"></textarea>
-                                </div>
-                                <div class="col-auto mb-3">
-                                    <label for="description">Long Description</label>
-                                    <textarea name="longdescription" id="longDescription" class="form-control"></textarea>
-                                </div>
-                                <div class="d-flex justify-content-between">
-                                    <button type="button" class="btn btn-primary addMulti">
-                                        Save and add another
-                                    </button>
-                                    <button type="button" class="btn btn-primary mainCourseAdd">
-                                        Save
-                                    </button>
-                                </div>
-                            </form>
+                    <h6 class="mt-5 fw-bold">Who this course is for</h6>
+                    <ul>
+                        <li class="info-value">
+                            <input type="text" name="" class="form-control" disabled
+                                value="Information security enthusiasts and those who are looking for a perfect start in Cyber Security" />
+                        </li>
+                        <li class="info-value"> <input type="text" name="" class="form-control" disabled
+                                value="Those who are looking to change their field to Information Technology" /></li>
+                        <li class="info-value"> <input type="text" name="" class="form-control" disabled
+                                value="Those who want to become a Security Professional" /></li>
+                        <li class="info-value"> <input type="text" name="" class="form-control" disabled
+                                value="IT Security Consultants who want to refresh their knowledge" /></li>
+                    </ul>
+                    <div class="mt-5 row mx-0">
+                        <div class="col-md-8 d-flex justify-content-between">
+                            <h6 class="fw-bold">Course Content:</h6>
+                            <h6 class="info-value"> <input type="text" name="" class="form-control" disabled
+                                    value="8 Sections" /></h6>
+                            <h6 class="info-value"> <input type="text" name="" class="form-control" disabled
+                                    value="40 Lectures" /></h6>
+                            <h6 class="info-value"> <input type="text" name="" class="form-control" disabled
+                                    value="8 Weeks" /></h6>
                         </div>
-                        <!-- course section body -->
-                        <div class="courseSection d-none">
-                            <h3>Add Section</h3>
-                            <form action="">
-                                <div class="col-auto mb-3">
-                                    <label for="serviceName">Course Name</label>
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option selected></option>
-                                        <option value="1">Corporate Training</option>
-                                        <option value="2">Law Enforcement Training</option>
-                                        <option value="3">Educational Institute Training</option>
-                                    </select>
+                    </div>
+                    <button class="btn btn-success saveCourse d-none">Save</button>
+                </form>
+                <div class="mt-5 course-info">
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="course-heading-1">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#course-1" aria-expanded="false" aria-controls="course-1">
+                                    <table class="w-100" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th class="title fw-bold" style="width: 40%;">INTRODUCTION TO ETHICAL
+                                                    HACKING</th>
+                                                <th>7 on demand videos</th>
+                                                <th class="text-center">5 downloadable resources</th>
+                                                <th class="fw-bold text-end">LECTURE 1</th>
+                                                <th class="fw-bold text-end">
+                                                    <button class="btn" data-bs-toggle="modal"
+                                                        data-bs-target="#exampleModal1">
+                                                        <i
+                                                            class="icofont-edit text-primary rounded-circle activites-icon"></i>
+                                                        Edit
+                                                    </button></th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </button>
+                            </h2>
+                            <div id="course-1" class="accordion-collapse collapse" aria-labelledby="course-heading-1"
+                                data-bs-parent="#accordionFlushExample" style="">
+                                <div class="accordion-body">
+                                    <table class="w-100" id="table">
+                                        <tbody class="fs-14">
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">Welcome and Introduction to the
+                                                        Instructor</h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>50m</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="btn p-0">
+                                                        <i class="bi bi-file-earmark-pdf"></i> Cybersecurity
+                                                        Introduction Guide 1
+                                                    </a>
+                                                </td>
+                                                <td>Module 1</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">What is hacking? Who is a hacker?
+                                                    </h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>1h 20m</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="btn p-0">
+                                                        <i class="bi bi-file-earmark-pdf"></i> Cybersecurity
+                                                        Introduction Guide 2
+                                                    </a>
+                                                </td>
+                                                <td>Module 2</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">Skills of an ethical hacker, Types
+                                                        of hacker</h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>40m</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="btn p-0">
+                                                        <i class="bi bi-file-earmark-pdf"></i> Cybersecurity
+                                                        Introduction Guide 3
+                                                    </a>
+                                                </td>
+                                                <td>Module 3</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">Goals and learning objectives</h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>20m</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="btn p-0">
+                                                        <i class="bi bi-file-earmark-pdf"></i> Cybersecurity
+                                                        Introduction Guide 4
+                                                    </a>
+                                                </td>
+                                                <td>Module 4</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">What is Ethical hacking?</h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>1h</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td>
+                                                </td>
+                                                <td>Module 5</td>
+                                                <td></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">Why Ethical hacking is necessary?
+                                                    </h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>1h 10m</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td>
+                                                </td>
+                                                <td>Module 6</td>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <div class="col-auto mb-3">
-                                    <label for="serviceName">Course Section</label>
-                                    <input type="serviceName" class="form-control" id="serviceName"
-                                        placeholder="Enter Course Section Name" />
-                                </div>
-                                <div class="d-flex justify-content-between">
-                                    <button type="button" class="btn btn-primary addMulti">
-                                        Save and add another
-                                    </button>
-                                    <button type="button" class="btn btn-primary courseSectionAdd">
-                                        Save
-                                    </button>
-                                </div>
-                            </form>
+                            </div>
                         </div>
-                        <!-- course section module body -->
-                        <div class="courseSectionModule d-none">
-                            <h3>Add Lectures</h3>
-                            <form action="">
-                                <div class="col-auto mb-3">
-                                    <label for="serviceName">Select Section</label>
-                                    <select class="form-select" aria-label="Default select example">
-                                        <option selected></option>
-                                        <option value="1">Section 1</option>
-                                        <option value="2">Section 2</option>
-                                        <option value="3">Section 3</option>
-                                    </select>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="course-heading-2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#course-2" aria-expanded="false" aria-controls="course-2">
+                                    <table class="w-100" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th class="title fw-bold" style="width: 40%;">RISK ASSESMENTS</th>
+                                                <th>7 on demand videos</th>
+                                                <th class="text-center">5 downloadable resources</th>
+                                                <th class="fw-bold text-end">LECTURE 1</th>
+                                                <th class="fw-bold text-end">
+                                                    <button class="btn" data-bs-toggle="modal"
+                                                        data-bs-target="#exampleModal1">
+                                                        <i
+                                                            class="icofont-edit text-primary rounded-circle activites-icon"></i>
+                                                        Edit
+                                                    </button></th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </button>
+                            </h2>
+                            <div id="course-2" class="accordion-collapse collapse" aria-labelledby="course-heading-2"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <table class="w-100" id="table">
+                                        <tbody class="fs-14">
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">Welcome and Introduction to the
+                                                        Instructor</h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>50m</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="btn p-0">
+                                                        <i class="bi bi-file-earmark-pdf"></i> Cybersecurity
+                                                        Introduction Guide 1
+                                                    </a>
+                                                </td>
+                                                <td>Module 1</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">What is hacking? Who is a hacker?
+                                                    </h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>1h 20m</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="btn p-0">
+                                                        <i class="bi bi-file-earmark-pdf"></i> Cybersecurity
+                                                        Introduction Guide 2
+                                                    </a>
+                                                </td>
+                                                <td>Module 2</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">Skills of an ethical hacker, Types
+                                                        of hacker</h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>40m</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="btn p-0">
+                                                        <i class="bi bi-file-earmark-pdf"></i> Cybersecurity
+                                                        Introduction Guide 3
+                                                    </a>
+                                                </td>
+                                                <td>Module 3</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">Goals and learning objectives</h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>20m</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="btn p-0">
+                                                        <i class="bi bi-file-earmark-pdf"></i> Cybersecurity
+                                                        Introduction Guide 4
+                                                    </a>
+                                                </td>
+                                                <td>Module 4</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">What is Ethical hacking?</h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>1h</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td>
+                                                </td>
+                                                <td>Module 5</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">Why Ethical hacking is necessary?
+                                                    </h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>1h 10m</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td>
+                                                </td>
+                                                <td>Module 6</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <h4 class="text-uppercase">preview lectures:</h4>
-                                <div class="col-auto mb-3">
-                                    <label for="serviceName">Lecture Name</label>
-                                    <input type="text" class="form-control" id="serviceName"
-                                    placeholder="Enter Lecture Name" />
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="course-heading-3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#course-3" aria-expanded="false" aria-controls="course-3">
+                                    <table class="w-100" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th class="title fw-bold" style="width: 40%;">MALWARE THREATS</th>
+                                                <th>7 on demand videos</th>
+                                                <th class="text-center">5 downloadable resources</th>
+                                                <th class="fw-bold text-end">LECTURE 1</th>
+                                                <th class="fw-bold text-end">
+                                                    <button class="btn" data-bs-toggle="modal"
+                                                        data-bs-target="#exampleModal1">
+                                                        <i
+                                                            class="icofont-edit text-primary rounded-circle activites-icon"></i>
+                                                        Edit
+                                                    </button></th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </button>
+                            </h2>
+                            <div id="course-3" class="accordion-collapse collapse" aria-labelledby="course-heading-3"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <table class="w-100" id="table">
+                                        <tbody class="fs-14">
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">Welcome and Introduction to the
+                                                        Instructor</h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>50m</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="btn p-0">
+                                                        <i class="bi bi-file-earmark-pdf"></i> Cybersecurity
+                                                        Introduction Guide 1
+                                                    </a>
+                                                </td>
+                                                <td>Module 1</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">What is hacking? Who is a hacker?
+                                                    </h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>1h 20m</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="btn p-0">
+                                                        <i class="bi bi-file-earmark-pdf"></i> Cybersecurity
+                                                        Introduction Guide 2
+                                                    </a>
+                                                </td>
+                                                <td>Module 2</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">Skills of an ethical hacker, Types
+                                                        of hacker</h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>40m</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="btn p-0">
+                                                        <i class="bi bi-file-earmark-pdf"></i> Cybersecurity
+                                                        Introduction Guide 3
+                                                    </a>
+                                                </td>
+                                                <td>Module 3</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">Goals and learning objectives</h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>20m</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="btn p-0">
+                                                        <i class="bi bi-file-earmark-pdf"></i> Cybersecurity
+                                                        Introduction Guide 4
+                                                    </a>
+                                                </td>
+                                                <td>Module 4</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">What is Ethical hacking?</h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>1h</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td>
+                                                </td>
+                                                <td>Module 5</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">Why Ethical hacking is necessary?
+                                                    </h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>1h 10m</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td>
+                                                </td>
+                                                <td>Module 6</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <div class="col-auto mb-3">
-                                    <label for="serviceName">Upload Files</label>
-                                    <input type="file" class="previewVideo" name="filepond" data-allow-reorder="true"
-                                    data-max-files="3">
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="course-heading-4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#course-4" aria-expanded="false" aria-controls="course-4">
+                                    <table class="w-100" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th class="title fw-bold" style="width: 40%;">SOCIAL ENGINEERING</th>
+                                                <th>7 on demand videos</th>
+                                                <th class="text-center">5 downloadable resources</th>
+                                                <th class="fw-bold text-end">LECTURE 1</th>
+                                                <th class="fw-bold text-end">
+                                                    <button class="btn" data-bs-toggle="modal"
+                                                        data-bs-target="#exampleModal1">
+                                                        <i
+                                                            class="icofont-edit text-primary rounded-circle activites-icon"></i>
+                                                        Edit
+                                                    </button></th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </button>
+                            </h2>
+                            <div id="course-4" class="accordion-collapse collapse" aria-labelledby="course-heading-4"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <table class="w-100" id="table">
+                                        <tbody class="fs-14">
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">Welcome and Introduction to the
+                                                        Instructor</h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>50m</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="btn p-0">
+                                                        <i class="bi bi-file-earmark-pdf"></i> Cybersecurity
+                                                        Introduction Guide 1
+                                                    </a>
+                                                </td>
+                                                <td>Module 1</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">What is hacking? Who is a hacker?
+                                                    </h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>1h 20m</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="btn p-0">
+                                                        <i class="bi bi-file-earmark-pdf"></i> Cybersecurity
+                                                        Introduction Guide 2
+                                                    </a>
+                                                </td>
+                                                <td>Module 2</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">Skills of an ethical hacker, Types
+                                                        of hacker</h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>40m</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="btn p-0">
+                                                        <i class="bi bi-file-earmark-pdf"></i> Cybersecurity
+                                                        Introduction Guide 3
+                                                    </a>
+                                                </td>
+                                                <td>Module 3</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">Goals and learning objectives</h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>20m</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="btn p-0">
+                                                        <i class="bi bi-file-earmark-pdf"></i> Cybersecurity
+                                                        Introduction Guide 4
+                                                    </a>
+                                                </td>
+                                                <td>Module 4</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">What is Ethical hacking?</h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>1h</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td>
+                                                </td>
+                                                <td>Module 5</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">Why Ethical hacking is necessary?
+                                                    </h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>1h 10m</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td>
+                                                </td>
+                                                <td>Module 6</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <!-- <div class="col-auto mb-3">
-                                    <input type="file" class="previewFile" name="filepond" multiple data-allow-reorder="true"
-                                    data-max-files="3">
-                                </div> -->
-                                <div class="d-flex justify-content-between">
-                                    <button type="button" class="btn btn-primary courseSectionAdd">
-                                        Save
-                                    </button>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="course-heading-5">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#course-5" aria-expanded="false" aria-controls="course-5">
+                                    <table class="w-100" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th class="title fw-bold" style="width: 40%;">DIVING DEEP TO
+                                                    CYBERSECURITY</th>
+                                                <th>7 on demand videos</th>
+                                                <th class="text-center">5 downloadable resources</th>
+                                                <th class="fw-bold text-end">LECTURE 1</th>
+                                                <th class="fw-bold text-end">
+                                                    <button class="btn" data-bs-toggle="modal"
+                                                        data-bs-target="#exampleModal1">
+                                                        <i
+                                                            class="icofont-edit text-primary rounded-circle activites-icon"></i>
+                                                        Edit
+                                                    </button></th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </button>
+                            </h2>
+                            <div id="course-5" class="accordion-collapse collapse" aria-labelledby="course-heading-5"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <table class="w-100" id="table">
+                                        <tbody class="fs-14">
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">Welcome and Introduction to the
+                                                        Instructor</h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>50m</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="btn p-0">
+                                                        <i class="bi bi-file-earmark-pdf"></i> Cybersecurity
+                                                        Introduction Guide 1
+                                                    </a>
+                                                </td>
+                                                <td>Module 1</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">What is hacking? Who is a hacker?
+                                                    </h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>1h 20m</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="btn p-0">
+                                                        <i class="bi bi-file-earmark-pdf"></i> Cybersecurity
+                                                        Introduction Guide 2
+                                                    </a>
+                                                </td>
+                                                <td>Module 2</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">Skills of an ethical hacker, Types
+                                                        of hacker</h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>40m</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="btn p-0">
+                                                        <i class="bi bi-file-earmark-pdf"></i> Cybersecurity
+                                                        Introduction Guide 3
+                                                    </a>
+                                                </td>
+                                                <td>Module 3</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">Goals and learning objectives</h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>20m</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="btn p-0">
+                                                        <i class="bi bi-file-earmark-pdf"></i> Cybersecurity
+                                                        Introduction Guide 4
+                                                    </a>
+                                                </td>
+                                                <td>Module 4</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">What is Ethical hacking?</h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>1h</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td>
+                                                </td>
+                                                <td>Module 5</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">Why Ethical hacking is necessary?
+                                                    </h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>1h 10m</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td>
+                                                </td>
+                                                <td>Module 6</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <h4 class="text-uppercase my-4">Other lectures:</h4>
-                                <div class="col-auto mb-3">
-                                    <label for="serviceName">Lecture Name</label>
-                                    <input type="text" class="form-control" id="serviceName"
-                                    placeholder="Enter Lecture Name" />
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="course-heading-6">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#course-6" aria-expanded="false" aria-controls="course-6">
+                                    <table class="w-100" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th class="title fw-bold" style="width: 40%;">FUNDAMENTAL OF SECURITY
+                                                    MANAGEMENT</th>
+                                                <th>7 on demand videos</th>
+                                                <th class="text-center">5 downloadable resources</th>
+                                                <th class="fw-bold text-end">LECTURE 1</th>
+                                                <th class="fw-bold text-end">
+                                                    <button class="btn" data-bs-toggle="modal"
+                                                        data-bs-target="#exampleModal1">
+                                                        <i
+                                                            class="icofont-edit text-primary rounded-circle activites-icon"></i>
+                                                        Edit
+                                                    </button></th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </button>
+                            </h2>
+                            <div id="course-6" class="accordion-collapse collapse" aria-labelledby="course-heading-6"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <table class="w-100" id="table">
+                                        <tbody class="fs-14">
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">Welcome and Introduction to the
+                                                        Instructor</h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>50m</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="btn p-0">
+                                                        <i class="bi bi-file-earmark-pdf"></i> Cybersecurity
+                                                        Introduction Guide 1
+                                                    </a>
+                                                </td>
+                                                <td>Module 1</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">What is hacking? Who is a hacker?
+                                                    </h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>1h 20m</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="btn p-0">
+                                                        <i class="bi bi-file-earmark-pdf"></i> Cybersecurity
+                                                        Introduction Guide 2
+                                                    </a>
+                                                </td>
+                                                <td>Module 2</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">Skills of an ethical hacker, Types
+                                                        of hacker</h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>40m</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="btn p-0">
+                                                        <i class="bi bi-file-earmark-pdf"></i> Cybersecurity
+                                                        Introduction Guide 3
+                                                    </a>
+                                                </td>
+                                                <td>Module 3</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">Goals and learning objectives</h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>20m</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="btn p-0">
+                                                        <i class="bi bi-file-earmark-pdf"></i> Cybersecurity
+                                                        Introduction Guide 4
+                                                    </a>
+                                                </td>
+                                                <td>Module 4</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">What is Ethical hacking?</h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>1h</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td>
+                                                </td>
+                                                <td>Module 5</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">Why Ethical hacking is necessary?
+                                                    </h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>1h 10m</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td>
+                                                </td>
+                                                <td>Module 6</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-                                
-                                <div class="col-auto mb-3">
-                                    <label for="serviceName">Upload Files</label>
-                                    <div id="drag-drop-area"></div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="course-heading-7">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#course-7" aria-expanded="false" aria-controls="course-7">
+                                    <table class="w-100" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th class="title fw-bold" style="width: 40%;">DIVING DEEP TO
+                                                    CYBERSECURITY</th>
+                                                <th>7 on demand videos</th>
+                                                <th class="text-center">5 downloadable resources</th>
+                                                <th class="fw-bold text-end">LECTURE 1</th>
+                                                <th class="fw-bold text-end">
+                                                    <button class="btn" data-bs-toggle="modal"
+                                                        data-bs-target="#exampleModal1">
+                                                        <i
+                                                            class="icofont-edit text-primary rounded-circle activites-icon"></i>
+                                                        Edit
+                                                    </button></th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </button>
+                            </h2>
+                            <div id="course-7" class="accordion-collapse collapse" aria-labelledby="course-heading-7"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">
+                                    <table class="w-100" id="table">
+                                        <tbody class="fs-14">
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">Welcome and Introduction to the
+                                                        Instructor</h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>50m</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="btn p-0">
+                                                        <i class="bi bi-file-earmark-pdf"></i> Cybersecurity
+                                                        Introduction Guide 1
+                                                    </a>
+                                                </td>
+                                                <td>Module 1</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">What is hacking? Who is a hacker?
+                                                    </h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>1h 20m</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="btn p-0">
+                                                        <i class="bi bi-file-earmark-pdf"></i> Cybersecurity
+                                                        Introduction Guide 2
+                                                    </a>
+                                                </td>
+                                                <td>Module 2</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">Skills of an ethical hacker, Types
+                                                        of hacker</h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>40m</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="btn p-0">
+                                                        <i class="bi bi-file-earmark-pdf"></i> Cybersecurity
+                                                        Introduction Guide 3
+                                                    </a>
+                                                </td>
+                                                <td>Module 3</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">Goals and learning objectives</h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>20m</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td class="text-center">
+                                                    <a class="btn p-0">
+                                                        <i class="bi bi-file-earmark-pdf"></i> Cybersecurity
+                                                        Introduction Guide 4
+                                                    </a>
+                                                </td>
+                                                <td>Module 4</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">What is Ethical hacking?</h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>1h</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td>
+                                                </td>
+                                                <td>Module 5</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="col1" style="width: 40%;">
+                                                    <i class="icofont-ui-video-play"></i>
+                                                    <h6 class="d-inline ps-2 fw-bold">Why Ethical hacking is necessary?
+                                                    </h6>
+                                                </td>
+                                                <td class="d-flex justify-content-between align-items-center">
+                                                    <h6>1h 10m</h6>
+                                                    <button class="btn bg-transparent preview-btn"
+                                                        data-bs-toggle="modal"
+                                                        data-bs-target="#preview-video">Preview</button>
+                                                </td>
+                                                <td>
+                                                </td>
+                                                <td>Module 6</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
-                                
-                                <div class="d-flex justify-content-between">
-                                    <button type="button" class="btn btn-primary addMulti">
-                                        Save and add another
-                                    </button>
-                                    <button type="submit" class="btn btn-success">
-                                        Save
-                                    </button>
-                                </div>
-                                
-                            </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="preview-video" tabindex="-1" aria-labelledby="trainingModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-xl">
+                        <div class="modal-content border-0 bg-transparent">
+
+                            <div class="modal-body p-3 bg-transparent">
+                                <video controls="" class="img-fluid d-block mx-auto" preload="metadata" type="video/mp4"
+                                    src="/static/videos/academy/Rabiul Islam - Cybersecurity Specialist _ Ethical Hacker.mp4#t=0.5"></video>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -387,27 +1265,56 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form action="">
-                            <div class="col-auto mb-3">
-                                <label for="serviceName">Service Category Name</label>
-                                <input type="serviceName" class="form-control" id="serviceName"
-                                    placeholder="Enter Service Category Name" />
-                            </div>
-                            <div class="col-auto mb-3">
-                                <label for="description">Description</label>
-                                <textarea name="description" id="description" class="form-control" cols="30"
-                                    rows="10"></textarea>
-                            </div>
-                            
-                            <div class="d-flex justify-content-between">
-                                <!-- <button type="button" class="btn btn-primary">
-                                    Save and add another
-                                </button> -->
-                                <button type="button" class="btn btn-primary">
-                                    Update
-                                </button>
-                            </div>
-                        </form>
+                        <div class="courseSectionModule">
+                            <h3>Edit Lectures</h3>
+                            <form action="">
+                                <!-- <div class="col-auto mb-3">
+                                    <label for="serviceName">Select Section</label>
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected></option>
+                                        <option value="1">Section 1</option>
+                                        <option value="2">Section 2</option>
+                                        <option value="3">Section 3</option>
+                                    </select>
+                                </div> -->
+                                <div class="col-auto mb-3">
+                                    <label for="serviceName">Lecture Name</label>
+                                    <input type="text" class="form-control" id="serviceName"
+                                        placeholder="Enter Lecture Name" />
+                                </div>
+                                <h4 class="text-uppercase">Lectures Preview:</h4>
+                                <div class="col-auto mb-3">
+                                    <label for="serviceName">Upload Files</label>
+                                    <input type="file" class="previewVideo" name="filepond" data-allow-reorder="true"
+                                        data-max-files="3">
+                                </div>
+                                <!-- <div class="col-auto mb-3">
+                                    <input type="file" class="previewFile" name="filepond" multiple data-allow-reorder="true"
+                                    data-max-files="3">
+                                </div> -->
+                                <!-- <div class="d-flex justify-content-between">
+                                    <button type="button" class="btn btn-primary courseSectionAdd">
+                                        Save
+                                    </button>
+                                </div> -->
+                                <!-- <h4 class="text-uppercase my-4">Other lectures:</h4> -->
+                                
+                                <div class="col-auto mb-3">
+                                    <label for="serviceName">Upload Lecture Files</label>
+                                    <div id="drag-drop-area"></div>
+                                </div>
+
+                                <div class="d-flex justify-content-between">
+                                    <!-- <button type="button" class="btn btn-primary addMulti">
+                                        Save and add another
+                                    </button> -->
+                                    <button type="submit" class="btn btn-success">
+                                        Save
+                                    </button>
+                                </div>
+
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
