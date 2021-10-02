@@ -39,3 +39,9 @@
 .filepond--drip-blob {
 	background-color: #7f8a9a;
 }
+.tox-notifications-container, .filepond--credits{
+    display: none;
+}
+.uppy-Dashboard-AddFiles-info{
+    display: none !important;
+}
