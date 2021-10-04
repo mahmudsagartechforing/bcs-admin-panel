@@ -3,7 +3,7 @@ tinymce.init({
     plugins: 'image code lists',
     menubar: false,
     statusbar: false,
-    toolbar: 'undo redo | bold italic alignleft aligncenter alignright alignjustify| bullist numlist outdent indent| code',
+    toolbar: 'undo redo | bold italic alignleft aligncenter alignright| bullist numlist | code',
 
     /* without images_upload_url set, Upload tab won't show up*/
     images_upload_url: 'postAcceptor.php',

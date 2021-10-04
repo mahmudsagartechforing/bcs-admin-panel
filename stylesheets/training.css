@@ -49,6 +49,12 @@
 .accordion table td:first-child, .accordion table th:first-child{
     text-align: start;
 }
+.accordion table th{
+    font-size: 14px;
+}
+.accordion table td{
+    font-size: 12px;
+}
 .accordion-button, .accordion-button:not(.collapsed) {
     color: black;
     background-color: #E1E6F1;
